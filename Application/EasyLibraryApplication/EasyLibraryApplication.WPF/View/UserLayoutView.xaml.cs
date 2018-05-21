@@ -23,5 +23,17 @@ namespace EasyLibraryApplication.WPF.View
         {
             InitializeComponent();
         }
+
+        private void UiActionOption1_OnClick(object sender, RoutedEventArgs e)
+        {
+            uiActionRec1.Fill = Brushes.Blue;
+            uiActionRec2.Fill = Brushes.LightGray;
+        }
+
+        private void UiActionOption2_OnClick(object sender, RoutedEventArgs e)
+        {
+            uiActionRec1.Fill = Brushes.LightGray;
+            uiActionRec2.Fill = Brushes.Blue;
+        }
     }
 }
