@@ -58,8 +58,11 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="View\LayoutView.xaml.cs">
-      <DependentUpon>LayoutView.xaml</DependentUpon>
+    <Compile Include="View\AdminLayoutView.xaml.cs">
+      <DependentUpon>AdminLayoutView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserLayoutView.xaml.cs">
+      <DependentUpon>UserLayoutView.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -93,7 +96,11 @@
     <Folder Include="ViewModel\" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="View\LayoutView.xaml">
+    <Page Include="View\AdminLayoutView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UserLayoutView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace EasyLibraryApplication.WPF.View
 {
     /// <summary>
-    /// Interaction logic for LayoutView.xaml
+    /// Interaction logic for AdminLayoutView.xaml
     /// </summary>
-    public partial class LayoutView : Window
+    public partial class AdminLayoutView : Window
     {
-        public LayoutView()
+        public AdminLayoutView()
         {
             InitializeComponent();
         }
