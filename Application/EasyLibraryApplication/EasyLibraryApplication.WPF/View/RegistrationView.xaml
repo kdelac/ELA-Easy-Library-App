@@ -7,50 +7,48 @@
         mc:Ignorable="d"
         Title="RegistrationView" Height="500" Width="700"  Background="#2488e0" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
     <Grid>
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="30"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
 
-            <Label Grid.Column ="0"  FontSize="20" Foreground="White" Margin="10,0,173.2,31" Grid.RowSpan="2" Grid.ColumnSpan="2">Registracija</Label>
-            <Label Grid.Row="1" Grid.Column ="0" Margin="10,0.2,4.6,0"  Foreground="White">Ime</Label>
-            <TextBox Grid.Row="2" Grid.Column="0" Margin="10,0,4.6,0.6"></TextBox>
-            <Label Grid.Row="1" Grid.Column ="1" Margin="5.4,0.2,10.2,0" Foreground="White">Prezime</Label>
-            <TextBox Grid.Row="2" Grid.Column="1" Margin="5.4,0,10.2,0.6"></TextBox>
-            <Label Grid.Row="3" Grid.Column="0" Margin="10,5.4,173.2,0.8" Grid.ColumnSpan="2" Foreground="White">Adresa</Label>
-            <TextBox Grid.Row="3" Grid.Column="0" Margin="10,30.4,4.6,30.6" Grid.RowSpan="3"></TextBox>
-            <Label Grid.Row="3" Grid.Column="1" Margin="5.4,5.4,0.2,0.8" Foreground="White">Grad</Label>
-            <TextBox Grid.Row="3" Grid.Column="1" Margin="5.4,30.4,10.2,30.6" Grid.RowSpan="3"></TextBox>
-            <Label Grid.Row="5" Grid.ColumnSpan="2" Margin="10,0.6,0.2,5.6" Foreground="White">Email</Label>
-            <TextBox Grid.Row="6" Grid.ColumnSpan="2" Margin="10,0.4,10.2,0.2"></TextBox>
-            <Label Grid.Row="6" Grid.ColumnSpan="2" Margin="10,25.4,0.2,0.4" Grid.RowSpan="2" Foreground="White">Korisničko ime</Label>
-            <TextBox Name="proba" Grid.Row="7" Grid.ColumnSpan="2" Margin="10,30.8,10.2,0" Grid.RowSpan="2"/>
-            <Label Grid.Row="9"  Grid.ColumnSpan="2" Margin="10,5,0.2,28" Grid.RowSpan="2" Foreground="White">Lozinka</Label>
-            <PasswordBox Grid.Row="10" Grid.Column="0"  Grid.ColumnSpan="2" Margin="10,1.6,10.2,30.2" Grid.RowSpan="2"/>
-            <Button Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="12" Margin="0.4,2.4,172.6,23.4" Grid.RowSpan="2">Registriraj se</Button>
-            <Label Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Margin="173.4,0.2,172.6,0" Foreground="White">Izaberi knjižnicu</Label>
-            <ListBox Grid.Column="2" Grid.Row="2" Grid.RowSpan="9" Grid.ColumnSpan="2" Margin="0,0,10,0" SelectionMode="Multiple"></ListBox>
-        </Grid>
+        <Label Grid.Column ="0"  FontSize="20" Foreground="White" Margin="10,0,173.2,31" Grid.RowSpan="2" Grid.ColumnSpan="2">Registracija</Label>
+        <Label Grid.Row="1" Grid.Column ="0" Margin="10,0.2,4.6,0"  Foreground="White">Ime</Label>
+        <TextBox Grid.Row="2" Grid.Column="0" Margin="10,0,4.6,0.6"></TextBox>
+        <Label Grid.Row="1" Grid.Column ="1" Margin="5.4,0.2,10.2,0" Foreground="White">Prezime</Label>
+        <TextBox Grid.Row="2" Grid.Column="1" Margin="5.4,0,10.2,0.6"></TextBox>
+        <Label Grid.Row="3" Grid.Column="0" Margin="10,5.4,173.2,0.8" Grid.ColumnSpan="2" Foreground="White">Adresa</Label>
+        <TextBox Grid.Row="3" Grid.Column="0" Margin="10,30.4,4.6,30.6" Grid.RowSpan="3"></TextBox>
+        <Label Grid.Row="3" Grid.Column="1" Margin="5.4,5.4,0.2,0.8" Foreground="White">Grad</Label>
+        <TextBox Grid.Row="3" Grid.Column="1" Margin="5.4,30.4,10.2,30.6" Grid.RowSpan="3"></TextBox>
+        <Label Grid.Row="5" Grid.ColumnSpan="2" Margin="10,0.6,0.2,5.6" Foreground="White">Email</Label>
+        <TextBox Grid.Row="6" Grid.ColumnSpan="2" Margin="10,0.4,10.2,0.2"></TextBox>
+        <Label Grid.Row="6" Grid.ColumnSpan="2" Margin="10,25.4,0.2,0.4" Grid.RowSpan="2" Foreground="White">Korisničko ime</Label>
+        <TextBox Name="proba" Grid.Row="7" Grid.ColumnSpan="2" Margin="10,30.8,10.2,0" Grid.RowSpan="2"/>
+        <Label Grid.Row="9"  Grid.ColumnSpan="2" Margin="10,5,0.2,28" Grid.RowSpan="2" Foreground="White">Lozinka</Label>
+        <PasswordBox Grid.Row="10" Grid.Column="0"  Grid.ColumnSpan="2" Margin="10,1.6,10.2,30.2" Grid.RowSpan="2"/>
+        <Button Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="12" Margin="0.4,2.4,172.6,23.4" Grid.RowSpan="2">Registriraj se</Button>
+        <Label Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Margin="173.4,0.2,172.6,0" Foreground="White">Izaberi knjižnicu</Label>
+        <ListBox Grid.Column="2" Grid.Row="2" Grid.RowSpan="9" Grid.ColumnSpan="2" Margin="0,0,10,0" SelectionMode="Multiple"></ListBox>
     </Grid>
 </Window>
