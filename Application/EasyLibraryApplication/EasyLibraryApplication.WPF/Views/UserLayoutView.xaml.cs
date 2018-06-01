@@ -11,7 +11,6 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using EasyLibraryApplication.WPF.Model;
 
 namespace EasyLibraryApplication.WPF.View
 {
@@ -20,11 +19,9 @@ namespace EasyLibraryApplication.WPF.View
     /// </summary>
     public partial class LayoutView : Window
     {
-      
         public LayoutView()
         {
             InitializeComponent();
-            
         }
 
         private void UiActionOption1_OnClick(object sender, RoutedEventArgs e)
