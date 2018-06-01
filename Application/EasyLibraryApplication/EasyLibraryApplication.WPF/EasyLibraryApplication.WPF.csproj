@@ -34,8 +34,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -58,11 +67,79 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="View\LoginView.xaml.cs">
       <DependentUpon>LoginView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\RegistrationView.xaml.cs">
       <DependentUpon>RegistrationView.xaml</DependentUpon>
+=======
+    <Compile Include="Model\Administrator.cs">
+      <DependentUpon>LibraryDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Author.cs">
+      <DependentUpon>LibraryDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Book.cs">
+      <DependentUpon>LibraryDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Category.cs">
+      <DependentUpon>LibraryDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Copy.cs">
+      <DependentUpon>LibraryDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\GetAllLoansForUser_Result.cs">
+      <DependentUpon>LibraryDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Language.cs">
+      <DependentUpon>LibraryDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Library.cs">
+      <DependentUpon>LibraryDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\LibraryDbModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LibraryDbModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\LibraryDbModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LibraryDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\LibraryDbModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LibraryDbModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\LibraryMember.cs">
+      <DependentUpon>LibraryDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Loan.cs">
+      <DependentUpon>LibraryDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Publisher.cs">
+      <DependentUpon>LibraryDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Reservation.cs">
+      <DependentUpon>LibraryDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Section.cs">
+      <DependentUpon>LibraryDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Status.cs">
+      <DependentUpon>LibraryDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\User.cs">
+      <DependentUpon>LibraryDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="View\AdminLayoutView.xaml.cs">
+      <DependentUpon>AdminLayoutView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserLayoutView.xaml.cs">
+      <DependentUpon>UserLayoutView.xaml</DependentUpon>
+>>>>>>> 8ce114a449cd08ee736d3344537967e41e4fbf12
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -83,6 +160,14 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EntityDeploy Include="Model\LibraryDbModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>LibraryDbModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model\LibraryDbModel.edmx.diagram">
+      <DependentUpon>LibraryDbModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -92,10 +177,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Model\" />
     <Folder Include="ViewModel\" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Page Include="View\LoginView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -104,6 +189,33 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+=======
+    <Page Include="View\AdminLayoutView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UserLayoutView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\allBooks.png" />
+    <Resource Include="Icons\borrowedBooks.png" />
+    <Content Include="Model\LibraryDbModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>LibraryDbModel.Context.cs</LastGenOutput>
+      <DependentUpon>LibraryDbModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Model\LibraryDbModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LibraryDbModel.edmx</DependentUpon>
+      <LastGenOutput>LibraryDbModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+>>>>>>> 8ce114a449cd08ee736d3344537967e41e4fbf12
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

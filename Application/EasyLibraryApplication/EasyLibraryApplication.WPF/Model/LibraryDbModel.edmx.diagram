@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="505250321920482a9cc656895ee09c5f" Name="Diagram1">
+        <EntityTypeShape EntityType="DbModel.Administrator" Width="1.5" PointX="3" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbModel.Author" Width="1.5" PointX="5.25" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbModel.Book" Width="1.5" PointX="7.5" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbModel.Category" Width="1.5" PointX="5.25" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbModel.Copy" Width="1.5" PointX="9.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbModel.Language" Width="1.5" PointX="5.25" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbModel.Library" Width="1.5" PointX="0.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbModel.LibraryMember" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbModel.Loan" Width="1.5" PointX="12" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbModel.Publisher" Width="1.5" PointX="5.25" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbModel.Reservation" Width="1.5" PointX="9.75" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbModel.Section" Width="1.5" PointX="3" PointY="18.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbModel.Status" Width="1.5" PointX="7.5" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbModel.User" Width="1.5" PointX="0.75" PointY="2.875" IsExpanded="true" />
+        <AssociationConnector Association="DbModel.FK_Administrators_Libraries" ManuallyRouted="false" />
+        <AssociationConnector Association="DbModel.FK_Administrators_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="DbModel.FK_Books_Categories" ManuallyRouted="false" />
+        <AssociationConnector Association="DbModel.FK_Books_Languages" ManuallyRouted="false" />
+        <AssociationConnector Association="DbModel.FK_Books_Libraries" ManuallyRouted="false" />
+        <AssociationConnector Association="DbModel.FK_Books_Publishers" ManuallyRouted="false" />
+        <AssociationConnector Association="DbModel.FK_Copies_Books" ManuallyRouted="false" />
+        <AssociationConnector Association="DbModel.FK_Reservations_Books" ManuallyRouted="false" />
+        <AssociationConnector Association="DbModel.FK_Categories_Sections" ManuallyRouted="false" />
+        <AssociationConnector Association="DbModel.FK_Copies_Statuses" ManuallyRouted="false" />
+        <AssociationConnector Association="DbModel.FK_Loans_Copies" ManuallyRouted="false" />
+        <AssociationConnector Association="DbModel.FK_LibraryMembers_Libraries" ManuallyRouted="false" />
+        <AssociationConnector Association="DbModel.FK_Sections_Libraries" ManuallyRouted="false" />
+        <AssociationConnector Association="DbModel.FK_LibraryMembers_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="DbModel.FK_Loans_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="DbModel.FK_Reservations_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="DbModel.BooksAuthors" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
