@@ -29,13 +29,13 @@
         <Rectangle Grid.Row="0" Grid.Column="0" Grid.RowSpan="5" Width="150" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Fill="LightGray"/>
         <Button Name="uiActionOption1" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Grid.ColumnSpan="2" Background="Transparent" BorderThickness="0" Click="UiActionOption1_OnClick">
             <StackPanel HorizontalAlignment="Center">
-                <Image Height="50" Width="50"/>
+                <Image Height="50" Width="50" Source="../Icons/allBooks.png"/>
                 <Label HorizontalAlignment="Center">Pregled knjiga</Label>
             </StackPanel>
         </Button>
         <Button Name="uiActionOption2" Grid.Column="0" Grid.Row="2" Grid.RowSpan="2" Grid.ColumnSpan="2" Background="Transparent" BorderThickness="0" Click="UiActionOption2_OnClick" >
             <StackPanel HorizontalAlignment="Center">
-                <Image Height="50" Width="50"/>
+                <Image Height="50" Width="50" Source="../Icons/borrowedBooks.png"/>
                 <Label HorizontalAlignment="Center">Pregled posuđenih</Label>
             </StackPanel>
         </Button>
