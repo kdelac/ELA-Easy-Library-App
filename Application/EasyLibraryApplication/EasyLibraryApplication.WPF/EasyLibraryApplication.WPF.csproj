@@ -182,6 +182,8 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Icons\allBooks.png" />
+    <Resource Include="Icons\borrowedBooks.png" />
     <Content Include="Model\LibraryDbModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>LibraryDbModel.Context.cs</LastGenOutput>
