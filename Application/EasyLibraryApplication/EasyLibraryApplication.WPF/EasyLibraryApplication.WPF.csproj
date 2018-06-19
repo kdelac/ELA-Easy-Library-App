@@ -169,6 +169,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Commands\" />
     <Folder Include="ViewModel\" />
   </ItemGroup>
   <ItemGroup>
