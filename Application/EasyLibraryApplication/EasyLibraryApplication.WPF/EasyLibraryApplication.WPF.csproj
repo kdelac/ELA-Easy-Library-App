@@ -67,13 +67,12 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="View\LoginView.xaml.cs">
       <DependentUpon>LoginView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\RegistrationView.xaml.cs">
       <DependentUpon>RegistrationView.xaml</DependentUpon>
-=======
+    </Compile>
     <Compile Include="Model\Administrator.cs">
       <DependentUpon>LibraryDbModel.tt</DependentUpon>
     </Compile>
@@ -139,7 +138,6 @@
     </Compile>
     <Compile Include="View\UserLayoutView.xaml.cs">
       <DependentUpon>UserLayoutView.xaml</DependentUpon>
->>>>>>> 8ce114a449cd08ee736d3344537967e41e4fbf12
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -181,7 +179,6 @@
     <Folder Include="ViewModel\" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <Page Include="View\LoginView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -190,7 +187,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-=======
     <Page Include="View\AdminLayoutView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -216,7 +212,6 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
->>>>>>> 8ce114a449cd08ee736d3344537967e41e4fbf12
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
