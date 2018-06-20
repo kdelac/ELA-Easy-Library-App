@@ -10,6 +10,7 @@ using EasyLibraryApplication.WPF.Annotations;
 using EasyLibraryApplication.WPF.Commands;
 using EasyLibraryApplication.WPF.Model;
 using EasyLibraryApplication.WPF.View;
+using PasswordHash;
 
 namespace EasyLibraryApplication.WPF.ViewModel
 {

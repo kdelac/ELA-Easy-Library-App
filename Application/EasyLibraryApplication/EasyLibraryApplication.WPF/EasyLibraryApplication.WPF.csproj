@@ -174,7 +174,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\PasswordHash\PasswordHash.csproj">
+      <Project>{34445e79-8f65-47e6-93af-82fdb5419aa4}</Project>
+      <Name>PasswordHash</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Page Include="View\AdminLayoutView.xaml">
       <SubType>Designer</SubType>
