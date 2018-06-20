@@ -93,7 +93,7 @@ namespace EasyLibraryApplication.WPF.ViewModel
             RegistrationView = new RegistrationView();
             RegistrationView.ShowDialog();
         }
-
+         
         #endregion
         
         #region CheckUsers

@@ -24,7 +24,7 @@ namespace EasyLibraryApplication.WPF.Commands
 
         public void Execute(object parameter)
         {
-            viewModel.UserRegistration();
+            viewModel.SaveChanges();
         }
 
         public event EventHandler CanExecuteChanged;
