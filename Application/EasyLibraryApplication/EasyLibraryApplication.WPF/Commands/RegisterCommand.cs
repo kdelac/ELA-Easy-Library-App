@@ -4,19 +4,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using EasyLibraryApplication.WPF.View;
+using EasyLibraryApplication.WPF.ViewModel;
 
 namespace EasyLibraryApplication.WPF.Commands
 {
     class RegisterCommand : ICommand
     {
+        private LoginViewModel viewModel;
+
+        public RegisterCommand(LoginViewModel vm)
+        {
+            viewModel = vm;
+        }
+
         public bool CanExecute(object parameter)
         {
-            throw new NotImplementedException();
+            return true;
         }
 
         public void Execute(object parameter)
         {
-            throw new NotImplementedException();
+            viewModel.ShowRegistrationView();
         }
 
         public event EventHandler CanExecuteChanged;

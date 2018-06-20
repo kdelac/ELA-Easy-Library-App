@@ -24,7 +24,6 @@ namespace EasyLibraryApplication.WPF.View
         public LayoutView()
         {
             InitializeComponent();
-            
         }
 
         private void UiActionOption1_OnClick(object sender, RoutedEventArgs e)

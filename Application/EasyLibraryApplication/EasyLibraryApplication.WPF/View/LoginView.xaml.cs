@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using EasyLibraryApplication.WPF.ViewModel;
 
 namespace EasyLibraryApplication.WPF.View
 {
@@ -22,6 +23,7 @@ namespace EasyLibraryApplication.WPF.View
         public Login()
         {
             InitializeComponent();
+            this.DataContext = new LoginViewModel(this);
         }
     }
 }

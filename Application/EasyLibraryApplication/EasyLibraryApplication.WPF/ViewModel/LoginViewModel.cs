@@ -25,15 +25,20 @@ namespace EasyLibraryApplication.WPF.ViewModel
         {
             ctx = new LibraryEntities();
             LoginEvent = new LoginCommand(this);
-            RegisterEven = new RegisterCommand();
+            RegisterEvent = new RegisterCommand(this);
             loginView = login;
             SelectedItem = new User();
+            
         }
+
+        public LayoutView UserLayoutView { get; set; }
+        public RegistrationView RegistrationView { get; set; }
+        public AdminLayoutView AdminLayoutView { get; set; }
 
         #region Commands
 
         public LoginCommand LoginEvent { get; set; }
-        public RegisterCommand RegisterEven { get; set; }
+        public RegisterCommand RegisterEvent { get; set; }
 
         #endregion
 
@@ -52,6 +57,32 @@ namespace EasyLibraryApplication.WPF.ViewModel
 
         #endregion
 
+        /// <summary>
+        /// Metoda koja prebacuje korisnika s ekrana za prijavu na korisnikov ekran.
+        /// </summary>
+        public void ChangeToUserView()
+        {
+            UserLayoutView = new LayoutView();
+            loginView.Close();
+            UserLayoutView.Show();
+        }
+
+        /// <summary>
+        /// Metoda koja prebacuje korisnika s ekrana za prijavu na administratorov ekran.
+        /// </summary>
+        public void ChangeToAdminView()
+        {
+            AdminLayoutView = new AdminLayoutView();
+            loginView.Close();
+            AdminLayoutView.Show();
+        }
+
+        public void ShowRegistrationView()
+        {
+            RegistrationView = new RegistrationView();
+            RegistrationView.ShowDialog();
+        }
+
         public void CheckUser()
         {
             User username = ctx.Users.FirstOrDefault(s => s.Username == SelectedItem.Username);
@@ -59,11 +90,11 @@ namespace EasyLibraryApplication.WPF.ViewModel
             if (username != null && password != null)
             {
                 MessageBox.Show($"Bok, {username.Username}");
-                loginView.Close();
+                ChangeToUserView();
             }
             else
             {
-                MessageBox.Show("Ne postoji");
+                ChangeToAdminView();
             }
         }
 

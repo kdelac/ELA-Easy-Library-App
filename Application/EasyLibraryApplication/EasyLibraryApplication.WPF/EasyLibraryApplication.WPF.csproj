@@ -131,14 +131,14 @@
     </Compile>
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
+    <Compile Include="View\AdminLayoutView.xaml.cs">
+      <DependentUpon>AdminLayoutView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\LoginView.xaml.cs">
       <DependentUpon>LoginView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\RegistrationView.xaml.cs">
       <DependentUpon>RegistrationView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\AdminLayoutView.xaml.cs">
-      <DependentUpon>AdminLayoutView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\UserLayoutView.xaml.cs">
       <DependentUpon>UserLayoutView.xaml</DependentUpon>
@@ -176,6 +176,10 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Page Include="View\AdminLayoutView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
     <Page Include="View\LoginView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -184,13 +188,9 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\AdminLayoutView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="View\UserLayoutView.xaml">
       <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
