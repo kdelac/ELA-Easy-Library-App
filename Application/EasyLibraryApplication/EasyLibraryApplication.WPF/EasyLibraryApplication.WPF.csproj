@@ -69,6 +69,7 @@
     </Compile>
     <Compile Include="Commands\LoginCommand.cs" />
     <Compile Include="Commands\RegisterCommand.cs" />
+    <Compile Include="Commands\RegistrationCommand.cs" />
     <Compile Include="Model\Administrator.cs">
       <DependentUpon>LibraryDbModel.tt</DependentUpon>
     </Compile>
@@ -131,6 +132,7 @@
     </Compile>
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
+    <Compile Include="ViewModel\RegistrationViewModel.cs" />
     <Compile Include="View\AdminLayoutView.xaml.cs">
       <DependentUpon>AdminLayoutView.xaml</DependentUpon>
     </Compile>

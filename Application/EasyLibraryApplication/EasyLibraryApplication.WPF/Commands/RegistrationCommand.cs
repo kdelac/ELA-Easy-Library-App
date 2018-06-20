@@ -3,22 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows;
 using System.Windows.Input;
-using EasyLibraryApplication.WPF.View;
 using EasyLibraryApplication.WPF.ViewModel;
 
 namespace EasyLibraryApplication.WPF.Commands
 {
-    class LoginCommand : ICommand
+    class RegistrationCommand : ICommand
     {
-        private LoginViewModel viewModel;
+        private RegistrationViewModel viewModel;
 
-        public LoginCommand(LoginViewModel vModel)
+        public RegistrationCommand(RegistrationViewModel vModel)
         {
             viewModel = vModel;
-
         }
+
         public bool CanExecute(object parameter)
         {
             return true;
@@ -26,7 +24,7 @@ namespace EasyLibraryApplication.WPF.Commands
 
         public void Execute(object parameter)
         {
-            viewModel.CheckUser();
+            viewModel.UserRegistration();
         }
 
         public event EventHandler CanExecuteChanged;

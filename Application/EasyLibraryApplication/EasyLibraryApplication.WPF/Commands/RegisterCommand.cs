@@ -13,9 +13,9 @@ namespace EasyLibraryApplication.WPF.Commands
     {
         private LoginViewModel viewModel;
 
-        public RegisterCommand(LoginViewModel vm)
+        public RegisterCommand(LoginViewModel vModel)
         {
-            viewModel = vm;
+            viewModel = vModel;
         }
 
         public bool CanExecute(object parameter)
