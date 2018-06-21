@@ -64,6 +64,9 @@ namespace EasyLibraryApplication.WPF.ViewModel
      
         }
 
+        /// <summary>
+        /// Ucitavanje podataka 
+        /// </summary>
         private void LoadData()
         {
             Refresh();
@@ -77,9 +80,19 @@ namespace EasyLibraryApplication.WPF.ViewModel
             ctx = new LibraryEntities();
             ctx.Libraries.Load();
             ctx.Books.Load();
-            
 
-            LibraryCollectionViewSource.Source = new ObservableCollection<Library>(ctx.Libraries.ToList());
+            List<Library> librariesOfFreeBook = (from library in ctx.Libraries
+                join book in ctx.Books on library.Id equals book.LibraryId into lybGroup
+                from pr2 in lybGroup
+                where pr2.ISBN == "1234"
+                join bookCopy in ctx.Copies on pr2.Id equals bookCopy.BookId into bookGroup
+                from pr3 in bookGroup
+                where bookGroup.Any() && pr3.StatusId == 1
+                select library).ToList();
+
+            LibraryCollectionViewSource.Source = new ObservableCollection<Library>(from lib in librariesOfFreeBook
+              where lib.LibraryMembers.Select(lb => lb.UserId == 11).Count() > 1 select lib); 
+             
             LibraryCollectionViewSource.SortDescriptions.Add(new SortDescription("Name", ListSortDirection.Ascending));    
         }
     }
