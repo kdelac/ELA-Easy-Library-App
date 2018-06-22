@@ -63,5 +63,41 @@ namespace EasyLibraryApplication.WPF.Model
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("ReserveBook", userIdParameter, bookIdParameter);
         }
+    
+        public virtual ObjectResult<Library> GetAllLibrarysForUser(Nullable<int> userId)
+        {
+            var userIdParameter = userId.HasValue ?
+                new ObjectParameter("UserId", userId) :
+                new ObjectParameter("UserId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Library>("GetAllLibrarysForUser", userIdParameter);
+        }
+    
+        public virtual ObjectResult<Library> GetAllLibrarysForUser(Nullable<int> userId, MergeOption mergeOption)
+        {
+            var userIdParameter = userId.HasValue ?
+                new ObjectParameter("UserId", userId) :
+                new ObjectParameter("UserId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Library>("GetAllLibrarysForUser", mergeOption, userIdParameter);
+        }
+    
+        public virtual ObjectResult<Library> GetAllLibrarysForUserNotRegistered(Nullable<int> userId)
+        {
+            var userIdParameter = userId.HasValue ?
+                new ObjectParameter("UserId", userId) :
+                new ObjectParameter("UserId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Library>("GetAllLibrarysForUserNotRegistered", userIdParameter);
+        }
+    
+        public virtual ObjectResult<Library> GetAllLibrarysForUserNotRegistered(Nullable<int> userId, MergeOption mergeOption)
+        {
+            var userIdParameter = userId.HasValue ?
+                new ObjectParameter("UserId", userId) :
+                new ObjectParameter("UserId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Library>("GetAllLibrarysForUserNotRegistered", mergeOption, userIdParameter);
+        }
     }
 }

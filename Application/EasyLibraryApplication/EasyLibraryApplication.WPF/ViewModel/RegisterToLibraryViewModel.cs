@@ -6,15 +6,20 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Data;
 using EasyLibraryApplication.WPF.Annotations;
+using EasyLibraryApplication.WPF.Commands;
 using EasyLibraryApplication.WPF.Model;
 
 namespace EasyLibraryApplication.WPF.ViewModel
 {
     class RegisterToLibraryViewModel : INotifyPropertyChanged
     {
-        public CollectionViewSource Collection { get; private set; }
+        public static int UserID { get; set; }
+        public CollectionViewSource RegistredLibrarCollection { get; private set; }
+        public CollectionViewSource NotRegistredLibrarCollection { get; private set; }
+        public RegisterToLibraryCommand RegisterToLibraryEvent { get; set; }
 
         #region Private Filds
 
@@ -26,7 +31,9 @@ namespace EasyLibraryApplication.WPF.ViewModel
 
         public RegisterToLibraryViewModel()
         {
-            Collection = new CollectionViewSource();
+            RegistredLibrarCollection= new CollectionViewSource();
+            NotRegistredLibrarCollection = new CollectionViewSource();
+            RegisterToLibraryEvent = new RegisterToLibraryCommand(this);
             LoadData();
         }
 
@@ -38,13 +45,37 @@ namespace EasyLibraryApplication.WPF.ViewModel
         {
             ctx = new LibraryEntities();
             ctx.Libraries.Load();
-            Collection.Source = ctx.Libraries.Local;
+            RegistredLibrarCollection.Source = ctx.GetAllLibrarysForUser(UserID);
+            NotRegistredLibrarCollection.Source = ctx.GetAllLibrarysForUserNotRegistered(UserID);
         }
 
         private void LoadData()
         {
             Refresh();
-            SelectedItem = Collection.View.CurrentItem as Library;
+            SelectedItem = NotRegistredLibrarCollection.View.CurrentItem as Library;
+        }
+
+        #endregion
+
+        #region RegisterToLibrary
+
+        public void RegisterToLibrary()
+        {
+            MessageBoxResult messageBoxResult = MessageBox.Show($"Želite se učlaniti u {SelectedItem.Name}?", "Pozor", MessageBoxButton.YesNo);
+            if (messageBoxResult == MessageBoxResult.Yes)
+            {
+                LibraryMember libraryMember = new LibraryMember()
+                {
+                    LibraryId = SelectedItem.Id,
+                    UserId = UserID,
+                    MembershipStartDay = DateTime.Now
+                };
+                ctx.LibraryMembers.Add(libraryMember);
+                ctx.SaveChanges();
+                MessageBox.Show($"Uspješno ste se registrirali u {SelectedItem.Name}");
+                Refresh();
+            }
+            
         }
 
         #endregion
