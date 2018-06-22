@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using EasyLibraryApplication.WPF.Model;
+using EasyLibraryApplication.WPF.ViewModel;
 
 namespace EasyLibraryApplication.WPF.View
 {
@@ -24,18 +25,32 @@ namespace EasyLibraryApplication.WPF.View
         public LayoutView()
         {
             InitializeComponent();
+            uiActionRec1.Fill = Brushes.LightSkyBlue;
+            uiFrame.Source = new Uri("UserBooksView.xaml", UriKind.Relative);
         }
 
         private void UiActionOption1_OnClick(object sender, RoutedEventArgs e)
         {
-            uiActionRec1.Fill = Brushes.Blue;
-            uiActionRec2.Fill = Brushes.LightGray;
+            uiActionRec1.Fill = Brushes.LightSkyBlue;
+            uiActionRec2.Fill = Brushes.AliceBlue;
+            uiActionRec3.Fill = Brushes.AliceBlue;
+            uiFrame.Source = new Uri("UserBooksView.xaml", UriKind.Relative);
         }
 
         private void UiActionOption2_OnClick(object sender, RoutedEventArgs e)
         {
-            uiActionRec1.Fill = Brushes.LightGray;
-            uiActionRec2.Fill = Brushes.Blue;
+            uiActionRec1.Fill = Brushes.AliceBlue;
+            uiActionRec3.Fill = Brushes.AliceBlue;
+            uiActionRec2.Fill = Brushes.LightSkyBlue;
+            //uiFrame.Source = new Uri("Page1.xaml", UriKind.Relative);
+        }
+
+        private void UiActionOption3_OnClick(object sender, RoutedEventArgs e)
+        {
+            uiActionRec1.Fill = Brushes.AliceBlue;
+            uiActionRec2.Fill = Brushes.AliceBlue;
+            uiActionRec3.Fill = Brushes.LightSkyBlue;
+            //uiFrame.Source = new Uri("Page1.xaml", UriKind.Relative);
         }
     }
 }
