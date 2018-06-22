@@ -82,6 +82,9 @@
     <Compile Include="Model\Copy.cs">
       <DependentUpon>LibraryDbModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\GetAllLibrariesWhereIsBookFreeForUser_Result.cs">
+      <DependentUpon>LibraryDbModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\GetAllLoansForUser_Result.cs">
       <DependentUpon>LibraryDbModel.tt</DependentUpon>
     </Compile>

@@ -42,13 +42,22 @@ namespace EasyLibraryApplication.WPF.Model
         public virtual DbSet<Status> Statuses { get; set; }
         public virtual DbSet<User> Users { get; set; }
     
-        public virtual ObjectResult<GetAllLoansForUser_Result> GetAllLoansForUser(Nullable<int> userId)
+        public virtual ObjectResult<Loan> GetAllLoansForUser(Nullable<int> userId)
         {
             var userIdParameter = userId.HasValue ?
                 new ObjectParameter("UserId", userId) :
                 new ObjectParameter("UserId", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GetAllLoansForUser_Result>("GetAllLoansForUser", userIdParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Loan>("GetAllLoansForUser", userIdParameter);
+        }
+    
+        public virtual ObjectResult<Loan> GetAllLoansForUser(Nullable<int> userId, MergeOption mergeOption)
+        {
+            var userIdParameter = userId.HasValue ?
+                new ObjectParameter("UserId", userId) :
+                new ObjectParameter("UserId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Loan>("GetAllLoansForUser", mergeOption, userIdParameter);
         }
     
         public virtual int ReserveBook(Nullable<int> userId, Nullable<int> bookId)
@@ -62,6 +71,32 @@ namespace EasyLibraryApplication.WPF.Model
                 new ObjectParameter("BookId", typeof(int));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("ReserveBook", userIdParameter, bookIdParameter);
+        }
+    
+        public virtual ObjectResult<Library> GetAllLibrariesWhereIsBookFreeForUser(string bookISBN, Nullable<int> userID)
+        {
+            var bookISBNParameter = bookISBN != null ?
+                new ObjectParameter("BookISBN", bookISBN) :
+                new ObjectParameter("BookISBN", typeof(string));
+    
+            var userIDParameter = userID.HasValue ?
+                new ObjectParameter("UserID", userID) :
+                new ObjectParameter("UserID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Library>("GetAllLibrariesWhereIsBookFreeForUser", bookISBNParameter, userIDParameter);
+        }
+    
+        public virtual ObjectResult<Library> GetAllLibrariesWhereIsBookFreeForUser(string bookISBN, Nullable<int> userID, MergeOption mergeOption)
+        {
+            var bookISBNParameter = bookISBN != null ?
+                new ObjectParameter("BookISBN", bookISBN) :
+                new ObjectParameter("BookISBN", typeof(string));
+    
+            var userIDParameter = userID.HasValue ?
+                new ObjectParameter("UserID", userID) :
+                new ObjectParameter("UserID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Library>("GetAllLibrariesWhereIsBookFreeForUser", mergeOption, bookISBNParameter, userIDParameter);
         }
     }
 }

@@ -10,18 +10,15 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using EasyLibraryApplication.WPF.Model;
 using EasyLibraryApplication.WPF.ViewModel;
-
 
 namespace EasyLibraryApplication.WPF.View
 {
     /// <summary>
     /// Interaction logic for ReservationView.xaml
     /// </summary>
-    public partial class ReservationView : Page
+    public partial class ReservationView : Window
     {
         public ReservationView()
         {
