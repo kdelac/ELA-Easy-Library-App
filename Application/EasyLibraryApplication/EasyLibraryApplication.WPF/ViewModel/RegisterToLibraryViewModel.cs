@@ -75,7 +75,6 @@ namespace EasyLibraryApplication.WPF.ViewModel
                 MessageBox.Show($"Uspješno ste se registrirali u {SelectedItem.Name}");
                 Refresh();
             }
-            
         }
 
         #endregion

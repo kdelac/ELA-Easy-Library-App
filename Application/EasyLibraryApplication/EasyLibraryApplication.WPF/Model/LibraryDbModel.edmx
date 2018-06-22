@@ -982,7 +982,7 @@
             <End Role="Authors" EntitySet="Authors" />
             <End Role="Books" EntitySet="Books" />
           </AssociationSet>
-          <FunctionImport Name="GetAllLoansForUser" ReturnType="Collection(DbModel.GetAllLoansForUser_Result)">
+          <FunctionImport Name="GetAllLoansForUser">
           <Parameter Name="UserId" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="ReserveBook">
@@ -990,19 +990,12 @@
             <Parameter Name="BookId" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="GetAllLibrarysForUser" EntitySet="Libraries" ReturnType="Collection(DbModel.Library)">
-            <Parameter Name="UserId" Mode="In" Type="Int32" />
+          <Parameter Name="UserId" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="GetAllLibrarysForUserNotRegistered" EntitySet="Libraries" ReturnType="Collection(DbModel.Library)">
-            <Parameter Name="UserId" Mode="In" Type="Int32" />
+          <Parameter Name="UserId" Mode="In" Type="Int32" />
           </FunctionImport>
         </EntityContainer>
-        <ComplexType Name="GetAllLoansForUser_Result">
-          <Property Type="Int32" Name="UserId" Nullable="false" />
-          <Property Type="Int32" Name="CopyId" Nullable="false" />
-          <Property Type="DateTime" Name="LoanDate" Nullable="false" />
-          <Property Type="DateTime" Name="EndLoanDate" Nullable="true" />
-          <Property Type="Double" Name="OverdueAmount" Nullable="true" />
-        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1169,15 +1162,6 @@
             </EndProperty>
           </AssociationSetMapping>
           <FunctionImportMapping FunctionImportName="GetAllLoansForUser" FunctionName="DbModel.Store.GetAllLoansForUser">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="DbModel.GetAllLoansForUser_Result">
-                <ScalarProperty Name="UserId" ColumnName="UserId" />
-                <ScalarProperty Name="CopyId" ColumnName="CopyId" />
-                <ScalarProperty Name="LoanDate" ColumnName="LoanDate" />
-                <ScalarProperty Name="EndLoanDate" ColumnName="EndLoanDate" />
-                <ScalarProperty Name="OverdueAmount" ColumnName="OverdueAmount" />
-              </ComplexTypeMapping>
-            </ResultMapping>
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="ReserveBook" FunctionName="DbModel.Store.ReserveBook" />
           <FunctionImportMapping FunctionImportName="GetAllLibrarysForUser" FunctionName="DbModel.Store.GetAllLibrarysForUser">

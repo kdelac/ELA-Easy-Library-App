@@ -42,13 +42,13 @@ namespace EasyLibraryApplication.WPF.Model
         public virtual DbSet<Status> Statuses { get; set; }
         public virtual DbSet<User> Users { get; set; }
     
-        public virtual ObjectResult<GetAllLoansForUser_Result> GetAllLoansForUser(Nullable<int> userId)
+        public virtual int GetAllLoansForUser(Nullable<int> userId)
         {
             var userIdParameter = userId.HasValue ?
                 new ObjectParameter("UserId", userId) :
                 new ObjectParameter("UserId", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GetAllLoansForUser_Result>("GetAllLoansForUser", userIdParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("GetAllLoansForUser", userIdParameter);
         }
     
         public virtual int ReserveBook(Nullable<int> userId, Nullable<int> bookId)
