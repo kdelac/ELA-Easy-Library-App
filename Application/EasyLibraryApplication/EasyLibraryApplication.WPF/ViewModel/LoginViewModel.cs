@@ -102,7 +102,7 @@ namespace EasyLibraryApplication.WPF.ViewModel
         ///  
         /// </summary>
         public void CheckUser()
-        {
+        { 
             Password passwordHash = new Password();
             User user = ctx.Users.FirstOrDefault(s => s.Username == SelectedItem.Username);
 

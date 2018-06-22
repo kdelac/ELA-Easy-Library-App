@@ -133,6 +133,7 @@
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="ViewModel\RegistrationViewModel.cs" />
+    <Compile Include="ViewModel\UserBooksViewModel.cs" />
     <Compile Include="View\AdminLayoutView.xaml.cs">
       <DependentUpon>AdminLayoutView.xaml</DependentUpon>
     </Compile>
@@ -141,6 +142,9 @@
     </Compile>
     <Compile Include="View\RegistrationView.xaml.cs">
       <DependentUpon>RegistrationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserBooksView.xaml.cs">
+      <DependentUpon>UserBooksView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\UserLayoutView.xaml.cs">
       <DependentUpon>UserLayoutView.xaml</DependentUpon>
@@ -192,6 +196,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\RegistrationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UserBooksView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -7,8 +7,16 @@ using System.Threading.Tasks;
 
 namespace PasswordHash
 {
+    /// <summary>
+    /// Klasa za pretvaranje stringa lozinke u hash zapis i provjera hash zapisa s unesenom lozinkom
+    /// </summary>
     public class Password
     {
+        /// <summary>
+        /// Metoda koja pretvara string lozinke i vraća hashirani string
+        /// </summary>
+        /// <param name="password"></param>
+        /// <returns></returns>
         public string GetHashString(string password)
         {
             byte[] salt;
@@ -24,6 +32,12 @@ namespace PasswordHash
             return Convert.ToBase64String(hashBytes);
         }
 
+        /// <summary>
+        /// Usporedba upisane lozinke i hashiranog stringa i ako su isti vraća 1, a ako nisu vraća 0
+        /// </summary>
+        /// <param name="savedPasswordHash"></param>
+        /// <param name="password"></param>
+        /// <returns></returns>
         public int VerifyHashString(string savedPasswordHash, string password)
         {
             int flag = 0;
