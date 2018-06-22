@@ -132,6 +132,7 @@
     </Compile>
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
+    <Compile Include="ViewModel\RegisterToLibraryViewModel.cs" />
     <Compile Include="ViewModel\RegistrationViewModel.cs" />
     <Compile Include="ViewModel\UserBooksViewModel.cs" />
     <Compile Include="View\AdminLayoutView.xaml.cs">
@@ -139,6 +140,9 @@
     </Compile>
     <Compile Include="View\LoginView.xaml.cs">
       <DependentUpon>LoginView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\RegiserToLibraryView.xaml.cs">
+      <DependentUpon>RegiserToLibraryView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\RegistrationView.xaml.cs">
       <DependentUpon>RegistrationView.xaml</DependentUpon>
@@ -195,6 +199,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\RegiserToLibraryView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\RegistrationView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -222,6 +230,7 @@
     </EntityDeploy>
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Icons\library.png" />
     <Content Include="Model\LibraryDbModel.Context.tt">
       <DependentUpon>LibraryDbModel.edmx</DependentUpon>
       <Generator>TextTemplatingFileGenerator</Generator>

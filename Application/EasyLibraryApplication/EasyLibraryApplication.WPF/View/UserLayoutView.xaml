@@ -41,8 +41,8 @@
         </Button>
         <Button Name="uiActionOption3" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Background="Transparent" BorderThickness="0"  Click ="UiActionOption3_OnClick">
             <StackPanel HorizontalAlignment="Center">
-                <Image Height="50" Width="50" Source="../Icons/borrowedBooks.png"/>
-                <Label HorizontalAlignment="Center">Pregled posuđenih</Label>
+                <Image Height="50" Width="50" Source="../Icons/library.png"/>
+                <TextBlock HorizontalAlignment="Center">Registracija</TextBlock>
             </StackPanel>
         </Button>
         <Button Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" Background="Transparent" BorderThickness="0">Odjava</Button>

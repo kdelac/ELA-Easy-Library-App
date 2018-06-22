@@ -47,7 +47,7 @@
                 <ColumnDefinition Width="11*"/>
                 <ColumnDefinition Width="9*"/>
             </Grid.ColumnDefinitions>
-            <TextBlock Grid.Column="0" Margin="10,20,9.6,20" Text="{Binding SelectedUser.Id, Mode=TwoWay}"/>
+            <TextBox Grid.Column="0" Margin="10,20,9.6,20" Text="{Binding SelectedUser.Id, Mode=TwoWay}"/>
             <Button Grid.Column="1" Margin="10.4,20,176,20" Content="Pretrazi"></Button>
         </Grid>
 
