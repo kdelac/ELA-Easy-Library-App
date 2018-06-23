@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
 using System.Data.Entity;
 using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Data;
 using EasyLibraryApplication.WPF.Annotations;
@@ -18,6 +13,9 @@ using EasyLibraryApplication.WPF.View;
 using PasswordHash;
 namespace EasyLibraryApplication.WPF.ViewModel
 {
+    /// <summary>
+    /// Klasa koja služi za spajanje pogleda za prijavu i modela, te za izradu poslovne logike
+    /// </summary>
     class RegistrationViewModel : INotifyPropertyChanged
     {
         public CollectionViewSource Collection { get; private set; }
@@ -32,6 +30,10 @@ namespace EasyLibraryApplication.WPF.ViewModel
 
         #region Constructor
 
+        /// <summary>
+        /// Konstruktor koji stvara tri objekta od kojih je jedan za listu koja prikazuje podatke na pogledima i jedan objekt
+        /// za događaj prilikom pritiska gumba, te jedan objekt koji stvara korisnika. Poziva se metoda za prikaz podataka
+        /// </summary>
         public RegistrationViewModel(RegistrationView regView)
         {
             Collection = new CollectionViewSource();
@@ -80,9 +82,13 @@ namespace EasyLibraryApplication.WPF.ViewModel
         }
 
         #endregion
-        
+
         #region LoadData
 
+        /// <summary>
+        /// Stvaranje novog objekta baze, učitavanje svih knjižnica. Dodjeljivanje knjižnica u liste pomoću
+        /// pohranjenih procedura.
+        /// </summary>
         public void Refresh()
         {
             ctx = new LibraryEntities();
@@ -90,6 +96,9 @@ namespace EasyLibraryApplication.WPF.ViewModel
             Collection.Source = ctx.Libraries.Local;
         }
 
+        /// <summary>
+        /// Pozivanje metode Refresh i dodjeljivanje SelectedItem-a
+        /// </summary>
         private void LoadData()
         {
             Refresh();
@@ -100,6 +109,9 @@ namespace EasyLibraryApplication.WPF.ViewModel
         
         #region SaveDataToDatabase
 
+        /// <summary>
+        /// Metoda koja služi za spremanje korisnika u bazu podataka.
+        /// </summary>
         public void SaveChanges()
         {
             if (SelectedUser.Name != null && SelectedUser.Surname != null && SelectedUser.Username != null && SelectedUser.PasswordHash != null && SelectedUser.Email != null && SelectedUser.City != null)
@@ -156,6 +168,11 @@ namespace EasyLibraryApplication.WPF.ViewModel
 
         #region CheckEmail
 
+        /// <summary>
+        /// Metoda koja služi za provjeru email adrese. Ako je email ispravan vraća true.
+        /// </summary>
+        /// <param name="s"></param>
+        /// <returns></returns>
         public static bool IsValidEmailAddress(string s)
         {
             Regex regex = new Regex(@"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$");
@@ -166,6 +183,10 @@ namespace EasyLibraryApplication.WPF.ViewModel
 
         #region PropertyChangedEventHandler
 
+        /// <summary>
+        /// Metoda zadužena za implementaciju INotifyPropertyChanged sučelja
+        /// </summary>
+        /// <param name="propertyName"></param>
         public event PropertyChangedEventHandler PropertyChanged;
 
         [NotifyPropertyChangedInvocator]

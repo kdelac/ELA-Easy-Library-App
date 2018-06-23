@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Data.Entity;
-using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Controls;
 using System.Windows.Data;
 using EasyLibraryApplication.WPF.Annotations;
 using EasyLibraryApplication.WPF.Commands;
@@ -15,10 +8,14 @@ using EasyLibraryApplication.WPF.Model;
 
 namespace EasyLibraryApplication.WPF.ViewModel
 {
+    /// <summary>
+    /// Klasa koja služi za spajanje pogleda pregleda knjiga i modela, te za izradu poslovne logike
+    /// </summary>
     class UserBooksViewModel : INotifyPropertyChanged
     {
         public static User User { get; set; }
         public CollectionViewSource BooksCollectionViewSource { get; set; }
+        
 
         #region PrivateFields
 
@@ -26,16 +23,21 @@ namespace EasyLibraryApplication.WPF.ViewModel
 
         #endregion
 
+        #region Constructor
 
+        /// <summary>
+        /// Konstruktor koji stvara dva nova objekta jedan za listu knjiga, a drugi za događaj pritiska na gumb. Poziva se metoda LoadData().
+        /// </summary>
         public UserBooksViewModel()
         {
             BooksCollectionViewSource = new CollectionViewSource();
+            ChooseBookEvent = new ChooseBookCommand(this);
             SearchEvent = new SearchCommand(this);
             LoadData();
         }
 
-        public SearchCommand SearchEvent { get; set; }
-
+        #endregion
+        
         #region Selected Item
 
         private Book selectedItem;
@@ -52,13 +54,21 @@ namespace EasyLibraryApplication.WPF.ViewModel
 
         #endregion
 
+        #region Command
+
+        public SearchCommand SearchEvent { get; set; }
+        public ChooseBookCommand ChooseBookEvent { get; set; }
+
+        #endregion
+
+        #region LoadData
 
         public void Refresh()
         {
             ctx = new LibraryEntities();
             ctx.Books.Load();
             ctx.Authors.Load();
-            BooksCollectionViewSource.Source = ctx.Books.Local;
+            BooksCollectionViewSource.Source = ctx.FindBookForUser(User.Id);
         }
 
         private void LoadData()
@@ -66,6 +76,10 @@ namespace EasyLibraryApplication.WPF.ViewModel
             Refresh();
             SelectedItem = BooksCollectionViewSource.View.CurrentItem as Book;
         }
+
+        #endregion
+
+        #region InputName
 
         private string name;
         public string Name
@@ -75,19 +89,27 @@ namespace EasyLibraryApplication.WPF.ViewModel
             {
                 if (name != value)
                 {
-                    name= value;
+                    name = value;
                     OnPropertyChanged(nameof(Name));
 
                 }
             }
         }
 
+        #endregion
+
+
+        /// <summary>
+        /// Metoda za pretragu knjige po naslovu knjige
+        /// </summary>
         public void Search()
         {
-            BooksCollectionViewSource.Source = ctx.Books.Local.Select(s => s.Title.Equals("Vlak u snijegu"));
-            SelectedItem = BooksCollectionViewSource.View.CurrentItem as Book;
+            BooksCollectionViewSource.Source = ctx.FindBookForUserName(User.Id, Name);
         }
 
+        /// <summary>
+        /// Metoda koja se aktivira prilikom pritiska na gumb i otvara se prozor za rezervaciju
+        /// </summary>
         public void CooseBook()
         {
 
@@ -97,6 +119,10 @@ namespace EasyLibraryApplication.WPF.ViewModel
 
         public event PropertyChangedEventHandler PropertyChanged;
 
+        /// <summary>
+        /// Metoda zadužena za implementaciju INotifyPropertyChanged sučelja
+        /// </summary>
+        /// <param name="propertyName"></param>
         [NotifyPropertyChangedInvocator]
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {

@@ -14,13 +14,21 @@ using EasyLibraryApplication.WPF.Model;
 
 namespace EasyLibraryApplication.WPF.ViewModel
 {
+    /// <summary>
+    /// Klasa koja služi za spajanje pogleda za registraciju knjiznice za određenog korisnika
+    /// i modela, te za izradu poslovne logike
+    /// </summary>
     class RegisterToLibraryViewModel : INotifyPropertyChanged
     {
+        #region Atributes
+
         public static User User { get; set; }
         public CollectionViewSource RegistredLibrarCollection { get; private set; }
         public CollectionViewSource NotRegistredLibrarCollection { get; private set; }
         public RegisterToLibraryCommand RegisterToLibraryEvent { get; set; }
 
+        #endregion
+        
         #region Private Filds
 
         private LibraryEntities ctx;
@@ -29,6 +37,10 @@ namespace EasyLibraryApplication.WPF.ViewModel
 
         #region Constructor
 
+        /// <summary>
+        /// Konstruktor koji stvara tri objekta od kojih su dva liste koje prikazuju podatke na pogledima i jedan objekt
+        /// za događaj prilikom pritiska gumba. Poziva se metoda za prikaz podataka
+        /// </summary>
         public RegisterToLibraryViewModel()
         {
             RegistredLibrarCollection= new CollectionViewSource();
@@ -41,6 +53,10 @@ namespace EasyLibraryApplication.WPF.ViewModel
 
         #region LoadData
 
+        /// <summary>
+        /// Stvaranje novog objekta baze, učitavanje svih knjižnica. Dodjeljivanje knjižnica u liste pomoću
+        /// pohranjenih procedura.
+        /// </summary>
         public void Refresh()
         {
             ctx = new LibraryEntities();
@@ -49,6 +65,9 @@ namespace EasyLibraryApplication.WPF.ViewModel
             NotRegistredLibrarCollection.Source = ctx.GetAllLibrarysForUserNotRegistered(User.Id);
         }
 
+        /// <summary>
+        /// Pozivanje metode Refresh i dodjeljivanje SelectedItem-a
+        /// </summary>
         private void LoadData()
         {
             Refresh();
@@ -59,6 +78,9 @@ namespace EasyLibraryApplication.WPF.ViewModel
 
         #region RegisterToLibrary
 
+        /// <summary>
+        /// Metoda koja upisuje korisnika u bazu i dodaje mu izabranu knjižnicu
+        /// </summary>
         public void RegisterToLibrary()
         {
             MessageBoxResult messageBoxResult = MessageBox.Show($"Želite se učlaniti u {SelectedItem.Name}?", "Pozor", MessageBoxButton.YesNo);
@@ -99,6 +121,10 @@ namespace EasyLibraryApplication.WPF.ViewModel
 
         public event PropertyChangedEventHandler PropertyChanged;
 
+        /// <summary>
+        /// Metoda zadužena za implementaciju INotifyPropertyChanged sučelja
+        /// </summary>
+        /// <param name="propertyName"></param>
         [NotifyPropertyChangedInvocator]
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
@@ -106,6 +132,5 @@ namespace EasyLibraryApplication.WPF.ViewModel
         }
 
         #endregion
-
     }
 }

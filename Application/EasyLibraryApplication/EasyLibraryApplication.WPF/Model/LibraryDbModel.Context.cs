@@ -99,5 +99,49 @@ namespace EasyLibraryApplication.WPF.Model
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Library>("GetAllLibrarysForUserNotRegistered", mergeOption, userIdParameter);
         }
+    
+        public virtual ObjectResult<Book> FindBookForUser(Nullable<int> userId)
+        {
+            var userIdParameter = userId.HasValue ?
+                new ObjectParameter("UserId", userId) :
+                new ObjectParameter("UserId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Book>("FindBookForUser", userIdParameter);
+        }
+    
+        public virtual ObjectResult<Book> FindBookForUser(Nullable<int> userId, MergeOption mergeOption)
+        {
+            var userIdParameter = userId.HasValue ?
+                new ObjectParameter("UserId", userId) :
+                new ObjectParameter("UserId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Book>("FindBookForUser", mergeOption, userIdParameter);
+        }
+    
+        public virtual ObjectResult<Book> FindBookForUserName(Nullable<int> userId, string name)
+        {
+            var userIdParameter = userId.HasValue ?
+                new ObjectParameter("UserId", userId) :
+                new ObjectParameter("UserId", typeof(int));
+    
+            var nameParameter = name != null ?
+                new ObjectParameter("Name", name) :
+                new ObjectParameter("Name", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Book>("FindBookForUserName", userIdParameter, nameParameter);
+        }
+    
+        public virtual ObjectResult<Book> FindBookForUserName(Nullable<int> userId, string name, MergeOption mergeOption)
+        {
+            var userIdParameter = userId.HasValue ?
+                new ObjectParameter("UserId", userId) :
+                new ObjectParameter("UserId", typeof(int));
+    
+            var nameParameter = name != null ?
+                new ObjectParameter("Name", name) :
+                new ObjectParameter("Name", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Book>("FindBookForUserName", mergeOption, userIdParameter, nameParameter);
+        }
     }
 }

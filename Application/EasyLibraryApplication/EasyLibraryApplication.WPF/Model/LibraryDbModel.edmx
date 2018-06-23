@@ -396,6 +396,17 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="BookName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="UserId" Type="int" Mode="In" />
+          <Parameter Name="Name" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="FindBookForUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="UserId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="FindBookForUserName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="UserId" Type="int" Mode="In" />
+          <Parameter Name="Name" Type="varchar" Mode="In" />
+        </Function>
         <Function Name="GetAllLibrarysForUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="UserId" Type="int" Mode="In" />
         </Function>
@@ -404,6 +415,13 @@
         </Function>
         <Function Name="GetAllLoansForUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="UserId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GetBooksForUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="UserId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GetBooksForUserAndName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="UserId" Type="int" Mode="In" />
+          <Parameter Name="Name" Type="varchar" Mode="In" />
         </Function>
         <Function Name="ReserveBook" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="UserId" Type="int" Mode="In" />
@@ -995,6 +1013,13 @@
           <FunctionImport Name="GetAllLibrarysForUserNotRegistered" EntitySet="Libraries" ReturnType="Collection(DbModel.Library)">
           <Parameter Name="UserId" Mode="In" Type="Int32" />
           </FunctionImport>
+          <FunctionImport Name="FindBookForUser" EntitySet="Books" ReturnType="Collection(DbModel.Book)">
+            <Parameter Name="UserId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="FindBookForUserName" EntitySet="Books" ReturnType="Collection(DbModel.Book)">
+            <Parameter Name="UserId" Mode="In" Type="Int32" />
+            <Parameter Name="Name" Mode="In" Type="String" />
+          </FunctionImport>
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
@@ -1167,6 +1192,10 @@
           <FunctionImportMapping FunctionImportName="GetAllLibrarysForUser" FunctionName="DbModel.Store.GetAllLibrarysForUser">
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="GetAllLibrarysForUserNotRegistered" FunctionName="DbModel.Store.GetAllLibrarysForUserNotRegistered">
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="FindBookForUser" FunctionName="DbModel.Store.FindBookForUser">
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="FindBookForUserName" FunctionName="DbModel.Store.FindBookForUserName">
           </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>

@@ -13,24 +13,26 @@
                 <Image Height="120" Width="80" Source="{Binding Signatory}"></Image>
                 <Grid VerticalAlignment="Center">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
                         <ColumnDefinition/>
                         <ColumnDefinition/>
                         <ColumnDefinition/>
+                        <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <Label VerticalAlignment="Center" FontWeight="Bold" Content="Naslov:"></Label>
+                    <Label VerticalAlignment="Center" FontWeight="Bold" Grid.Row="0" Grid.Column="0" Content="Naslov:"></Label>
                     <Label VerticalAlignment="Center" FontWeight="Bold" Grid.Row="1" Grid.Column="0" Content="ISBN:"></Label>
+                    <Label VerticalAlignment="Center" FontWeight="Bold" Grid.Row="0" Grid.Column="2" Content="Godina izdanja:"></Label>
+                    <Label VerticalAlignment="Center" FontWeight="Bold" Grid.Row="1" Grid.Column="2" Content="Izdanje"></Label>
                     <TextBlock VerticalAlignment="Center" Grid.Row="0" Grid.Column="1" Width="120" Text="{Binding Title}"></TextBlock>
                     <TextBlock VerticalAlignment="Center" Grid.Row="1" Grid.Column="1" Width="120" Text="{Binding ISBN}"></TextBlock>
-                    <Label Grid.Column="2"  Grid.Row ="0"  VerticalAlignment="Center" FontWeight="Bold" Content="Izdanje:"></Label>
-                    <Label VerticalAlignment="Center" FontWeight="Bold" Grid.Row="1" Grid.Column="2" Content="Godina izdanja:"></Label>
-                    <TextBlock VerticalAlignment="Center" Grid.Row="0" Grid.Column="3" x:Name="Name" Width="120" Text="{Binding Edition}"></TextBlock>
-                    <TextBlock VerticalAlignment="Center" Grid.Row="1" Grid.Column="3" x:Name="LastName" Width="120" Text="{Binding PublicationYear}"></TextBlock>
+                    <TextBlock VerticalAlignment="Center" Grid.Row="0" Grid.Column="3" Width="120" Text="{Binding PublicationYear}"></TextBlock>
+                    <TextBlock VerticalAlignment="Center" Grid.Row="1" Grid.Column="3" Width="120" Text="{Binding Edition}"></TextBlock>
                 </Grid>
             </StackPanel>
         </DataTemplate>
@@ -51,7 +53,9 @@
             <Button Grid.Column="1" Margin="10.4,20,176,20" Content="Pretrazi" Command="{Binding SearchEvent}"></Button>
         </Grid>
 
-        <ListBox Grid.Row="1" Margin="10,0,10,71" SelectionMode="Single" ItemTemplate="{StaticResource BookTemplate}" ItemsSource="{Binding BooksCollectionViewSource.View}" SelectedItem="{Binding SelectedItem}" Grid.RowSpan="2"></ListBox>
-        <Button Grid.Row="2" Margin="436,20.2,10,20" Content="Izaberi knjigu"></Button>
+        <ListBox Grid.Row="1" Margin="10,0,10,71" SelectionMode="Single" ItemTemplate="{StaticResource BookTemplate}" ItemsSource="{Binding BooksCollectionViewSource.View}" SelectedItem="{Binding SelectedItem}" Grid.RowSpan="2">
+            
+            </ListBox>
+        <Button Grid.Row="2" Margin="436,20.2,10,20" Content="Odaberi knjigu" Command="{Binding ChooseBookEvent}"></Button>
     </Grid>
 </Page>

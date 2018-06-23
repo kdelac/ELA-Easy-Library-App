@@ -10,6 +10,9 @@ using PasswordHash;
 
 namespace EasyLibraryApplication.WPF.ViewModel
 {
+    /// <summary>
+    /// Klasa koja služi za spajanje pogleda za prijavu i modela, te za izradu poslovne logike
+    /// </summary>
     class LoginViewModel : INotifyPropertyChanged
     {
         #region Private Fields
@@ -18,11 +21,12 @@ namespace EasyLibraryApplication.WPF.ViewModel
         private Login loginView;
 
         #endregion
-        
+
         #region Constructor
 
         /// <summary>
-        /// Konstruktor klase 
+        /// Konstruktor koji stvara četiri objekta od kojih su dva objekt za događaj prilikom pritiska gumba.
+        /// Stvaranje context objekta. Stvaranje novog korisnika. Dodjeljivanje pogleda.
         /// </summary>
         public LoginViewModel(Login login)
         {
@@ -69,7 +73,7 @@ namespace EasyLibraryApplication.WPF.ViewModel
         #region ChangeViews
 
         /// <summary>
-        /// Metoda koja prebacuje korisnika s ekrana za prijavu na korisnikov ekran.
+        /// Metoda koja prebacuje korisnika s pogleda za prijavu na korisnikov pogled.
         /// </summary>
         public void ChangeToUserView()
         {
@@ -79,7 +83,7 @@ namespace EasyLibraryApplication.WPF.ViewModel
         }
 
         /// <summary>
-        /// Metoda koja prebacuje korisnika s ekrana za prijavu na administratorov ekran.
+        /// Metoda koja prebacuje korisnika s pogleda za prijavu na administratorov pogled.
         /// </summary>
         public void ChangeToAdminView()
         {
@@ -88,6 +92,9 @@ namespace EasyLibraryApplication.WPF.ViewModel
             AdminLayoutView.Show();
         }
 
+        /// <summary>
+        /// Metoda koja prebacuje korisnika s pogleda za prijavu na pogled za registraciju.
+        /// </summary>
         public void ShowRegistrationView()
         {
             RegistrationView = new RegistrationView();
@@ -99,7 +106,7 @@ namespace EasyLibraryApplication.WPF.ViewModel
         #region CheckUsers
 
         /// <summary>
-        ///  
+        ///  Metoda koja provjeraca dali korisnik postoji u bazi
         /// </summary>
         public void CheckUser()
         { 
@@ -144,7 +151,10 @@ namespace EasyLibraryApplication.WPF.ViewModel
         #region PropertyChangedEventHandler
 
         public event PropertyChangedEventHandler PropertyChanged;
-
+        /// <summary>
+        /// Metoda zadužena za implementaciju INotifyPropertyChanged sučelja
+        /// </summary>
+        /// <param name="propertyName"></param>
         [NotifyPropertyChangedInvocator]
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
