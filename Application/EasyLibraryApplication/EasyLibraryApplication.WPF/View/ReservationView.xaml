@@ -31,7 +31,7 @@
                     </ListBox.ItemTemplate>
                 </ListBox>
             </WrapPanel>
-            <Button Width="100" Height="20" Content="Rezerviraj knjigu"  />
+            <Button Width="100" Height="20" Content="Rezerviraj knjigu" Command="{Binding ReservationEvent}"  />
         </StackPanel>
     </Grid>
 

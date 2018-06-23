@@ -10,6 +10,13 @@ using System.Threading.Tasks;
 using System.Windows.Data;
 using EasyLibraryApplication.WPF.Annotations;
 using EasyLibraryApplication.WPF.Model;
+using QrCodeGenerator;
+using EmailGenerator;
+using System.Drawing;
+using System.Threading;
+using System.Windows;
+using EasyLibraryApplication.WPF.Commands;
+using Newtonsoft.Json;
 
 namespace EasyLibraryApplication.WPF.ViewModel
 {
@@ -29,6 +36,23 @@ namespace EasyLibraryApplication.WPF.ViewModel
         public CollectionViewSource LibraryCollectionViewSource { get; private set; }
         private LibraryEntities ctx;
 
+        
+        public static User User { get; set; }
+
+        private Email email;
+        private QrCode qrCode;
+        private Reservation reservation;
+
+        #region Commands
+
+        public ReservationCommand ReservationEvent{ get; set; }
+
+        #endregion
+
+
+        #region selectedBook
+
+        public static Book Book { get; set; }
         private Book selectedBook;
 
         public Book SelectedBook
@@ -40,6 +64,9 @@ namespace EasyLibraryApplication.WPF.ViewModel
                 OnPropertyChanged(nameof(SelectedBook));
             }
         }
+
+        #endregion
+
 
         #region SelectedLibrary
 
@@ -55,12 +82,15 @@ namespace EasyLibraryApplication.WPF.ViewModel
             }
         }
 
-
+        /// <summary>
+        /// KOnstruktor view model-a
+        /// </summary>
         #endregion
-        public ReservationViewModel(/*Book book*/)
+        public ReservationViewModel()
         {
             LibraryCollectionViewSource = new CollectionViewSource();
             LoadData();
+            ReservationEvent = new ReservationCommand(this);
      
         }
 
@@ -82,11 +112,43 @@ namespace EasyLibraryApplication.WPF.ViewModel
             ctx = new LibraryEntities();
             ctx.Libraries.Load();
             ctx.Books.Load();
-            LibraryCollectionViewSource.Source = new ObservableCollection<Library>(ctx.GetAllLibrariesWhereIsBookFreeForUser("1234",11).ToList()); 
+            LibraryCollectionViewSource.Source = new ObservableCollection<Library>(ctx.GetAllLibrariesWhereIsBookFreeForUser("1234",20).ToList()); 
              
             LibraryCollectionViewSource.SortDescriptions.Add(new SortDescription("Name", ListSortDirection.Ascending));    
         }
 
+        public void CreateReservation()
+        {
+            reservation = new Reservation();
+            reservation.UserId = 20;
+            reservation.BookId = 1;
+            reservation.ReservationDate = DateTime.Now;
+            reservation.EndReservationDate = DateTime.Now.Add(new TimeSpan(3, 0, 0, 0));
+        
+        }
+        public Bitmap CreateQrPicture()
+        {
+            
+            string json = JsonConvert.SerializeObject(reservation);
+            qrCode = new QrCode(json);
+            return qrCode.GetQrCodeBitmap();
+        }
+        public async void SendEmail()
+        {
+            CreateReservation();
+            email = new Email("kristijan.mihaljinac@gmail.com", "kristijan.mihaljinac@gmail.com");
+            await email.SendEmail(CreateQrPicture(), "ovo je jebenica");
+            
+        }
 
+        public async void SaveReservationToDatabase()
+        {
+            CreateReservation();
+            /*ctx.Books
+                .Where(book => book.LibraryId == selectedLibrary.Id && book.ISBN == SelectedBook.ISBN)
+                .Select(book => book.Id).FirstOrDefault();*/
+            ctx.Reservations.Add(reservation);
+            await ctx.SaveChangesAsync();
+        }
     }
 }
