@@ -47,8 +47,8 @@
                 <ColumnDefinition Width="11*"/>
                 <ColumnDefinition Width="9*"/>
             </Grid.ColumnDefinitions>
-            <TextBox Grid.Column="0" Margin="10,20,9.6,20" Text="{Binding SelectedUser.Id, Mode=TwoWay}"/>
-            <Button Grid.Column="1" Margin="10.4,20,176,20" Content="Pretrazi"></Button>
+            <TextBox Grid.Column="0" Margin="10,20,9.6,20" Text="{Binding Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            <Button Grid.Column="1" Margin="10.4,20,176,20" Content="Pretrazi" Command="{Binding SearchEvent}"></Button>
         </Grid>
 
         <ListBox Grid.Row="1" Margin="10,0,10,71" SelectionMode="Single" ItemTemplate="{StaticResource BookTemplate}" ItemsSource="{Binding BooksCollectionViewSource.View}" SelectedItem="{Binding SelectedItem}" Grid.RowSpan="2"></ListBox>

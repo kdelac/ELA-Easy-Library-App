@@ -16,7 +16,7 @@ namespace EasyLibraryApplication.WPF.ViewModel
 {
     class RegisterToLibraryViewModel : INotifyPropertyChanged
     {
-        public static int UserID { get; set; }
+        public static User User { get; set; }
         public CollectionViewSource RegistredLibrarCollection { get; private set; }
         public CollectionViewSource NotRegistredLibrarCollection { get; private set; }
         public RegisterToLibraryCommand RegisterToLibraryEvent { get; set; }
@@ -45,8 +45,8 @@ namespace EasyLibraryApplication.WPF.ViewModel
         {
             ctx = new LibraryEntities();
             ctx.Libraries.Load();
-            RegistredLibrarCollection.Source = ctx.GetAllLibrarysForUser(UserID);
-            NotRegistredLibrarCollection.Source = ctx.GetAllLibrarysForUserNotRegistered(UserID);
+            RegistredLibrarCollection.Source = ctx.GetAllLibrarysForUser(User.Id);
+            NotRegistredLibrarCollection.Source = ctx.GetAllLibrarysForUserNotRegistered(User.Id);
         }
 
         private void LoadData()
@@ -67,7 +67,7 @@ namespace EasyLibraryApplication.WPF.ViewModel
                 LibraryMember libraryMember = new LibraryMember()
                 {
                     LibraryId = SelectedItem.Id,
-                    UserId = UserID,
+                    UserId = User.Id,
                     MembershipStartDay = DateTime.Now
                 };
                 ctx.LibraryMembers.Add(libraryMember);

@@ -67,10 +67,12 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Commands\ChooseBookCommand.cs" />
     <Compile Include="Commands\LoginCommand.cs" />
     <Compile Include="Commands\RegisterCommand.cs" />
     <Compile Include="Commands\RegisterToLibraryCommand.cs" />
     <Compile Include="Commands\RegistrationCommand.cs" />
+    <Compile Include="Commands\SearchCommand.cs" />
     <Compile Include="Model\Administrator.cs">
       <DependentUpon>LibraryDbModel.tt</DependentUpon>
     </Compile>

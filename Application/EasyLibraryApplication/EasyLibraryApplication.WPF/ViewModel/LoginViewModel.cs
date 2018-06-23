@@ -130,7 +130,8 @@ namespace EasyLibraryApplication.WPF.ViewModel
                     MessageBox.Show("Pogresna lozinka");
                 }
 
-                RegisterToLibraryViewModel.UserID = user.Id;
+                RegisterToLibraryViewModel.User = user;
+                UserBooksViewModel.User = user;
             }
             else
             {
