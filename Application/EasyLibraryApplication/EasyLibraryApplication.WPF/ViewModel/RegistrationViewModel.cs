@@ -122,7 +122,8 @@ namespace EasyLibraryApplication.WPF.ViewModel
                             {
                                 LibraryId = SelectedItem.Id,
                                 MembershipStartDay = DateTime.Now,
-                                UserId = selectedUser.Id
+                                UserId = selectedUser.Id,
+                                MembershipEndDay = DateTime.Now.AddYears(1) 
                             };
                             ctx.LibraryMembers.Add(libraryMember);
                             ctx.SaveChanges();
