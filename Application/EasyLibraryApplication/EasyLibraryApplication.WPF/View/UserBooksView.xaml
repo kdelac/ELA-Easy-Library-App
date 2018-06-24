@@ -29,7 +29,7 @@
                     <Label VerticalAlignment="Center" FontWeight="Bold" Grid.Row="1" Grid.Column="0" Content="ISBN:"></Label>
                     <Label VerticalAlignment="Center" FontWeight="Bold" Grid.Row="0" Grid.Column="2" Content="Godina izdanja:"></Label>
                     <Label VerticalAlignment="Center" FontWeight="Bold" Grid.Row="1" Grid.Column="2" Content="Izdanje"></Label>
-                    <TextBlock VerticalAlignment="Center" Grid.Row="0" Grid.Column="1" Width="120" Text="{Binding Title}"></TextBlock>
+                    <TextBlock VerticalAlignment="Center" Grid.Row="0" Grid.Column="1" Width="120" Text="{Binding Title}" TextWrapping="Wrap"></TextBlock>
                     <TextBlock VerticalAlignment="Center" Grid.Row="1" Grid.Column="1" Width="120" Text="{Binding ISBN}"></TextBlock>
                     <TextBlock VerticalAlignment="Center" Grid.Row="0" Grid.Column="3" Width="120" Text="{Binding PublicationYear}"></TextBlock>
                     <TextBlock VerticalAlignment="Center" Grid.Row="1" Grid.Column="3" Width="120" Text="{Binding Edition}"></TextBlock>
