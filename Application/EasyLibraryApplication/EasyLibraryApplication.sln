@@ -5,7 +5,6 @@ VisualStudioVersion = 15.0.27428.2015
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyLibraryApplication.WPF", "EasyLibraryApplication.WPF\EasyLibraryApplication.WPF.csproj", "{17C717B5-B512-4D88-901D-45D336A2B3D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QRCodeGenerator", "QRCodeGenerator\QRCodeGenerator.csproj", "{A4DC4756-38A6-466D-A08C-DF9783E3AE9C}"
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PasswordHash", "PasswordHash\PasswordHash.csproj", "{34445E79-8F65-47E6-93AF-82FDB5419AA4}"
 EndProject
 Global
