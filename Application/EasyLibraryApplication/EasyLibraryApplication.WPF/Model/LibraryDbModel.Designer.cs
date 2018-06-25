@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\krist\Documents\Podaci\Fakultet\PI\Projekt\Application\EasyLibraryApplication\EasyLibraryApplication.WPF\Model\LibraryDbModel.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Faks\Programsko inžinjerstvo\Projekt\Application\EasyLibraryApplication\EasyLibraryApplication.WPF\Model\LibraryDbModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

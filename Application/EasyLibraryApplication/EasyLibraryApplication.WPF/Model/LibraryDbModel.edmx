@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="DbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Administrators">
           <Key>
             <PropertyRef Name="LibraryId" />
@@ -20,7 +20,7 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="20" />
           <Property Name="Surname" Type="nvarchar" MaxLength="30" />
           <Property Name="LinkWiki" Type="nvarchar" MaxLength="50" />
@@ -31,13 +31,13 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Signatory" Type="nvarchar" MaxLength="30" />
+          <Property Name="Signatory" Type="nvarchar(max)" />
           <Property Name="Title" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="ISBN" Type="nvarchar" MaxLength="30" Nullable="false" />
           <Property Name="Pages" Type="int" />
           <Property Name="Edition" Type="nvarchar" MaxLength="5" />
           <Property Name="PublicationYear" Type="int" />
-          <Property Name="Description" Type="nvarchar" MaxLength="100" />
+          <Property Name="Description" Type="nvarchar(max)" />
           <Property Name="LibraryId" Type="int" Nullable="false" />
           <Property Name="CategoryId" Type="int" />
           <Property Name="LanguageId" Type="int" />
@@ -396,8 +396,32 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="BookName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="UserId" Type="int" Mode="In" />
+          <Parameter Name="Name" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="FindBookForUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="UserId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="FindBookForUserName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="UserId" Type="int" Mode="In" />
+          <Parameter Name="Name" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="GetAllLibrarysForUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="UserId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GetAllLibrarysForUserNotRegistered" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="UserId" Type="int" Mode="In" />
+        </Function>
         <Function Name="GetAllLoansForUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="UserId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GetBooksForUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="UserId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GetBooksForUserAndName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="UserId" Type="int" Mode="In" />
+          <Parameter Name="Name" Type="varchar" Mode="In" />
         </Function>
         <Function Name="ReserveBook" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="UserId" Type="int" Mode="In" />
@@ -492,8 +516,7 @@
             <End Role="Sections" EntitySet="Sections" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -526,13 +549,13 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Signatory" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Signatory" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="ISBN" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Pages" Type="Int32" />
           <Property Name="Edition" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
           <Property Name="PublicationYear" Type="Int32" />
-          <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="LibraryId" Type="Int32" Nullable="false" />
           <Property Name="CategoryId" Type="Int32" />
           <Property Name="LanguageId" Type="Int32" />
@@ -977,21 +1000,27 @@
             <End Role="Authors" EntitySet="Authors" />
             <End Role="Books" EntitySet="Books" />
           </AssociationSet>
-          <FunctionImport Name="GetAllLoansForUser" ReturnType="Collection(DbModel.GetAllLoansForUser_Result)">
-            <Parameter Name="UserId" Mode="In" Type="Int32" />
+          <FunctionImport Name="GetAllLoansForUser">
+          <Parameter Name="UserId" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="ReserveBook">
             <Parameter Name="UserId" Mode="In" Type="Int32" />
             <Parameter Name="BookId" Mode="In" Type="Int32" />
           </FunctionImport>
+          <FunctionImport Name="GetAllLibrarysForUser" EntitySet="Libraries" ReturnType="Collection(DbModel.Library)">
+          <Parameter Name="UserId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="GetAllLibrarysForUserNotRegistered" EntitySet="Libraries" ReturnType="Collection(DbModel.Library)">
+          <Parameter Name="UserId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="FindBookForUser" EntitySet="Books" ReturnType="Collection(DbModel.Book)">
+            <Parameter Name="UserId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="FindBookForUserName" EntitySet="Books" ReturnType="Collection(DbModel.Book)">
+            <Parameter Name="UserId" Mode="In" Type="Int32" />
+            <Parameter Name="Name" Mode="In" Type="String" />
+          </FunctionImport>
         </EntityContainer>
-        <ComplexType Name="GetAllLoansForUser_Result">
-          <Property Type="Int32" Name="UserId" Nullable="false" />
-          <Property Type="Int32" Name="CopyId" Nullable="false" />
-          <Property Type="DateTime" Name="LoanDate" Nullable="false" />
-          <Property Type="DateTime" Name="EndLoanDate" Nullable="true" />
-          <Property Type="Double" Name="OverdueAmount" Nullable="true" />
-        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1158,17 +1187,16 @@
             </EndProperty>
           </AssociationSetMapping>
           <FunctionImportMapping FunctionImportName="GetAllLoansForUser" FunctionName="DbModel.Store.GetAllLoansForUser">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="DbModel.GetAllLoansForUser_Result">
-                <ScalarProperty Name="UserId" ColumnName="UserId" />
-                <ScalarProperty Name="CopyId" ColumnName="CopyId" />
-                <ScalarProperty Name="LoanDate" ColumnName="LoanDate" />
-                <ScalarProperty Name="EndLoanDate" ColumnName="EndLoanDate" />
-                <ScalarProperty Name="OverdueAmount" ColumnName="OverdueAmount" />
-              </ComplexTypeMapping>
-            </ResultMapping>
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="ReserveBook" FunctionName="DbModel.Store.ReserveBook" />
+          <FunctionImportMapping FunctionImportName="GetAllLibrarysForUser" FunctionName="DbModel.Store.GetAllLibrarysForUser">
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetAllLibrarysForUserNotRegistered" FunctionName="DbModel.Store.GetAllLibrarysForUserNotRegistered">
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="FindBookForUser" FunctionName="DbModel.Store.FindBookForUser">
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="FindBookForUserName" FunctionName="DbModel.Store.FindBookForUserName">
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
