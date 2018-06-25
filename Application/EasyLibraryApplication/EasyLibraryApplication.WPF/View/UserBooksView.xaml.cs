@@ -8,10 +8,12 @@ namespace EasyLibraryApplication.WPF.View
     /// </summary>
     public partial class UserBooksView : Page
     {
+        private UserBooksViewModel userBooksViewModel;
         public UserBooksView()
         {
             InitializeComponent();
-            this.DataContext = new UserBooksViewModel();
+            userBooksViewModel = new UserBooksViewModel();
+            this.DataContext = userBooksViewModel;
         }
     }
 }

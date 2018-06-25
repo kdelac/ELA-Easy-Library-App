@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="EasyLibraryApplication.WPF.Commands.LoginCommand">
+    <Position X="10.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\LoginCommand.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="viewModel" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="EasyLibraryApplication.WPF.View.Login">
+    <Position X="7.25" Y="0.5" Width="1.5" />
+    <AssociationLine Name="loginViewModel" Type="EasyLibraryApplication.WPF.ViewModel.LoginViewModel">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.005" Y="0.463" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>View\LoginView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="loginViewModel" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="EasyLibraryApplication.WPF.ViewModel.LoginViewModel">
+    <Position X="7.25" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAABAAAAAAAIAAAAgAigAgAAAAAIHAAAQAQAAA=</HashCode>
+      <FileName>ViewModel\LoginViewModel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="ctx" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="EasyLibraryApplication.WPF.Model.LibraryEntities" Collapsed="true">
+    <Position X="7.25" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAACAACEIAAAAEEAAEgAAAkARAEAAAAUAAMABBAAQ=</HashCode>
+      <FileName>Model\LibraryDbModel.Context.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EasyLibraryApplication.WPF.View.RegiserToLibraryView">
+    <Position X="0.5" Y="5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\RegiserToLibraryView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="registerToLibraryViewModel" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="EasyLibraryApplication.WPF.ViewModel.RegisterToLibraryViewModel">
+    <Position X="3.5" Y="6.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAABQAAAAIAEAAAAAgAAMAAAAIBAgAAAQAAA=</HashCode>
+      <FileName>ViewModel\RegisterToLibraryViewModel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="ctx" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="EasyLibraryApplication.WPF.View.RegistrationView">
+    <Position X="13.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>View\RegistrationView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="registrationViewModel" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="EasyLibraryApplication.WPF.ViewModel.RegistrationViewModel">
+    <Position X="10.25" Y="6.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>gAEAAAAAAABwQAAAIAAAAAAAgAAAAAAAIJAAAACSAAA=</HashCode>
+      <FileName>ViewModel\RegistrationViewModel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="ctx" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="EasyLibraryApplication.WPF.View.UserBooksView">
+    <Position X="4.25" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>View\UserBooksView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="userBooksViewModel" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="EasyLibraryApplication.WPF.ViewModel.UserBooksViewModel">
+    <Position X="7.25" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAABQAAAAIAAAAAQAkAAEAAAAIDAAAgAwAAA=</HashCode>
+      <FileName>ViewModel\UserBooksViewModel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="ctx" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="EasyLibraryApplication.WPF.Commands.ChooseBookCommand">
+    <Position X="10.25" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\ChooseBookCommand.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="viewModel" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="EasyLibraryApplication.WPF.Commands.RegisterCommand">
+    <Position X="4.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\RegisterCommand.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="viewModel" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="EasyLibraryApplication.WPF.Commands.RegisterToLibraryCommand">
+    <Position X="0.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\RegisterToLibraryCommand.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="viewModel" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="EasyLibraryApplication.WPF.Commands.RegistrationCommand">
+    <Position X="13.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\RegistrationCommand.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="viewModel" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="EasyLibraryApplication.WPF.Commands.SearchCommand">
+    <Position X="4.25" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\SearchCommand.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="viewModel" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

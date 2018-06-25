@@ -173,6 +173,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="ClassDiagram.cd" />
     <None Include="HelperFiles\KorisnickiPogled.chm" />
     <None Include="HelperFiles\Prijava.chm" />
     <None Include="HelperFiles\Registracija.chm" />

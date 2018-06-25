@@ -10,10 +10,12 @@ namespace EasyLibraryApplication.WPF.View
     /// </summary>
     public partial class Login : Window
     {
+        private LoginViewModel loginViewModel = null;
         public Login()
         {
             InitializeComponent();
-            this.DataContext = new LoginViewModel(this);
+            loginViewModel = new LoginViewModel(this);
+            this.DataContext = loginViewModel;
             KeyDown += Login_KeyDown;
         }
 

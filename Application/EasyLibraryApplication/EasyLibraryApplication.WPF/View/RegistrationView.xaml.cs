@@ -10,10 +10,12 @@ namespace EasyLibraryApplication.WPF.View
     /// </summary>
     public partial class RegistrationView : Window
     {
+        private RegistrationViewModel registrationViewModel;
         public RegistrationView()
         {
             InitializeComponent();
-            this.DataContext = new RegistrationViewModel(this);
+            registrationViewModel = new RegistrationViewModel(this);
+            this.DataContext = registrationViewModel;
             KeyDown += RegistrationView_KeyDown;
         }
 

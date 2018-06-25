@@ -8,10 +8,12 @@ namespace EasyLibraryApplication.WPF.View
     /// </summary>
     public partial class RegiserToLibraryView : Page
     {
+        private RegisterToLibraryViewModel registerToLibraryViewModel;
         public RegiserToLibraryView()
         {
             InitializeComponent();
-            this.DataContext = new RegisterToLibraryViewModel();
+            registerToLibraryViewModel = new RegisterToLibraryViewModel();
+            this.DataContext = registerToLibraryViewModel;
         }
     }
 }
