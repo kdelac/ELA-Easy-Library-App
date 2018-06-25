@@ -1,0 +1,9 @@
+diff a/Application/EasyLibraryApplication/EasyLibraryApplication.sln b/Application/EasyLibraryApplication/EasyLibraryApplication.sln	(rejected hunks)
+@@ -5,6 +5,7 @@
+  MinimumVisualStudioVersion = 10.0.40219.1
+  Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyLibraryApplication.WPF", "EasyLibraryApplication.WPF\EasyLibraryApplication.WPF.csproj", "{17C717B5-B512-4D88-901D-45D336A2B3D3}"
+  EndProject
+++<<<<<<< HEAD
+ +Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QrCodeGenerator", "QrCodeGenerator\QrCodeGenerator.csproj", "{7E919E4A-C8D8-4DEF-83EE-AAE6A8E8F958}"
+ +EndProject
+ +Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmailGenerator", "EmailGenerator\EmailGenerator.csproj", "{1F06D96F-72CB-401B-9FB4-30693BD3E29E}"
