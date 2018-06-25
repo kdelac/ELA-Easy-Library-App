@@ -3,10 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:EasyLibraryApplication.WPF.View"
-        xmlns:data ="clr-namespace:EasyLibraryApplication.WPF.ViewModel"
         mc:Ignorable="d"
-        Title="RegistrationView" Height="500" Width="700"  Background="#2488e0" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
+        Title="Registracija" Height="500" Width="700"  Background="#2488e0" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
     <Window.Resources>
         <DataTemplate x:Key="LibraryTemplate" >
             <StackPanel Margin="0" Orientation="Horizontal" Grid.Row="0">
