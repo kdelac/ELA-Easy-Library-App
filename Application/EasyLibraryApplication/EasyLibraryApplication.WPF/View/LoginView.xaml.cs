@@ -1,16 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
+﻿using System.Windows;
+using System.Windows.Forms;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using EasyLibraryApplication.WPF.ViewModel;
 
 namespace EasyLibraryApplication.WPF.View
@@ -24,6 +14,15 @@ namespace EasyLibraryApplication.WPF.View
         {
             InitializeComponent();
             this.DataContext = new LoginViewModel(this);
+            KeyDown += Login_KeyDown;
+        }
+
+        private void Login_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            if (e.Key == Key.F1)
+            {
+                Help.ShowHelp(null, "file://C:\\Faks\\Programsko inžinjerstvo\\Projekt\\Application\\EasyLibraryApplication\\EasyLibraryApplication.WPF\\HelperFiles\\Prijava.chm");
+            }
         }
     }
 }

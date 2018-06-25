@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
-using EasyLibraryApplication.WPF.View;
 using EasyLibraryApplication.WPF.ViewModel;
 
 namespace EasyLibraryApplication.WPF.Commands
@@ -13,6 +8,10 @@ namespace EasyLibraryApplication.WPF.Commands
     {
         private LoginViewModel viewModel;
 
+        /// <summary>
+        /// Konstruktor u kojemu se predaje viewModel kako bi se mogle izvršit metode iz zadanog viewModela
+        /// </summary>
+        /// <param name="vModel"></param>
         public RegisterCommand(LoginViewModel vModel)
         {
             viewModel = vModel;
@@ -23,6 +22,10 @@ namespace EasyLibraryApplication.WPF.Commands
             return true;
         }
 
+        /// <summary>
+        /// Metoda koja se izvršava prilikom pritiska na gumb, te se izvršava metoda iz viewModela
+        /// </summary>
+        /// <param name="parameter"></param>
         public void Execute(object parameter)
         {
             viewModel.ShowRegistrationView();

@@ -1,18 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
+using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using EasyLibraryApplication.WPF.Model;
-using EasyLibraryApplication.WPF.ViewModel;
+using MessageBox = System.Windows.MessageBox;
 
 namespace EasyLibraryApplication.WPF.View
 {
@@ -27,6 +20,15 @@ namespace EasyLibraryApplication.WPF.View
             InitializeComponent();
             uiActionRec1.Fill = Brushes.LightSkyBlue;
             uiFrame.Source = new Uri("UserBooksView.xaml", UriKind.Relative);
+            KeyDown += LayoutView_KeyDown;
+        }
+
+        private void LayoutView_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            if (e.Key == Key.F1)
+            {
+                Help.ShowHelp(null, "file://C:\\Faks\\Programsko inžinjerstvo\\Projekt\\Application\\EasyLibraryApplication\\EasyLibraryApplication.WPF\\HelperFiles\\KorisnickiPogled.chm");
+            }
         }
 
         private void UiActionOption1_OnClick(object sender, RoutedEventArgs e)
@@ -51,6 +53,13 @@ namespace EasyLibraryApplication.WPF.View
             uiActionRec2.Fill = Brushes.AliceBlue;
             uiActionRec3.Fill = Brushes.LightSkyBlue;
             uiFrame.Source = new Uri("RegiserToLibraryView.xaml", UriKind.Relative);
+        }
+
+        private void UiActionLogoOff_OnClick(object sender, RoutedEventArgs e)
+        {
+            Login login = new Login();
+            this.Close();
+            login.Show();
         }
     }
 }

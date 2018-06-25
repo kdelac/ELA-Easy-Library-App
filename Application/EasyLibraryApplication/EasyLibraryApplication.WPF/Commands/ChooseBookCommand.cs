@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 using EasyLibraryApplication.WPF.ViewModel;
 
@@ -12,6 +8,10 @@ namespace EasyLibraryApplication.WPF.Commands
     {
         private UserBooksViewModel viewModel;
 
+        /// <summary>
+        /// Konstruktor u kojemu se predaje viewModel kako bi se mogle izvršit metode iz zadanog viewModela
+        /// </summary>
+        /// <param name="vModel"></param>
         public ChooseBookCommand(UserBooksViewModel vModel)
         {
             viewModel = vModel;

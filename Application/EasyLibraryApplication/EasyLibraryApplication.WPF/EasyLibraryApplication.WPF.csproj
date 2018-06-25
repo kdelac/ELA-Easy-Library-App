@@ -45,6 +45,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -172,6 +173,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="HelperFiles\KorisnickiPogled.chm" />
+    <None Include="HelperFiles\Prijava.chm" />
+    <None Include="HelperFiles\Registracija.chm" />
     <None Include="Model\LibraryDbModel.edmx.diagram">
       <DependentUpon>LibraryDbModel.edmx</DependentUpon>
     </None>
@@ -242,5 +246,6 @@
       <LastGenOutput>LibraryDbModel.cs</LastGenOutput>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
