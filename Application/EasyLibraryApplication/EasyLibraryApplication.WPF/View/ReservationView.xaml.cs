@@ -11,17 +11,19 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using EasyLibraryApplication.WPF.ViewModel;
 
 namespace EasyLibraryApplication.WPF.View
 {
     /// <summary>
-    /// Interaction logic for AdminLayoutView.xaml
+    /// Interaction logic for ReservationView.xaml
     /// </summary>
-    public partial class AdminLayoutView : Window
+    public partial class ReservationView : Window
     {
-        public AdminLayoutView()
+        public ReservationView()
         {
             InitializeComponent();
+            this.DataContext = new ReservationViewModel();
         }
     }
 }

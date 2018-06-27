@@ -34,15 +34,28 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EmailGenerator">
+      <HintPath>..\EmailGenerator\bin\Debug\EmailGenerator.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PasswordHash">
+      <HintPath>..\PasswordHash\bin\Debug\PasswordHash.dll</HintPath>
+    </Reference>
+    <Reference Include="QrCodeGenerator">
+      <HintPath>..\QrCodeGenerator\bin\Debug\QrCodeGenerator.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Windows.Forms" />
@@ -73,6 +86,7 @@
     <Compile Include="Commands\RegisterCommand.cs" />
     <Compile Include="Commands\RegisterToLibraryCommand.cs" />
     <Compile Include="Commands\RegistrationCommand.cs" />
+    <Compile Include="Commands\ReservationCommand.cs" />
     <Compile Include="Commands\SearchCommand.cs" />
     <Compile Include="Model\Administrator.cs">
       <DependentUpon>LibraryDbModel.tt</DependentUpon>
@@ -87,6 +101,21 @@
       <DependentUpon>LibraryDbModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Copy.cs">
+      <DependentUpon>LibraryDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\FindBookForUserName_Result.cs">
+      <DependentUpon>LibraryDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\FindBookForUser_Result.cs">
+      <DependentUpon>LibraryDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\GetAllLibrariesWhereIsBookFreeForUser_Result.cs">
+      <DependentUpon>LibraryDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\GetAllLibrarysForUserNotRegistered_Result.cs">
+      <DependentUpon>LibraryDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\GetAllLibrarysForUser_Result.cs">
       <DependentUpon>LibraryDbModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Language.cs">
@@ -135,6 +164,7 @@
     <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="ViewModel\RegisterToLibraryViewModel.cs" />
     <Compile Include="ViewModel\RegistrationViewModel.cs" />
+    <Compile Include="ViewModel\ReservationViewModel.cs" />
     <Compile Include="ViewModel\UserBooksViewModel.cs" />
     <Compile Include="View\AdminLayoutView.xaml.cs">
       <DependentUpon>AdminLayoutView.xaml</DependentUpon>
@@ -147,6 +177,9 @@
     </Compile>
     <Compile Include="View\RegistrationView.xaml.cs">
       <DependentUpon>RegistrationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ReservationView.xaml.cs">
+      <DependentUpon>ReservationView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\UserBooksView.xaml.cs">
       <DependentUpon>UserBooksView.xaml</DependentUpon>
@@ -173,7 +206,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="ClassDiagram.cd" />
+    <None Include="HelperFiles\api.chm" />
     <None Include="HelperFiles\KorisnickiPogled.chm" />
     <None Include="HelperFiles\Prijava.chm" />
     <None Include="HelperFiles\Registracija.chm" />
@@ -190,35 +223,39 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PasswordHash\PasswordHash.csproj">
-      <Project>{34445e79-8f65-47e6-93af-82fdb5419aa4}</Project>
-      <Name>PasswordHash</Name>
-    </ProjectReference>
+    <EntityDeploy Include="Model\LibraryDbModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>LibraryDbModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
   </ItemGroup>
   <ItemGroup>
     <Page Include="View\AdminLayoutView.xaml">
       <SubType>Designer</SubType>
-      <Generator>XamlIntelliSenseFileGenerator</Generator>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\LoginView.xaml">
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="View\RegiserToLibraryView.xaml">
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="View\RegistrationView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\ReservationView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\UserBooksView.xaml">
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="View\UserLayoutView.xaml">
       <SubType>Designer</SubType>
-      <Generator>XamlIntelliSenseFileGenerator</Generator>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
@@ -227,12 +264,6 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <EntityDeploy Include="Model\LibraryDbModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>LibraryDbModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Icons\library.png" />
@@ -247,6 +278,5 @@
       <LastGenOutput>LibraryDbModel.cs</LastGenOutput>
     </Content>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

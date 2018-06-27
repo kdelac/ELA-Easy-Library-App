@@ -5,6 +5,7 @@ using System.Windows.Data;
 using EasyLibraryApplication.WPF.Annotations;
 using EasyLibraryApplication.WPF.Commands;
 using EasyLibraryApplication.WPF.Model;
+using EasyLibraryApplication.WPF.View;
 
 namespace EasyLibraryApplication.WPF.ViewModel
 {
@@ -37,7 +38,14 @@ namespace EasyLibraryApplication.WPF.ViewModel
         }
 
         #endregion
+
+        #region Views
+
+        public ReservationView ReservationView { get; set; }
         
+
+        #endregion
+
         #region Selected Item
 
         private Book selectedItem;
@@ -110,9 +118,12 @@ namespace EasyLibraryApplication.WPF.ViewModel
         /// <summary>
         /// Metoda koja se aktivira prilikom pritiska na gumb i otvara se prozor za rezervaciju
         /// </summary>
-        public void CooseBook()
+        public void ChooseBook()
         {
-
+            ReservationViewModel.User = User;
+            ReservationViewModel.Book = SelectedItem;
+            ReservationView = new ReservationView();
+            ReservationView.ShowDialog();
         }
 
         #region PropertyChangedEventHandler
