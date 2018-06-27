@@ -64,42 +64,6 @@ namespace EasyLibraryApplication.WPF.Model
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("ReserveBook", userIdParameter, bookIdParameter);
         }
     
-        public virtual ObjectResult<Library> GetAllLibrarysForUser(Nullable<int> userId)
-        {
-            var userIdParameter = userId.HasValue ?
-                new ObjectParameter("UserId", userId) :
-                new ObjectParameter("UserId", typeof(int));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Library>("GetAllLibrarysForUser", userIdParameter);
-        }
-    
-        public virtual ObjectResult<Library> GetAllLibrarysForUser(Nullable<int> userId, MergeOption mergeOption)
-        {
-            var userIdParameter = userId.HasValue ?
-                new ObjectParameter("UserId", userId) :
-                new ObjectParameter("UserId", typeof(int));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Library>("GetAllLibrarysForUser", mergeOption, userIdParameter);
-        }
-    
-        public virtual ObjectResult<Library> GetAllLibrarysForUserNotRegistered(Nullable<int> userId)
-        {
-            var userIdParameter = userId.HasValue ?
-                new ObjectParameter("UserId", userId) :
-                new ObjectParameter("UserId", typeof(int));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Library>("GetAllLibrarysForUserNotRegistered", userIdParameter);
-        }
-    
-        public virtual ObjectResult<Library> GetAllLibrarysForUserNotRegistered(Nullable<int> userId, MergeOption mergeOption)
-        {
-            var userIdParameter = userId.HasValue ?
-                new ObjectParameter("UserId", userId) :
-                new ObjectParameter("UserId", typeof(int));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Library>("GetAllLibrarysForUserNotRegistered", mergeOption, userIdParameter);
-        }
-    
         public virtual ObjectResult<Book> FindBookForUser(Nullable<int> userId)
         {
             var userIdParameter = userId.HasValue ?
@@ -142,6 +106,68 @@ namespace EasyLibraryApplication.WPF.Model
                 new ObjectParameter("Name", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Book>("FindBookForUserName", mergeOption, userIdParameter, nameParameter);
+        }
+    
+        public virtual ObjectResult<Library> GetAllLibrarysForUser(Nullable<int> userId)
+        {
+            var userIdParameter = userId.HasValue ?
+                new ObjectParameter("UserId", userId) :
+                new ObjectParameter("UserId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Library>("GetAllLibrarysForUser", userIdParameter);
+        }
+    
+        public virtual ObjectResult<Library> GetAllLibrarysForUser(Nullable<int> userId, MergeOption mergeOption)
+        {
+            var userIdParameter = userId.HasValue ?
+                new ObjectParameter("UserId", userId) :
+                new ObjectParameter("UserId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Library>("GetAllLibrarysForUser", mergeOption, userIdParameter);
+        }
+    
+        public virtual ObjectResult<Library> GetAllLibrarysForUserNotRegistered(Nullable<int> userId)
+        {
+            var userIdParameter = userId.HasValue ?
+                new ObjectParameter("UserId", userId) :
+                new ObjectParameter("UserId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Library>("GetAllLibrarysForUserNotRegistered", userIdParameter);
+        }
+    
+        public virtual ObjectResult<Library> GetAllLibrarysForUserNotRegistered(Nullable<int> userId, MergeOption mergeOption)
+        {
+            var userIdParameter = userId.HasValue ?
+                new ObjectParameter("UserId", userId) :
+                new ObjectParameter("UserId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Library>("GetAllLibrarysForUserNotRegistered", mergeOption, userIdParameter);
+        }
+    
+        public virtual ObjectResult<Library> GetAllLibrariesWhereIsBookFreeForUser(string bookISBN, Nullable<int> userID)
+        {
+            var bookISBNParameter = bookISBN != null ?
+                new ObjectParameter("BookISBN", bookISBN) :
+                new ObjectParameter("BookISBN", typeof(string));
+    
+            var userIDParameter = userID.HasValue ?
+                new ObjectParameter("UserID", userID) :
+                new ObjectParameter("UserID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Library>("GetAllLibrariesWhereIsBookFreeForUser", bookISBNParameter, userIDParameter);
+        }
+    
+        public virtual ObjectResult<Library> GetAllLibrariesWhereIsBookFreeForUser(string bookISBN, Nullable<int> userID, MergeOption mergeOption)
+        {
+            var bookISBNParameter = bookISBN != null ?
+                new ObjectParameter("BookISBN", bookISBN) :
+                new ObjectParameter("BookISBN", typeof(string));
+    
+            var userIDParameter = userID.HasValue ?
+                new ObjectParameter("UserID", userID) :
+                new ObjectParameter("UserID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Library>("GetAllLibrariesWhereIsBookFreeForUser", mergeOption, bookISBNParameter, userIDParameter);
         }
     }
 }

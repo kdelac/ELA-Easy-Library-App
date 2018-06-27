@@ -59,6 +59,7 @@ namespace EasyLibraryApplication.WPF.ViewModel
             ctx.Libraries.Load();
             RegistredLibrarCollection.Source = ctx.GetAllLibrarysForUser(User.Id);
             NotRegistredLibrarCollection.Source = ctx.GetAllLibrarysForUserNotRegistered(User.Id);
+            
         }
 
         /// <summary>
