@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
@@ -24,8 +25,15 @@ namespace EasyLibraryApplication.WPF.Commands
 
         public void Execute(object parameter)
         {
-            reservationViewModel.SendEmail();
-            reservationViewModel.SaveReservationToDatabase();
+            if (reservationViewModel.CreateReservation())
+            {
+                Thread.Sleep(1);
+                reservationViewModel.SendEmail();
+                reservationViewModel.SaveReservationToDatabase();
+                MessageBox.Show($"Uspješno ste rezervirali knjigu {ReservationViewModel.Book.Title} u knjižnici {reservationViewModel.SelectedLibrary.Name}, \npodaci o rezervaciji su poslani na Vaš e-mail.");
+            }
+            
+          
         }
 
         public event EventHandler CanExecuteChanged;

@@ -23,7 +23,7 @@ namespace EasyLibraryApplication.WPF.Commands
 
         public void Execute(object parameter)
         {
-            viewModel.CooseBook();
+            viewModel.ChooseBook();
         }
 
         public event EventHandler CanExecuteChanged;

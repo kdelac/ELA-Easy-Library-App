@@ -22,6 +22,10 @@ namespace EasyLibraryApplication.WPF.ViewModel
 {
     class ReservationViewModel : INotifyPropertyChanged
     {
+        
+
+        public CollectionViewSource LibraryCollectionViewSource { get; private set; }
+
         #region INotifyPropertyChanged
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -33,15 +37,17 @@ namespace EasyLibraryApplication.WPF.ViewModel
 
         #endregion
 
-        public CollectionViewSource LibraryCollectionViewSource { get; private set; }
-        private LibraryEntities ctx;
-
-        
+        #region StaticProperties
         public static User User { get; set; }
+        public static Book Book { get; set; }
+        #endregion
 
+        #region PrivateFields
+        private LibraryEntities ctx;
         private Email email;
         private QrCode qrCode;
         private Reservation reservation;
+        #endregion
 
         #region Commands
 
@@ -49,10 +55,8 @@ namespace EasyLibraryApplication.WPF.ViewModel
 
         #endregion
 
-
-        #region selectedBook
-
-        public static Book Book { get; set; }
+        #region SelectedBook
+       
         private Book selectedBook;
 
         public Book SelectedBook
@@ -67,7 +71,6 @@ namespace EasyLibraryApplication.WPF.ViewModel
 
         #endregion
 
-
         #region SelectedLibrary
 
         private Library selectedLibrary;
@@ -81,26 +84,28 @@ namespace EasyLibraryApplication.WPF.ViewModel
                 OnPropertyChanged(nameof(SelectedLibrary));
             }
         }
+        #endregion
 
+        #region Constructor
         /// <summary>
         /// KOnstruktor view model-a
         /// </summary>
-        #endregion
         public ReservationViewModel()
         {
             LibraryCollectionViewSource = new CollectionViewSource();
             LoadData();
             ReservationEvent = new ReservationCommand(this);
-     
         }
+        #endregion
 
+        #region LoadData       
         /// <summary>
         /// Ucitavanje podataka 
         /// </summary>
         private void LoadData()
         {
             Refresh();
-            SelectedBook = ctx.Books.FirstOrDefault(s => s.Id == 1);
+            SelectedBook = Book;
             SelectedLibrary = LibraryCollectionViewSource.View.CurrentItem as Library;
         }
 
@@ -112,43 +117,107 @@ namespace EasyLibraryApplication.WPF.ViewModel
             ctx = new LibraryEntities();
             ctx.Libraries.Load();
             ctx.Books.Load();
-            LibraryCollectionViewSource.Source = new ObservableCollection<Library>(ctx.GetAllLibrariesWhereIsBookFreeForUser("1234",20).ToList()); 
-             
+            LibraryCollectionViewSource.Source = new ObservableCollection<Library>(ctx.GetAllLibrariesWhereIsBookFreeForUser(Book.ISBN,User.Id).ToList());             
             LibraryCollectionViewSource.SortDescriptions.Add(new SortDescription("Name", ListSortDirection.Ascending));    
         }
+        #endregion
 
-        public void CreateReservation()
+        #region ReservationQRAndMail
+        /// <summary>
+        /// Metoda kojom se kreira objekt rezervacije te popunjava podacima 
+        /// (odabrana knjiga, odabrana knjižnica, korisnik, datum rezervacije...)
+        /// </summary>
+        /// <returns>
+        /// Vraća true ukolike je uspješno stvaranje objekta rezervacije te false ako je neuspješno
+        /// </returns>
+        public bool CreateReservation()
         {
-            reservation = new Reservation();
-            reservation.UserId = 20;
-            reservation.BookId = 1;
-            reservation.ReservationDate = DateTime.Now;
-            reservation.EndReservationDate = DateTime.Now.Add(new TimeSpan(3, 0, 0, 0));
-        
+            //Točno određena knjiga u odabranoj knjižnici
+            int selectedBookId = ctx.Books
+                .Where(book => book.LibraryId == selectedLibrary.Id && book.ISBN == Book.ISBN)
+                .Select(book => book.Id).FirstOrDefault();
+
+            bool bookAlredyReserved =
+                ctx.Reservations.FirstOrDefault(r => r.UserId == User.Id && r.BookId == selectedBookId) != null;
+
+            if (bookAlredyReserved)
+            {
+                MessageBox.Show($"Već ste rezervirali knjigu {Book.Title} u odabranoj knjižnici.");
+                reservation = null;
+                return false;
+            }
+            else
+            {
+                reservation = new Reservation();
+                reservation.UserId = User.Id;
+                reservation.BookId = selectedBookId;
+                reservation.ReservationDate = DateTime.Now;
+                reservation.EndReservationDate = DateTime.Now.Add(new TimeSpan(3,0,0,0));
+                return true;
+            }
+
         }
+        /// <summary>
+        /// Metoda koja stvara QR kod
+        /// </summary>
+        /// <returns>
+        /// Varaća sliku QR koda tipa Bitmap
+        /// </returns>
         public Bitmap CreateQrPicture()
         {
-            
-            string json = JsonConvert.SerializeObject(reservation);
-            qrCode = new QrCode(json);
-            return qrCode.GetQrCodeBitmap();
-        }
-        public async void SendEmail()
-        {
-            CreateReservation();
-            email = new Email("kristijan.mihaljinac@gmail.com", "kristijan.mihaljinac@gmail.com");
-            await email.SendEmail(CreateQrPicture(), "ovo je jebenica");
+            try
+            {
+                string json = JsonConvert.SerializeObject(reservation);
+                qrCode = new QrCode(json);
+                return qrCode.GetQrCodeBitmap();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Nesupješno stvaranje QR koda");
+                throw;
+            }           
             
         }
 
+        /// <summary>
+        /// Metoda kojom se šalju podaci rezervacije i QR kod prijavljenom korisniku
+        /// </summary>
+        public async void SendEmail()
+        {     
+            string emailText = $"Poštovani {User.Name} {User.Surname},\n " +
+                               $"rezervirali ste knjigu {Book.Title}.\n" +
+                               $"Datum rezervacije: {reservation.ReservationDate.ToShortDateString()}. \n" +
+                               $"Datum isteka rezervacije: {reservation.EndReservationDate.ToShortDateString()}. \n" +
+                               "Lijep podrav, \n" +
+                               $"{SelectedLibrary.Name}";               
+            email = new Email(SelectedLibrary.Email, SelectedLibrary.PasswordHash, User.Email);
+            try
+            {
+                await email.SendEmail(CreateQrPicture(), emailText);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Neuspješno slanje e-maila s QR kodom rezervacije.");
+            }
+                 
+        }
+
+        /// <summary>
+        /// Metoda kojom se podaci rezervacije spremaju u podaci podataka
+        /// </summary>
         public async void SaveReservationToDatabase()
         {
-            CreateReservation();
-            /*ctx.Books
-                .Where(book => book.LibraryId == selectedLibrary.Id && book.ISBN == SelectedBook.ISBN)
-                .Select(book => book.Id).FirstOrDefault();*/
-            ctx.Reservations.Add(reservation);
-            await ctx.SaveChangesAsync();
+            try
+            {
+                ctx.Reservations.Add(reservation);
+                await ctx.SaveChangesAsync();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Neuspjela rezervacija, pokušajte ponovno!!!");
+            }
+           
         }
+        #endregion
     }
 }
