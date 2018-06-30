@@ -81,6 +81,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Commands\AddBookCommand.cs" />
     <Compile Include="Commands\ChooseBookCommand.cs" />
     <Compile Include="Commands\LoginCommand.cs" />
     <Compile Include="Commands\RegisterCommand.cs" />
@@ -161,6 +162,7 @@
       <DependentUpon>LibraryDbModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="ViewModel\CRUDBooksViewModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="ViewModel\RegisterToLibraryViewModel.cs" />
     <Compile Include="ViewModel\RegistrationViewModel.cs" />
