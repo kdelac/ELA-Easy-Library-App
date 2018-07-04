@@ -88,6 +88,7 @@
     <Compile Include="Commands\RegisterToLibraryCommand.cs" />
     <Compile Include="Commands\RegistrationCommand.cs" />
     <Compile Include="Commands\ReservationCommand.cs" />
+    <Compile Include="Commands\SaveBookCommand.cs" />
     <Compile Include="Commands\SearchCommand.cs" />
     <Compile Include="Model\Administrator.cs">
       <DependentUpon>LibraryDbModel.tt</DependentUpon>

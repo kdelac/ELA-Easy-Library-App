@@ -31,7 +31,8 @@ namespace EasyLibraryApplication.WPF.Commands
             }
             else
             {
-                booksViewModel.SelectedBook = booksViewModel.BookCollection.View.CurrentItem as Book;               
+                booksViewModel.SelectedBook = booksViewModel.BookCollection.View.CurrentItem as Book;
+                booksViewModel.ButtonAddContent = "Dodaj";
             }
         }
 

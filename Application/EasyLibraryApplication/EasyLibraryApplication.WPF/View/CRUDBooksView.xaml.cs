@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using EasyLibraryApplication.WPF.ViewModel;
 
 namespace EasyLibraryApplication.WPF.View
 {
@@ -23,6 +24,7 @@ namespace EasyLibraryApplication.WPF.View
         public CRUDBooksView()
         {
             InitializeComponent();
+            DataContext = new CRUDBooksViewModel();
         }
     }
 }
