@@ -6,12 +6,12 @@
       xmlns:local="clr-namespace:EasyLibraryApplication.WPF.View"
       mc:Ignorable="d" 
       Height="500"
-      Width="600"
+      Width="630"
       Title="CRUDBooksView"
       Background="#2488e0">
-    
+
     <Page.Resources>
-        
+
         <DataTemplate x:Key="BookTemplate" >
             <StackPanel Margin="0" Orientation="Horizontal">
                 <Image Height="120" Width="80" Source="{Binding Signatory}"></Image>
@@ -24,7 +24,7 @@
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
-                       <ColumnDefinition/>
+                        <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <Label VerticalAlignment="Center" FontWeight="Bold" Grid.Row="0" Grid.Column="0" Content="Naslov:"></Label>
                     <Label VerticalAlignment="Center" FontWeight="Bold" Grid.Row="1" Grid.Column="0" Content="ISBN:"></Label>
@@ -44,12 +44,12 @@
 
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="53*"/>
+            <ColumnDefinition Width="49*"/>
 
-            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="65*"/>
         </Grid.ColumnDefinitions>
-        
-        <StackPanel  Name="StackPanelInfo" Grid.ColumnSpan="2" Margin="0,1.2,371.6,0.4">
+
+        <StackPanel  Name="StackPanelInfo" Margin="0,1,3.8,0.4">
             <TextBlock Margin="0,0,0,1" Text="Naziv knjige:"/>
             <TextBox Text="{Binding SelectedBook.Title, Mode=TwoWay}"/>
             <TextBlock Margin="0,2,0,1" Text="ISBN:"/>
@@ -71,21 +71,21 @@
             <TextBlock Margin="0,2,0,2" Text="Izdavač:"/>
             <ComboBox ItemsSource="{Binding PublisherCollection.View}" DisplayMemberPath="Name" SelectedItem="{Binding SelectedBook.Publisher}"/>
         </StackPanel>
-        <Grid Margin="10,0,0,0" Grid.Column="1">
+        <Grid Margin="9.2,0,0.6,0.4" Grid.Column="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="20*"></RowDefinition>
                 <RowDefinition Height="397*"></RowDefinition>
                 <RowDefinition Height="74*"></RowDefinition>
             </Grid.RowDefinitions>
-           
+
             <TextBlock Grid.Row="0" Margin="0,2,0,2" Text="Popis knjiga:"/>
             <ListBox Grid.Row="1" SelectionMode="Single" ItemTemplate="{StaticResource BookTemplate}" ItemsSource="{Binding BookCollection.View}" SelectedItem="{Binding SelectedBook}" Grid.RowSpan="2" Margin="0,0,0,73.4"/>
-         
+
             <StackPanel  Grid.Row="2">
-            <UniformGrid Margin="0,10,0,2" Rows="1">
-                <Button Margin="0,0,10,0" Content="Osvježi" Command="{Binding RefreshEvent}"></Button>
-                <Button Margin="10,0,10,0" Content="Obriši" Name="ButtonDelete" ></Button>
-                <Button Margin="10,0,0,0" Content="{Binding ButtonAddContent}" Command="{Binding AddBookEvent}"></Button>
+                <UniformGrid Margin="0,10,0,2" Rows="1">
+                    <Button Margin="0,0,10,0" Content="Osvježi" Command="{Binding RefreshEvent}"></Button>
+                    <Button Margin="10,0,10,0" Content="Obriši" Name="ButtonDelete" Command="{Binding DeleteBookEvent}" ></Button>
+                    <Button Margin="10,0,0,0" Content="{Binding ButtonAddContent}" Command="{Binding AddBookEvent}"></Button>
                 </UniformGrid>
                 <Button Content="Spremi" Command="{Binding SaveBookEvent}" />
             </StackPanel>
