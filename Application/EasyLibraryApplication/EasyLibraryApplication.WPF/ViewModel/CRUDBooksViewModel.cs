@@ -28,7 +28,7 @@ namespace EasyLibraryApplication.WPF.ViewModel
         #endregion
 
         #region StaticProperties
-        public static User AdminUser;
+        public static Administrator AdminUser;
         #endregion
 
         #region Collections
@@ -48,6 +48,9 @@ namespace EasyLibraryApplication.WPF.ViewModel
 
         public AddBookCommand AddBookEvent { get; set; }
         public SaveBookCommand SaveBookEvent { get; set; }
+        public RefreshCommand RefreshEvent { get; set; }
+        public DeleteBookCommand DeleteBookEvent { get; set; } 
+
 
         #endregion
 
@@ -142,7 +145,8 @@ namespace EasyLibraryApplication.WPF.ViewModel
         {
             SaveBookEvent = new SaveBookCommand(this);
             AddBookEvent = new AddBookCommand(this);
-
+            RefreshEvent = new RefreshCommand(this);
+            DeleteBookEvent = new DeleteBookCommand(this);
             BookCollection = new CollectionViewSource();
             LanguageCollection = new CollectionViewSource();
             PublisherCollection = new CollectionViewSource();
@@ -166,27 +170,36 @@ namespace EasyLibraryApplication.WPF.ViewModel
 
         }
 
-        private void Refresh()
+        public void Refresh()
         {
-            //int libraryId = AdminUser.Administrators.Where(ad => ad.EndOfWork == null).Select(ad => ad.LibraryId)
-            //    .FirstOrDefault();
+            int libraryId = AdminUser.LibraryId;
             ctx = new LibraryEntities();
             ctx.Books.Load();
             ctx.Publishers.Load();
             ctx.Languages.Load();
             ctx.Categories.Load();
 
-            BookCollection.Source = ctx.Books.Local;
-            //BookCollection.Source = new ObservableCollection<Book>(ctx.Books
-            //    .Where(book => book.LibraryId == 2));
+       
+            BookCollection.Source = new ObservableCollection<Book>(ctx.Books
+               .Where(book => book.LibraryId == libraryId));
             LanguageCollection.Source = ctx.Languages.Local;
             PublisherCollection.Source = ctx.Publishers.Local;
-            CategoryCollection.Source = new ObservableCollection<Category>(ctx.Categories.Where(ctg => ctg.Section.LibraryId == 2));
+            CategoryCollection.Source = new ObservableCollection<Category>(ctx.Categories.Where(ctg => ctg.Section.LibraryId == libraryId));
         }
 
         #endregion
 
-
+        public void DeleteSelectedBook()
+        {
+            MessageBoxResult messageBoxResult = MessageBox.Show($"Želite obrisati knjigu {SelectedBook.Title}?", "Pozor", MessageBoxButton.YesNo);
+            if (messageBoxResult == MessageBoxResult.Yes)
+            {
+                ctx.Books.Remove(BookCollection.View.CurrentItem as Book);
+                ctx.SaveChanges();
+                Refresh();
+            }
+            
+        }
         public void SaveChanges()
         {
             if (ButtonAddContent == "Otkaži")
