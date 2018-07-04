@@ -17,6 +17,8 @@ namespace EasyLibraryApplication.WPF.ViewModel
 {
     class CRUDBooksViewModel : INotifyPropertyChanged
     {
+        private LibraryEntities ctx;
+
         #region INotifyPropertyChanged
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -39,10 +41,6 @@ namespace EasyLibraryApplication.WPF.ViewModel
         public CollectionViewSource CategoryCollection { get; set; }
 
         #endregion
-
-
-
-        private LibraryEntities ctx;
 
         #region Commands
 
@@ -140,7 +138,9 @@ namespace EasyLibraryApplication.WPF.ViewModel
         #endregion
 
         #region Constructor
-
+        /// <summary>
+        /// Konstruktor klase CRUDBooksViewModel
+        /// </summary>
         public CRUDBooksViewModel()
         {
             SaveBookEvent = new SaveBookCommand(this);
@@ -157,9 +157,11 @@ namespace EasyLibraryApplication.WPF.ViewModel
 
         #endregion
 
-
         #region LoadData
 
+        /// <summary>
+        /// Učitavanje podataka 
+        /// </summary>
         private void LoadData()
         {
             Refresh();
@@ -170,6 +172,9 @@ namespace EasyLibraryApplication.WPF.ViewModel
 
         }
 
+        /// <summary>
+        /// Dohvaćanje podataka iz baze podataka
+        /// </summary>
         public void Refresh()
         {
             int libraryId = AdminUser.LibraryId;
@@ -189,6 +194,11 @@ namespace EasyLibraryApplication.WPF.ViewModel
 
         #endregion
 
+        #region DeleteMethod
+
+        /// <summary>
+        /// Metoda koja služi za brisanje odabrane knjige iz baze podataka
+        /// </summary>
         public void DeleteSelectedBook()
         {
             MessageBoxResult messageBoxResult = MessageBox.Show($"Želite obrisati knjigu {SelectedBook.Title}?", "Pozor", MessageBoxButton.YesNo);
@@ -200,6 +210,12 @@ namespace EasyLibraryApplication.WPF.ViewModel
             }
             
         }
+        #endregion
+
+        #region SaveChangesMethon 
+        /// <summary>
+        /// Metoda koja služi za spremanje promjena u bazu podataka
+        /// </summary>
         public void SaveChanges()
         {
             if (ButtonAddContent == "Otkaži")
@@ -210,7 +226,13 @@ namespace EasyLibraryApplication.WPF.ViewModel
             ctx.SaveChanges();
             ButtonAddContent = "Dodaj";
         }
+        #endregion
 
+        #region AddMethod
+
+        /// <summary>
+        /// Metoda koja služi za dodavanje nove knjige u bazu podataka
+        /// </summary>
         private void Add()
         {
             SelectedBook.CategoryId = SelectedCategory.Id;
@@ -233,8 +255,8 @@ namespace EasyLibraryApplication.WPF.ViewModel
             {
                 MessageBox.Show("Broj stranica mora biti cijeli broj.");
             }
-
-
         }
+
+        #endregion
     }
 }

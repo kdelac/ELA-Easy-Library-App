@@ -12,15 +12,30 @@ namespace EasyLibraryApplication.WPF.Commands
     class AddBookCommand : ICommand
     {
         private CRUDBooksViewModel booksViewModel;
+
+        /// <summary>
+        /// Konstruktor klase
+        /// </summary>
+        /// <param name="viewModel"></param>
         public AddBookCommand(CRUDBooksViewModel viewModel)
         {
             this.booksViewModel = viewModel;
         }
+
+        /// <summary>
+        /// Metoda koja određuje može li se naredba dodavanja knjige izvršiti
+        /// </summary>
+        /// <param name="parameter"></param>
+        /// <returns></returns>
         public bool CanExecute(object parameter)
         {
             return true;
         }
 
+        /// <summary>
+        /// Metoda koja služi za dodavanje knjige
+        /// </summary>
+        /// <param name="parameter"></param>
         public void Execute(object parameter)
         {
             if (booksViewModel.ButtonAddContent == "Dodaj")
