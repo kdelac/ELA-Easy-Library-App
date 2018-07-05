@@ -36,7 +36,7 @@
                     <Label HorizontalAlignment="Center" Content="CRUD Knjige"></Label>
                 </StackPanel>
             </Button>
-            <Button Name="uiActionOption2" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Background="Transparent" BorderThickness="0" >
+            <Button Name="uiActionOption2" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Background="Transparent" BorderThickness="0" Click="UiActionOption2_OnClick">
                 <StackPanel HorizontalAlignment="Center">
                     <Image Height="50" Width="50"/>
                     <Label HorizontalAlignment="Center"></Label>
