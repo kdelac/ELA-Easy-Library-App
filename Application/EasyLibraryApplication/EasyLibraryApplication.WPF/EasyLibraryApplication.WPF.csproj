@@ -165,6 +165,7 @@
       <DependentUpon>LibraryDbModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="ViewModel\CRUDBookCopiesViewModel.cs" />
     <Compile Include="ViewModel\CRUDBooksViewModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="ViewModel\RegisterToLibraryViewModel.cs" />
@@ -173,6 +174,9 @@
     <Compile Include="ViewModel\UserBooksViewModel.cs" />
     <Compile Include="View\AdminLayoutView.xaml.cs">
       <DependentUpon>AdminLayoutView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CRUDBookCopiesView.xaml.cs">
+      <DependentUpon>CRUDBookCopiesView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\CRUDBooksView.xaml.cs">
       <DependentUpon>CRUDBooksView.xaml</DependentUpon>
@@ -238,6 +242,10 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="View\AdminLayoutView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CRUDBookCopiesView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
