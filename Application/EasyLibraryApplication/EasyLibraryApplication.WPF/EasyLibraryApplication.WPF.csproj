@@ -82,6 +82,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Commands\AddBookCommand.cs" />
+    <Compile Include="Commands\AddBookCopyCommand.cs" />
     <Compile Include="Commands\ChooseBookCommand.cs" />
     <Compile Include="Commands\DeleteBookCommand.cs" />
     <Compile Include="Commands\LoginCommand.cs" />

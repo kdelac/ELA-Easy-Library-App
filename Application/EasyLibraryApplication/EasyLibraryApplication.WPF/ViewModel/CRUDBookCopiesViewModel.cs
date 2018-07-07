@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Data;
 using EasyLibraryApplication.WPF.Annotations;
+using EasyLibraryApplication.WPF.Commands;
 using EasyLibraryApplication.WPF.Model;
 
 namespace EasyLibraryApplication.WPF.ViewModel
@@ -16,6 +17,13 @@ namespace EasyLibraryApplication.WPF.ViewModel
     class CRUDBookCopiesViewModel : INotifyPropertyChanged
     {
         private LibraryEntities ctx;
+
+        #region Commands
+
+        public AddBookCopyCommand AddBookCopyEvent { get; set; }
+        
+
+        #endregion
 
         #region INotifyPropertyChanged
 
@@ -33,10 +41,27 @@ namespace EasyLibraryApplication.WPF.ViewModel
 
         public CRUDBookCopiesViewModel()
         {
+            AddBookCopyEvent = new AddBookCopyCommand(this);
             StatusesCollection = new CollectionViewSource();
             CopiesCollection = new CollectionViewSource();
             BookCollection = new CollectionViewSource();
             LoadData();
+            this.PropertyChanged += OnPropertyChanged;
+            ButtonAddContent = "Dodaj";
+        }
+
+
+
+        #endregion
+
+        #region CopySourceChange
+
+        private void OnPropertyChanged(object sender, PropertyChangedEventArgs propertyChangedEventArgs)
+        {
+            if (propertyChangedEventArgs.PropertyName == nameof(SelectedBook))
+            {
+                CopiesCollection.Source = new ObservableCollection<Copy>(ctx.Copies.Where(cp => cp.BookId == SelectedBook.Id));
+            }
         }
 
         #endregion
@@ -107,7 +132,6 @@ namespace EasyLibraryApplication.WPF.ViewModel
         #endregion
         #endregion
 
-
         #region LoadData
 
         /// <summary>
@@ -117,8 +141,7 @@ namespace EasyLibraryApplication.WPF.ViewModel
         {
             Refresh();
             SelectedBook = BookCollection.View.CurrentItem as Book;
-            SelectedStatus = StatusesCollection.View.CurrentItem as Status;
-           
+            SelectedStatus = StatusesCollection.View.CurrentItem as Status;          
             SelectedBookCopy = CopiesCollection.View.CurrentItem as Copy;
         }
 
@@ -137,11 +160,29 @@ namespace EasyLibraryApplication.WPF.ViewModel
                 .Where(book => book.LibraryId == libraryId));
             SelectedBook = BookCollection.View.CurrentItem as Book;
             StatusesCollection.Source = ctx.Statuses.Local;
-            CopiesCollection.Source = new ObservableCollection<Copy>();
+            CopiesCollection.Source = new ObservableCollection<Copy>(ctx.Copies.Where(cp => cp.BookId == SelectedBook.Id));
             
         }
-         
 
+
+
+        #endregion
+    
+        #region ButtonAddContent Full Property
+        private string _buttonAddContent;
+        public string ButtonAddContent
+        {
+            get
+            {
+                return _buttonAddContent;
+            }
+
+            set
+            {
+                _buttonAddContent = value;
+                OnPropertyChanged(nameof(ButtonAddContent));
+            }
+        }
         #endregion
     }
 }
