@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 
 namespace EasyLibraryApplication.WPF.View
 {
@@ -10,6 +11,7 @@ namespace EasyLibraryApplication.WPF.View
         public AdminLayoutView()
         {
             InitializeComponent();
+            uiFrame.Source = new Uri("CRUDBooksView.xaml", UriKind.Relative);
         }
 
         private void UiActionLogOff_OnClick(object sender, RoutedEventArgs e)
@@ -17,6 +19,16 @@ namespace EasyLibraryApplication.WPF.View
             Login login = new Login();
             this.Close();
             login.Show();
+        }
+
+        private void UiActionOption1_OnClick(object sender, RoutedEventArgs e)
+        {
+            uiFrame.Source = new Uri("CRUDBooksView.xaml", UriKind.Relative);
+        }
+
+        private void UiActionOption2_OnClick(object sender, RoutedEventArgs e)
+        {
+            uiFrame.Source = new Uri("CRUDBookCopiesView.xaml", UriKind.Relative);
         }
     }
 }

@@ -81,12 +81,20 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Commands\AddBookCommand.cs" />
+    <Compile Include="Commands\AddBookCopyCommand.cs" />
     <Compile Include="Commands\ChooseBookCommand.cs" />
+    <Compile Include="Commands\DeleteBookCommand.cs" />
+    <Compile Include="Commands\DeleteBookCopyCommand.cs" />
     <Compile Include="Commands\LoginCommand.cs" />
+    <Compile Include="Commands\RefreshCommand.cs" />
+    <Compile Include="Commands\RefreshCopyCommand.cs" />
     <Compile Include="Commands\RegisterCommand.cs" />
     <Compile Include="Commands\RegisterToLibraryCommand.cs" />
     <Compile Include="Commands\RegistrationCommand.cs" />
     <Compile Include="Commands\ReservationCommand.cs" />
+    <Compile Include="Commands\SaveBookCommand.cs" />
+    <Compile Include="Commands\SaveBookCopyCommand.cs" />
     <Compile Include="Commands\SearchCommand.cs" />
     <Compile Include="Model\Administrator.cs">
       <DependentUpon>LibraryDbModel.tt</DependentUpon>
@@ -161,6 +169,9 @@
       <DependentUpon>LibraryDbModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="ViewModel\CRUDBookCopiesViewModel.cs" />
+    <Compile Include="ViewModel\CRUDBooksViewModel.cs" />
+    <Compile Include="ViewModel\LoanBookViewModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="ViewModel\RegisterToLibraryViewModel.cs" />
     <Compile Include="ViewModel\RegistrationViewModel.cs" />
@@ -168,6 +179,15 @@
     <Compile Include="ViewModel\UserBooksViewModel.cs" />
     <Compile Include="View\AdminLayoutView.xaml.cs">
       <DependentUpon>AdminLayoutView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CRUDBookCopiesView.xaml.cs">
+      <DependentUpon>CRUDBookCopiesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CRUDBooksView.xaml.cs">
+      <DependentUpon>CRUDBooksView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\LoanBooksView.xaml.cs">
+      <DependentUpon>LoanBooksView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\LoginView.xaml.cs">
       <DependentUpon>LoginView.xaml</DependentUpon>
@@ -233,6 +253,18 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\CRUDBookCopiesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CRUDBooksView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\LoanBooksView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\LoginView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -267,6 +299,7 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Icons\library.png" />
+    <Resource Include="Icons\books.png" />
     <Content Include="Model\LibraryDbModel.Context.tt">
       <DependentUpon>LibraryDbModel.edmx</DependentUpon>
       <Generator>TextTemplatingFileGenerator</Generator>

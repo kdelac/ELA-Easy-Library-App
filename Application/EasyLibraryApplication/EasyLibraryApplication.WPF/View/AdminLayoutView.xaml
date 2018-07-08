@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:EasyLibraryApplication.WPF.View"
         mc:Ignorable="d"
         Title="AdminLayoutView"
-        Height="500"
-        Width="700"
+        Height="537"
+        Width="745"
         WindowStartupLocation="CenterScreen"
         ResizeMode="CanMinimize">
     <Grid>
@@ -30,16 +30,16 @@
             <Rectangle Grid.Row="3" Grid.Column="1" Fill="LightGray" Name="uiActionRec4"></Rectangle>
             <Rectangle Grid.Row="4" Grid.Column="1" Fill="LightGray" Name="uiActionRec5"></Rectangle>
             <Rectangle Grid.Row="0" Grid.Column="0" Grid.RowSpan="5" Width="150" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Fill="LightGray"/>
-            <Button Name="uiActionOption1" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Background="Transparent" BorderThickness="0">
+            <Button Name="uiActionOption1" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Background="Transparent" BorderThickness="0" Click="UiActionOption1_OnClick">
                 <StackPanel HorizontalAlignment="Center">
-                    <Image Height="50" Width="50"/>
-                    <Label HorizontalAlignment="Center"></Label>
+                    <Image Height="50" Width="50" Source="../Icons/allBooks.png"/>
+                    <Label HorizontalAlignment="Center" Content="CRUD Knjige"></Label>
                 </StackPanel>
             </Button>
-            <Button Name="uiActionOption2" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Background="Transparent" BorderThickness="0" >
+            <Button Name="uiActionOption2" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Background="Transparent" BorderThickness="0" Click="UiActionOption2_OnClick">
                 <StackPanel HorizontalAlignment="Center">
-                    <Image Height="50" Width="50"/>
-                    <Label HorizontalAlignment="Center"></Label>
+                    <Image Height="50" Width="50" Source="../Icons/books.png"/>
+                    <Label HorizontalAlignment="Center" Content="CRUD Kopije"></Label>
                 </StackPanel>
             </Button>
             <Button Name="uiActionOption3" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Background="Transparent" BorderThickness="0">
@@ -55,7 +55,7 @@
                 </StackPanel>
             </Button>
             <Button x:Name="uiActionLogOff" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" Background="Transparent" BorderThickness="0" Click="UiActionLogOff_OnClick">Odjava</Button>
-            <Frame Grid.Row="0" Grid.RowSpan="5" Grid.Column="2" NavigationUIVisibility="Hidden"></Frame>
+            <Frame Grid.Row="0" Grid.RowSpan="5" Grid.Column="2" NavigationUIVisibility="Hidden" x:Name="uiFrame"></Frame>
         </Grid>
     </Grid>
 </Window>

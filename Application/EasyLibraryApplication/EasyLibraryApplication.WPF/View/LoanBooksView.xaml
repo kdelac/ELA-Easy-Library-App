@@ -1,0 +1,50 @@
+﻿<Page x:Class="EasyLibraryApplication.WPF.View.LoanBooksView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:EasyLibraryApplication.WPF.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="600"
+      Title="LoanBooksView"
+      Background="#2488e0">
+
+    <Page.Resources>
+        <DataTemplate x:Key="BookTemplate" >
+            <StackPanel Margin="0" Orientation="Horizontal" Grid.Row="0">
+                <Image Height="120" Width="80" Source="{Binding Copy.Book.Signatory}"></Image>
+                <Grid VerticalAlignment="Center">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label VerticalAlignment="Center" FontWeight="Bold" Grid.Row="0" Grid.Column="0" Content="Naslov:"></Label>
+                    <Label VerticalAlignment="Center" FontWeight="Bold" Grid.Row="1" Grid.Column="0" Content="ISBN:"></Label>
+                    <Label VerticalAlignment="Center" FontWeight="Bold" Grid.Row="0" Grid.Column="2" Content="Datum posudbe: "></Label>
+                    <Label VerticalAlignment="Center" FontWeight="Bold" Grid.Row="1" Grid.Column="2" Content="Datum vraćanja: "></Label>
+                    <TextBlock VerticalAlignment="Center" Grid.Row="0" Grid.Column="1" Width="120" Text="{Binding Copy.Book.Title}" TextWrapping="Wrap"></TextBlock>
+                    <TextBlock VerticalAlignment="Center" Grid.Row="1" Grid.Column="1" Width="120" Text="{Binding Copy.Book.ISBN}"></TextBlock>
+                    <TextBlock VerticalAlignment="Center" Grid.Row="0" Grid.Column="3" Width="120" Text="{Binding LoanDate.Date}"></TextBlock>
+                    <TextBlock VerticalAlignment="Center" Grid.Row="1" Grid.Column="3" Width="120" Text="{Binding EndLoanDate.Date}"></TextBlock>
+                </Grid>
+            </StackPanel>
+        </DataTemplate>
+    </Page.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="47*"></RowDefinition>
+            <RowDefinition Height="402*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Popis posuđenih knjiga:" Margin="10,27,-10,0.2"/>
+        <ListBox Grid.Row="1" Margin="10,11.8,10,9.6" SelectionMode="Single" ItemTemplate="{StaticResource BookTemplate}" ItemsSource="{Binding LoanBooksCollection.View}" SelectedItem="{Binding SelectedLoan}" />
+    </Grid>
+</Page>
