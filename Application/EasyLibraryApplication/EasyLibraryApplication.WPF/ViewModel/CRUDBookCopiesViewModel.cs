@@ -7,6 +7,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Data;
 using EasyLibraryApplication.WPF.Annotations;
 using EasyLibraryApplication.WPF.Commands;
@@ -21,13 +22,23 @@ namespace EasyLibraryApplication.WPF.ViewModel
         #region Commands
 
         public AddBookCopyCommand AddBookCopyEvent { get; set; }
-        
+
+        public SaveBookCopyCommand SaveBookCopyEvent { get; set; }
+
+        public DeleteBookCopyCommand DeleteBookCopyEvent { get; set; }
+
+        public RefreshCopyCommand RefreshCopyEvent { get; set; }
 
         #endregion
 
         #region INotifyPropertyChanged
 
         public event PropertyChangedEventHandler PropertyChanged;
+
+        /// <summary>
+        /// Metoda koja implementira INotifyPropertyChanged interface
+        /// </summary>
+        /// <param name="propertyName"></param>
 
         [NotifyPropertyChangedInvocator]
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
@@ -39,9 +50,15 @@ namespace EasyLibraryApplication.WPF.ViewModel
 
         #region Constructor
 
+        /// <summary>
+        /// Konstruktor klase
+        /// </summary>
         public CRUDBookCopiesViewModel()
         {
+            SaveBookCopyEvent = new SaveBookCopyCommand(this);
             AddBookCopyEvent = new AddBookCopyCommand(this);
+            DeleteBookCopyEvent = new DeleteBookCopyCommand(this);
+            RefreshCopyEvent = new RefreshCopyCommand(this);
             StatusesCollection = new CollectionViewSource();
             CopiesCollection = new CollectionViewSource();
             BookCollection = new CollectionViewSource();
@@ -183,6 +200,56 @@ namespace EasyLibraryApplication.WPF.ViewModel
                 OnPropertyChanged(nameof(ButtonAddContent));
             }
         }
+        #endregion
+
+        #region DeleteMethod
+
+        /// <summary>
+        /// Metoda koja služi za brisanje odabrane knjige iz baze podataka
+        /// </summary>
+        public void DeleteSelectedBookCopy()
+        {
+            MessageBoxResult messageBoxResult = MessageBox.Show($"Želite obrisati kopiju knjige {SelectedBook.Title}?", "Pozor", MessageBoxButton.YesNo);
+            if (messageBoxResult == MessageBoxResult.Yes)
+            {
+                ctx.Copies.Remove(CopiesCollection.View.CurrentItem as Copy);
+                ctx.SaveChanges();
+                Refresh();
+            }
+
+        }
+        #endregion
+
+        #region SaveChangesMethod 
+        /// <summary>
+        /// Metoda koja služi za spremanje promjena u bazu podataka
+        /// </summary>
+        public void SaveChanges()
+        {
+            if (ButtonAddContent == "Otkaži")
+            {
+                Add();
+            }
+
+            ctx.SaveChanges();
+            ButtonAddContent = "Dodaj";
+        }
+        #endregion
+
+        #region AddMethod
+
+        /// <summary>
+        /// Metoda koja služi za dodavanje nove kopije knjige u bazu podataka
+        /// </summary>
+        private void Add()
+        {
+            SelectedBookCopy.BookId = SelectedBook.Id;
+            SelectedBookCopy.StatusId = SelectedStatus.Id;
+           
+            ctx.Copies.Add(SelectedBookCopy);
+            
+        }
+
         #endregion
     }
 }

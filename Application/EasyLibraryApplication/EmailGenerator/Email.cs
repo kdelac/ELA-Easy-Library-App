@@ -31,6 +31,12 @@ namespace EmailGenerator
             this.senderPassword = senderPassword;
         }
 
+        /// <summary>
+        /// Metoda koja šalje mail s tekstom i slikom
+        /// </summary>
+        /// <param name="image">Slika</param>
+        /// <param name="text">Tekst</param>
+        /// <returns></returns>
         public Task SendEmail(Bitmap image, string text)
         {
             SmtpClient client = new SmtpClient();

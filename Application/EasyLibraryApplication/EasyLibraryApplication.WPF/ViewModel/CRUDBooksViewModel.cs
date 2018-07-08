@@ -238,7 +238,7 @@ namespace EasyLibraryApplication.WPF.ViewModel
             SelectedBook.CategoryId = SelectedCategory.Id;
             SelectedBook.LanguageId = SelectedLanguage.Id;
             SelectedBook.PublisherId = SelectedPublisher.Id;
-            SelectedBook.LibraryId = 2;
+            SelectedBook.LibraryId = AdminUser.LibraryId;
             try
             {
                 

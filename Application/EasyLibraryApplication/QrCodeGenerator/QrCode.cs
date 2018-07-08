@@ -35,6 +35,11 @@ namespace QrCodeGenerator
             
         }
 
+        /// <summary>
+        /// Vraća objekt slike QR koda
+        /// </summary>
+        /// <returns>Bitpmap objekt</returns>
+
         public Bitmap GetQrCodeBitmap()
         {
             return qrCodeBitmap;

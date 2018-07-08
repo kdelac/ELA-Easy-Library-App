@@ -44,7 +44,7 @@ namespace EasyLibraryApplication.WPF.View
             uiActionRec1.Fill = Brushes.AliceBlue;
             uiActionRec3.Fill = Brushes.AliceBlue;
             uiActionRec2.Fill = Brushes.LightSkyBlue;
-            //uiFrame.Source = new Uri("Page1.xaml", UriKind.Relative);
+            uiFrame.Source = new Uri("LoanBooksView.xaml", UriKind.Relative);
         }
 
         private void UiActionOption3_OnClick(object sender, RoutedEventArgs e)
