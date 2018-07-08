@@ -226,10 +226,13 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="ClassDiagram.cd" />
+    <None Include="HelperFiles\AdminPogled.chm" />
     <None Include="HelperFiles\api.chm" />
     <None Include="HelperFiles\KorisnickiPogled.chm" />
     <None Include="HelperFiles\Prijava.chm" />
     <None Include="HelperFiles\Registracija.chm" />
+    <None Include="HelperFiles\RezervacijaKnjige.chm" />
     <None Include="Model\LibraryDbModel.edmx.diagram">
       <DependentUpon>LibraryDbModel.edmx</DependentUpon>
     </None>

@@ -21,10 +21,12 @@ namespace EasyLibraryApplication.WPF.View
     /// </summary>
     public partial class LoanBooksView : Page
     {
+        private LoanBookViewModel viewModel;
         public LoanBooksView()
         {
             InitializeComponent();
-            DataContext = new LoanBookViewModel();
+            viewModel = new LoanBookViewModel();
+            DataContext = viewModel;
         }
     }
 }

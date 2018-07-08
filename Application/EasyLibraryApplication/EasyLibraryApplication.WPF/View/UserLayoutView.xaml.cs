@@ -27,7 +27,7 @@ namespace EasyLibraryApplication.WPF.View
         {
             if (e.Key == Key.F1)
             {
-                Help.ShowHelp(null, "file://C:\\Faks\\Programsko inžinjerstvo\\Projekt\\Application\\EasyLibraryApplication\\EasyLibraryApplication.WPF\\HelperFiles\\KorisnickiPogled.chm");
+                Help.ShowHelp(null, "file://C:\\Users\\krist\\Documents\\Podaci\\Fakultet\\PI\\Projekt\\Application\\EasyLibraryApplication\\EasyLibraryApplication.WPF\\HelperFiles\\KorisnickiPogled.chm");
             }
         }
 

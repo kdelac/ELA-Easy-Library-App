@@ -21,10 +21,12 @@ namespace EasyLibraryApplication.WPF.View
     /// </summary>
     public partial class CRUDBooksView : Page
     {
+        private CRUDBooksViewModel viewModel;
         public CRUDBooksView()
         {
             InitializeComponent();
-            DataContext = new CRUDBooksViewModel();
+            viewModel = new CRUDBooksViewModel();
+            DataContext = viewModel;
         }
     }
 }

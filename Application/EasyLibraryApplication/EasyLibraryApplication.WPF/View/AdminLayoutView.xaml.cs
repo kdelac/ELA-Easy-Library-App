@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Windows;
+using System.Windows.Forms;
+using System.Windows.Input;
+using KeyEventArgs = System.Windows.Input.KeyEventArgs;
 
 namespace EasyLibraryApplication.WPF.View
 {
@@ -12,6 +15,15 @@ namespace EasyLibraryApplication.WPF.View
         {
             InitializeComponent();
             uiFrame.Source = new Uri("CRUDBooksView.xaml", UriKind.Relative);
+            KeyDown += OnKeyDown;
+        }
+
+        private void OnKeyDown(object sender, KeyEventArgs keyEventArgs)
+        {
+            if (keyEventArgs.Key == Key.F1)
+            {
+                Help.ShowHelp(null, "file://C:\\Users\\krist\\Documents\\Podaci\\Fakultet\\PI\\Projekt\\Application\\EasyLibraryApplication\\EasyLibraryApplication.WPF\\HelperFiles\\AdminPogled.chm");
+            }
         }
 
         private void UiActionLogOff_OnClick(object sender, RoutedEventArgs e)
