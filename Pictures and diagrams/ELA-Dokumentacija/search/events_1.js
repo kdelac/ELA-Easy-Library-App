@@ -1,4 +1,0 @@
-var searchData=
-[
-  ['propertychanged',['PropertyChanged',['../class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_login_view_model.html#a3b0fd37be74aa128048216c1ba154c44',1,'EasyLibraryApplication.WPF.ViewModel.LoginViewModel.PropertyChanged()'],['../class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_register_to_library_view_model.html#ac883e545476f345c2c3516a918826891',1,'EasyLibraryApplication.WPF.ViewModel.RegisterToLibraryViewModel.PropertyChanged()'],['../class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_registration_view_model.html#ae88942054c90a4f0f9a66c39166d11e6',1,'EasyLibraryApplication.WPF.ViewModel.RegistrationViewModel.PropertyChanged()'],['../class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_user_books_view_model.html#a2073c3f2b1b2cd6137f46eb1494037be',1,'EasyLibraryApplication.WPF.ViewModel.UserBooksViewModel.PropertyChanged()']]]
-];

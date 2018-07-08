@@ -1,0 +1,180 @@
+\hypertarget{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_login_view_model}{}\section{Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+Login\+View\+Model Class Reference}
+\label{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_login_view_model}\index{Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+Login\+View\+Model@{Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+Login\+View\+Model}}
+
+
+Klasa koja služi za spajanje pogleda za prijavu i modela, te za izradu poslovne logike  
+
+
+Inheritance diagram for Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+Login\+View\+Model\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_login_view_model}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_login_view_model_a2a9bd8a176cd17791935f2f3ed06b38c}{Login\+View\+Model}} (\mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_1_1_login}{Login}} login)
+\begin{DoxyCompactList}\small\item\em Konstruktor koji stvara četiri objekta od kojih su dva objekt za događaj prilikom pritiska gumba. Stvaranje context objekta. Stvaranje novog korisnika. Dodjeljivanje pogleda. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_login_view_model_af515d26dff01cc8a0a8db4695eced767}{Change\+To\+User\+View}} ()
+\begin{DoxyCompactList}\small\item\em Metoda koja prebacuje korisnika s pogleda za prijavu na korisnikov pogled. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_login_view_model_ac7ef3aa4c44e225fda617e58015f085e}{Change\+To\+Admin\+View}} ()
+\begin{DoxyCompactList}\small\item\em Metoda koja prebacuje korisnika s pogleda za prijavu na administratorov pogled. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_login_view_model_a18236d8222050949019144299c572897}{Show\+Registration\+View}} ()
+\begin{DoxyCompactList}\small\item\em Metoda koja prebacuje korisnika s pogleda za prijavu na pogled za registraciju. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_login_view_model_a0eccbbb7026ba1e6987d2893aade2533}{Check\+User}} ()
+\begin{DoxyCompactList}\small\item\em Metoda koja provjeraca dali korisnik postoji u bazi \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_login_view_model_a37085a6166656c44d579c25c90f82e29}{On\+Property\+Changed}} (\mbox{[}Caller\+Member\+Name\mbox{]} string property\+Name=null)
+\begin{DoxyCompactList}\small\item\em Metoda zadužena za implementaciju I\+Notify\+Property\+Changed sučelja \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_1_1_layout_view}{Layout\+View}} \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_login_view_model_ad49150399ff0b54d1e01e6cd5cd73fb1}{User\+Layout\+View}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_1_1_registration_view}{Registration\+View}} \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_login_view_model_ae460bf864e6c62425f465fff9cf36f21}{Registration\+View}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_1_1_admin_layout_view}{Admin\+Layout\+View}} \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_login_view_model_a3bc9155e60bb8d8edced3049afae9b95}{Admin\+Layout\+View}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_commands_1_1_login_command}{Login\+Command}} \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_login_view_model_a44d019cf5d7d6079b593b02a172037b0}{Login\+Event}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_commands_1_1_register_command}{Register\+Command}} \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_login_view_model_a5f405bd15a08fcb6f6f3602a2a75cc42}{Register\+Event}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_model_1_1_user}{User}} \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_login_view_model_ad7a0aa3927c0d9ee3a9050dee2f928e3}{Selected\+Item}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+\subsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+Property\+Changed\+Event\+Handler \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_login_view_model_a3b0fd37be74aa128048216c1ba154c44}{Property\+Changed}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Klasa koja služi za spajanje pogleda za prijavu i modela, te za izradu poslovne logike 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_login_view_model_a2a9bd8a176cd17791935f2f3ed06b38c}\label{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_login_view_model_a2a9bd8a176cd17791935f2f3ed06b38c}} 
+\index{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Login\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Login\+View\+Model}!Login\+View\+Model@{Login\+View\+Model}}
+\index{Login\+View\+Model@{Login\+View\+Model}!Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Login\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Login\+View\+Model}}
+\subsubsection{\texorpdfstring{Login\+View\+Model()}{LoginViewModel()}}
+{\footnotesize\ttfamily Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+Login\+View\+Model.\+Login\+View\+Model (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_1_1_login}{Login}}}]{login }\end{DoxyParamCaption})}
+
+
+
+Konstruktor koji stvara četiri objekta od kojih su dva objekt za događaj prilikom pritiska gumba. Stvaranje context objekta. Stvaranje novog korisnika. Dodjeljivanje pogleda. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_login_view_model_ac7ef3aa4c44e225fda617e58015f085e}\label{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_login_view_model_ac7ef3aa4c44e225fda617e58015f085e}} 
+\index{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Login\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Login\+View\+Model}!Change\+To\+Admin\+View@{Change\+To\+Admin\+View}}
+\index{Change\+To\+Admin\+View@{Change\+To\+Admin\+View}!Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Login\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Login\+View\+Model}}
+\subsubsection{\texorpdfstring{Change\+To\+Admin\+View()}{ChangeToAdminView()}}
+{\footnotesize\ttfamily void Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+Login\+View\+Model.\+Change\+To\+Admin\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metoda koja prebacuje korisnika s pogleda za prijavu na administratorov pogled. 
+
+\mbox{\Hypertarget{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_login_view_model_af515d26dff01cc8a0a8db4695eced767}\label{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_login_view_model_af515d26dff01cc8a0a8db4695eced767}} 
+\index{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Login\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Login\+View\+Model}!Change\+To\+User\+View@{Change\+To\+User\+View}}
+\index{Change\+To\+User\+View@{Change\+To\+User\+View}!Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Login\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Login\+View\+Model}}
+\subsubsection{\texorpdfstring{Change\+To\+User\+View()}{ChangeToUserView()}}
+{\footnotesize\ttfamily void Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+Login\+View\+Model.\+Change\+To\+User\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metoda koja prebacuje korisnika s pogleda za prijavu na korisnikov pogled. 
+
+\mbox{\Hypertarget{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_login_view_model_a0eccbbb7026ba1e6987d2893aade2533}\label{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_login_view_model_a0eccbbb7026ba1e6987d2893aade2533}} 
+\index{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Login\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Login\+View\+Model}!Check\+User@{Check\+User}}
+\index{Check\+User@{Check\+User}!Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Login\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Login\+View\+Model}}
+\subsubsection{\texorpdfstring{Check\+User()}{CheckUser()}}
+{\footnotesize\ttfamily void Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+Login\+View\+Model.\+Check\+User (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metoda koja provjeraca dali korisnik postoji u bazi 
+
+\mbox{\Hypertarget{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_login_view_model_a37085a6166656c44d579c25c90f82e29}\label{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_login_view_model_a37085a6166656c44d579c25c90f82e29}} 
+\index{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Login\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Login\+View\+Model}!On\+Property\+Changed@{On\+Property\+Changed}}
+\index{On\+Property\+Changed@{On\+Property\+Changed}!Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Login\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Login\+View\+Model}}
+\subsubsection{\texorpdfstring{On\+Property\+Changed()}{OnPropertyChanged()}}
+{\footnotesize\ttfamily virtual void Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+Login\+View\+Model.\+On\+Property\+Changed (\begin{DoxyParamCaption}\item[{\mbox{[}\+Caller\+Member\+Name\mbox{]} string}]{property\+Name = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Metoda zadužena za implementaciju I\+Notify\+Property\+Changed sučelja 
+
+
+\begin{DoxyParams}{Parameters}
+{\em property\+Name} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_login_view_model_a18236d8222050949019144299c572897}\label{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_login_view_model_a18236d8222050949019144299c572897}} 
+\index{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Login\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Login\+View\+Model}!Show\+Registration\+View@{Show\+Registration\+View}}
+\index{Show\+Registration\+View@{Show\+Registration\+View}!Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Login\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Login\+View\+Model}}
+\subsubsection{\texorpdfstring{Show\+Registration\+View()}{ShowRegistrationView()}}
+{\footnotesize\ttfamily void Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+Login\+View\+Model.\+Show\+Registration\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metoda koja prebacuje korisnika s pogleda za prijavu na pogled za registraciju. 
+
+
+
+\subsection{Property Documentation}
+\mbox{\Hypertarget{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_login_view_model_a3bc9155e60bb8d8edced3049afae9b95}\label{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_login_view_model_a3bc9155e60bb8d8edced3049afae9b95}} 
+\index{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Login\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Login\+View\+Model}!Admin\+Layout\+View@{Admin\+Layout\+View}}
+\index{Admin\+Layout\+View@{Admin\+Layout\+View}!Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Login\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Login\+View\+Model}}
+\subsubsection{\texorpdfstring{Admin\+Layout\+View}{AdminLayoutView}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_1_1_admin_layout_view}{Admin\+Layout\+View}} Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+Login\+View\+Model.\+Admin\+Layout\+View\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_login_view_model_a44d019cf5d7d6079b593b02a172037b0}\label{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_login_view_model_a44d019cf5d7d6079b593b02a172037b0}} 
+\index{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Login\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Login\+View\+Model}!Login\+Event@{Login\+Event}}
+\index{Login\+Event@{Login\+Event}!Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Login\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Login\+View\+Model}}
+\subsubsection{\texorpdfstring{Login\+Event}{LoginEvent}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_commands_1_1_login_command}{Login\+Command}} Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+Login\+View\+Model.\+Login\+Event\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_login_view_model_a5f405bd15a08fcb6f6f3602a2a75cc42}\label{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_login_view_model_a5f405bd15a08fcb6f6f3602a2a75cc42}} 
+\index{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Login\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Login\+View\+Model}!Register\+Event@{Register\+Event}}
+\index{Register\+Event@{Register\+Event}!Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Login\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Login\+View\+Model}}
+\subsubsection{\texorpdfstring{Register\+Event}{RegisterEvent}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_commands_1_1_register_command}{Register\+Command}} Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+Login\+View\+Model.\+Register\+Event\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_login_view_model_ae460bf864e6c62425f465fff9cf36f21}\label{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_login_view_model_ae460bf864e6c62425f465fff9cf36f21}} 
+\index{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Login\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Login\+View\+Model}!Registration\+View@{Registration\+View}}
+\index{Registration\+View@{Registration\+View}!Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Login\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Login\+View\+Model}}
+\subsubsection{\texorpdfstring{Registration\+View}{RegistrationView}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_1_1_registration_view}{Registration\+View}} Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+Login\+View\+Model.\+Registration\+View\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_login_view_model_ad7a0aa3927c0d9ee3a9050dee2f928e3}\label{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_login_view_model_ad7a0aa3927c0d9ee3a9050dee2f928e3}} 
+\index{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Login\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Login\+View\+Model}!Selected\+Item@{Selected\+Item}}
+\index{Selected\+Item@{Selected\+Item}!Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Login\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Login\+View\+Model}}
+\subsubsection{\texorpdfstring{Selected\+Item}{SelectedItem}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_model_1_1_user}{User}} Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+Login\+View\+Model.\+Selected\+Item\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_login_view_model_ad49150399ff0b54d1e01e6cd5cd73fb1}\label{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_login_view_model_ad49150399ff0b54d1e01e6cd5cd73fb1}} 
+\index{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Login\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Login\+View\+Model}!User\+Layout\+View@{User\+Layout\+View}}
+\index{User\+Layout\+View@{User\+Layout\+View}!Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Login\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Login\+View\+Model}}
+\subsubsection{\texorpdfstring{User\+Layout\+View}{UserLayoutView}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_1_1_layout_view}{Layout\+View}} Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+Login\+View\+Model.\+User\+Layout\+View\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+\subsection{Event Documentation}
+\mbox{\Hypertarget{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_login_view_model_a3b0fd37be74aa128048216c1ba154c44}\label{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_login_view_model_a3b0fd37be74aa128048216c1ba154c44}} 
+\index{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Login\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Login\+View\+Model}!Property\+Changed@{Property\+Changed}}
+\index{Property\+Changed@{Property\+Changed}!Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Login\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Login\+View\+Model}}
+\subsubsection{\texorpdfstring{Property\+Changed}{PropertyChanged}}
+{\footnotesize\ttfamily Property\+Changed\+Event\+Handler Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+Login\+View\+Model.\+Property\+Changed}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Easy\+Library\+Application.\+W\+P\+F/\+View\+Model/\mbox{\hyperlink{_login_view_model_8cs}{Login\+View\+Model.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,30 @@
+\hypertarget{class_invoker_parameter_name_attribute}{}\section{Invoker\+Parameter\+Name\+Attribute Class Reference}
+\label{class_invoker_parameter_name_attribute}\index{Invoker\+Parameter\+Name\+Attribute@{Invoker\+Parameter\+Name\+Attribute}}
+
+
+Indicates that the function argument should be string literal and match one of the parameters of the caller function. For example, Re\+Sharper annotates the parameter of System.\+Argument\+Null\+Exception.  
+
+
+Inheritance diagram for Invoker\+Parameter\+Name\+Attribute\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_invoker_parameter_name_attribute}
+\end{center}
+\end{figure}
+
+
+\subsection{Detailed Description}
+Indicates that the function argument should be string literal and match one of the parameters of the caller function. For example, Re\+Sharper annotates the parameter of System.\+Argument\+Null\+Exception. 
+
+
+\begin{DoxyCode}
+\textcolor{keywordtype}{void} \mbox{\hyperlink{_annotations_8cs_a710c2378b43f44cd4a9b365c85be5d6c}{Foo}}(\textcolor{keywordtype}{string} param) \{
+  \textcolor{keywordflow}{if} (param == null)
+    \textcolor{keywordflow}{throw} \textcolor{keyword}{new} ArgumentNullException(\textcolor{stringliteral}{"par"}); \textcolor{comment}{// Warning: Cannot resolve symbol}
+\}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Easy\+Library\+Application.\+W\+P\+F/\+Properties/\mbox{\hyperlink{_annotations_8cs}{Annotations.\+cs}}\end{DoxyCompactItemize}

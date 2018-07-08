@@ -1,0 +1,87 @@
+\hypertarget{class_macro_attribute}{}\section{Macro\+Attribute Class Reference}
+\label{class_macro_attribute}\index{Macro\+Attribute@{Macro\+Attribute}}
+
+
+Allows specifying a macro for a parameter of a \mbox{\hyperlink{class_source_template_attribute}{source template}}.  
+
+
+Inheritance diagram for Macro\+Attribute\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_macro_attribute}
+\end{center}
+\end{figure}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_macro_attribute_a172bf7385bb748baa1eb2fa931f1f9f8}{Expression}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Allows specifying a macro that will be executed for a \mbox{\hyperlink{class_source_template_attribute}{source template}} parameter when the template is expanded. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_macro_attribute_a273bac2efafc085eba59752b2ea3ae58}{Editable}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Allows specifying which occurrence of the target parameter becomes editable when the template is deployed. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_macro_attribute_a94502148414b928f01ad540a924846d0}{Target}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Identifies the target parameter of a \mbox{\hyperlink{class_source_template_attribute}{source template}} if the \mbox{\hyperlink{class_macro_attribute}{Macro\+Attribute}} is applied on a template method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Allows specifying a macro for a parameter of a \mbox{\hyperlink{class_source_template_attribute}{source template}}. 
+
+You can apply the attribute on the whole method or on any of its additional parameters. The macro expression is defined in the \mbox{\hyperlink{class_macro_attribute_a172bf7385bb748baa1eb2fa931f1f9f8}{Macro\+Attribute.\+Expression}} property. When applied on a method, the target template parameter is defined in the \mbox{\hyperlink{class_macro_attribute_a94502148414b928f01ad540a924846d0}{Macro\+Attribute.\+Target}} property. To apply the macro silently for the parameter, set the \mbox{\hyperlink{class_macro_attribute_a273bac2efafc085eba59752b2ea3ae58}{Macro\+Attribute.\+Editable}} property value = -\/1. 
+
+Applying the attribute on a source template method\+: 
+\begin{DoxyCode}
+[SourceTemplate, Macro(\mbox{\hyperlink{class_macro_attribute_a94502148414b928f01ad540a924846d0}{Target}} = \textcolor{stringliteral}{"item"}, \mbox{\hyperlink{class_macro_attribute_a172bf7385bb748baa1eb2fa931f1f9f8}{Expression}} = \textcolor{stringliteral}{"suggestVariableName()"})]
+\textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{void} forEach<T>(\textcolor{keyword}{this} IEnumerable<T> collection) \{
+  \textcolor{keywordflow}{foreach} (var item \textcolor{keywordflow}{in} collection) \{
+    \textcolor{comment}{//$ $END$}
+  \}
+\}
+\end{DoxyCode}
+ Applying the attribute on a template method parameter\+: 
+\begin{DoxyCode}
+[SourceTemplate]
+\textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{void} something(\textcolor{keyword}{this} Entity x, [Macro(\mbox{\hyperlink{class_macro_attribute_a172bf7385bb748baa1eb2fa931f1f9f8}{Expression}} = \textcolor{stringliteral}{"guid()"}, 
+      \mbox{\hyperlink{class_macro_attribute_a273bac2efafc085eba59752b2ea3ae58}{Editable}} = -1)] \textcolor{keywordtype}{string} newguid) \{
+  \textcolor{comment}{/*$ var $x$Id = "$newguid$" + x.ToString();}
+\textcolor{comment}{  x.DoSomething($x$Id); */}
+\}
+\end{DoxyCode}
+ 
+
+\subsection{Property Documentation}
+\mbox{\Hypertarget{class_macro_attribute_a273bac2efafc085eba59752b2ea3ae58}\label{class_macro_attribute_a273bac2efafc085eba59752b2ea3ae58}} 
+\index{Macro\+Attribute@{Macro\+Attribute}!Editable@{Editable}}
+\index{Editable@{Editable}!Macro\+Attribute@{Macro\+Attribute}}
+\subsubsection{\texorpdfstring{Editable}{Editable}}
+{\footnotesize\ttfamily int Macro\+Attribute.\+Editable\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Allows specifying which occurrence of the target parameter becomes editable when the template is deployed. 
+
+If the target parameter is used several times in the template, only one occurrence becomes editable; other occurrences are changed synchronously. To specify the zero-\/based index of the editable occurrence, use values $>$= 0. To make the parameter non-\/editable when the template is expanded, use -\/1. 
+
+$>$ \mbox{\Hypertarget{class_macro_attribute_a172bf7385bb748baa1eb2fa931f1f9f8}\label{class_macro_attribute_a172bf7385bb748baa1eb2fa931f1f9f8}} 
+\index{Macro\+Attribute@{Macro\+Attribute}!Expression@{Expression}}
+\index{Expression@{Expression}!Macro\+Attribute@{Macro\+Attribute}}
+\subsubsection{\texorpdfstring{Expression}{Expression}}
+{\footnotesize\ttfamily string Macro\+Attribute.\+Expression\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Allows specifying a macro that will be executed for a \mbox{\hyperlink{class_source_template_attribute}{source template}} parameter when the template is expanded. 
+
+\mbox{\Hypertarget{class_macro_attribute_a94502148414b928f01ad540a924846d0}\label{class_macro_attribute_a94502148414b928f01ad540a924846d0}} 
+\index{Macro\+Attribute@{Macro\+Attribute}!Target@{Target}}
+\index{Target@{Target}!Macro\+Attribute@{Macro\+Attribute}}
+\subsubsection{\texorpdfstring{Target}{Target}}
+{\footnotesize\ttfamily string Macro\+Attribute.\+Target\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Identifies the target parameter of a \mbox{\hyperlink{class_source_template_attribute}{source template}} if the \mbox{\hyperlink{class_macro_attribute}{Macro\+Attribute}} is applied on a template method. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Easy\+Library\+Application.\+W\+P\+F/\+Properties/\mbox{\hyperlink{_annotations_8cs}{Annotations.\+cs}}\end{DoxyCompactItemize}

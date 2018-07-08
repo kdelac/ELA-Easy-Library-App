@@ -1,0 +1,5 @@
+var searchData=
+[
+  ['overdueamount',['OverdueAmount',['../class_easy_library_application_1_1_w_p_f_1_1_model_1_1_loan.html#a2a2de1c166ce6ac11dff9d031e806475',1,'EasyLibraryApplication::WPF::Model::Loan']]],
+  ['overdueprice',['OverduePrice',['../class_easy_library_application_1_1_w_p_f_1_1_model_1_1_get_all_libraries_where_is_book_free_for_user___result.html#a532d90d045b8dca5881bbb07b2ca6ef3',1,'EasyLibraryApplication.WPF.Model.GetAllLibrariesWhereIsBookFreeForUser_Result.OverduePrice()'],['../class_easy_library_application_1_1_w_p_f_1_1_model_1_1_get_all_librarys_for_user___result.html#a127360f902de65273ad8183d7a69f107',1,'EasyLibraryApplication.WPF.Model.GetAllLibrarysForUser_Result.OverduePrice()'],['../class_easy_library_application_1_1_w_p_f_1_1_model_1_1_get_all_librarys_for_user_not_registered___result.html#a0e4b51c3070af21ac70bf3300bd1a916',1,'EasyLibraryApplication.WPF.Model.GetAllLibrarysForUserNotRegistered_Result.OverduePrice()'],['../class_easy_library_application_1_1_w_p_f_1_1_model_1_1_library.html#aec4ff978bf9dca384c66dd0510e20347',1,'EasyLibraryApplication.WPF.Model.Library.OverduePrice()']]]
+];

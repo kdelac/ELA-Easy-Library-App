@@ -1,0 +1,59 @@
+\hypertarget{class_base_type_required_attribute}{}\section{Base\+Type\+Required\+Attribute Class Reference}
+\label{class_base_type_required_attribute}\index{Base\+Type\+Required\+Attribute@{Base\+Type\+Required\+Attribute}}
+
+
+When applied to a target attribute, specifies a requirement for any type marked with the target attribute to implement or inherit specific type or types.  
+
+
+Inheritance diagram for Base\+Type\+Required\+Attribute\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_base_type_required_attribute}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_base_type_required_attribute_a3b535405fd33291328613b6ede4e5d8a}{Base\+Type\+Required\+Attribute}} (\mbox{[}Not\+Null\mbox{]} Type base\+Type)
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+Type \mbox{\hyperlink{class_base_type_required_attribute_abd32451b36cd8eff34ecee4718e78f5b}{Base\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+When applied to a target attribute, specifies a requirement for any type marked with the target attribute to implement or inherit specific type or types. 
+
+
+\begin{DoxyCode}
+[BaseTypeRequired(typeof(IComponent)] \textcolor{comment}{// Specify requirement}
+\textcolor{keyword}{class} ComponentAttribute : Attribute \{ \}
+
+[Component] \textcolor{comment}{// ComponentAttribute requires implementing IComponent interface}
+\textcolor{keyword}{class }MyComponent : IComponent \{ \}
+\end{DoxyCode}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_base_type_required_attribute_a3b535405fd33291328613b6ede4e5d8a}\label{class_base_type_required_attribute_a3b535405fd33291328613b6ede4e5d8a}} 
+\index{Base\+Type\+Required\+Attribute@{Base\+Type\+Required\+Attribute}!Base\+Type\+Required\+Attribute@{Base\+Type\+Required\+Attribute}}
+\index{Base\+Type\+Required\+Attribute@{Base\+Type\+Required\+Attribute}!Base\+Type\+Required\+Attribute@{Base\+Type\+Required\+Attribute}}
+\subsubsection{\texorpdfstring{Base\+Type\+Required\+Attribute()}{BaseTypeRequiredAttribute()}}
+{\footnotesize\ttfamily Base\+Type\+Required\+Attribute.\+Base\+Type\+Required\+Attribute (\begin{DoxyParamCaption}\item[{\mbox{[}\+Not\+Null\mbox{]} Type}]{base\+Type }\end{DoxyParamCaption})}
+
+
+
+\subsection{Property Documentation}
+\mbox{\Hypertarget{class_base_type_required_attribute_abd32451b36cd8eff34ecee4718e78f5b}\label{class_base_type_required_attribute_abd32451b36cd8eff34ecee4718e78f5b}} 
+\index{Base\+Type\+Required\+Attribute@{Base\+Type\+Required\+Attribute}!Base\+Type@{Base\+Type}}
+\index{Base\+Type@{Base\+Type}!Base\+Type\+Required\+Attribute@{Base\+Type\+Required\+Attribute}}
+\subsubsection{\texorpdfstring{Base\+Type}{BaseType}}
+{\footnotesize\ttfamily Type Base\+Type\+Required\+Attribute.\+Base\+Type\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Easy\+Library\+Application.\+W\+P\+F/\+Properties/\mbox{\hyperlink{_annotations_8cs}{Annotations.\+cs}}\end{DoxyCompactItemize}

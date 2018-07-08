@@ -1,0 +1,179 @@
+\hypertarget{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_reservation_view_model}{}\section{Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+Reservation\+View\+Model Class Reference}
+\label{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_reservation_view_model}\index{Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+Reservation\+View\+Model@{Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+Reservation\+View\+Model}}
+Inheritance diagram for Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+Reservation\+View\+Model\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_reservation_view_model}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_reservation_view_model_a2f650e87ceb0f6bf17a5e7b384a9cc29}{Reservation\+View\+Model}} ()
+\begin{DoxyCompactList}\small\item\em K\+Onstruktor view model-\/a \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_reservation_view_model_a6e364c75ed2e8c4841fd3b821748ebf6}{Refresh}} ()
+\begin{DoxyCompactList}\small\item\em Dohvaćanje podataka iz baze podataka \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_reservation_view_model_a15f4bffbd97c33ba6593ff3b8f22f972}{Create\+Reservation}} ()
+\begin{DoxyCompactList}\small\item\em Metoda kojom se kreira objekt rezervacije te popunjava podacima (odabrana knjiga, odabrana knjižnica, korisnik, datum rezervacije...) \end{DoxyCompactList}\item 
+Bitmap \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_reservation_view_model_aa6d3dd879f96a485185c160ed39cbfef}{Create\+Qr\+Picture}} ()
+\begin{DoxyCompactList}\small\item\em Metoda koja stvara QR kod \end{DoxyCompactList}\item 
+async void \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_reservation_view_model_adc2f62d5b2744a23ccce98fed73e9a3e}{Send\+Email}} ()
+\begin{DoxyCompactList}\small\item\em Metoda kojom se šalju podaci rezervacije i QR kod prijavljenom korisniku \end{DoxyCompactList}\item 
+async void \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_reservation_view_model_addfe2a1a29cee69fa8fae2f60bf88c82}{Save\+Reservation\+To\+Database}} ()
+\begin{DoxyCompactList}\small\item\em Metoda kojom se podaci rezervacije spremaju u podaci podataka \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_reservation_view_model_a710689b3254ccbb4353fe2b270485eb4}{On\+Property\+Changed}} (\mbox{[}Caller\+Member\+Name\mbox{]} string property\+Name=null)
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+Collection\+View\+Source \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_reservation_view_model_a0c62f64982854a18eab60ae6a0f7c5bb}{Library\+Collection\+View\+Source}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+static \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_model_1_1_user}{User}} \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_reservation_view_model_a2988b4ee797b1a82f47a4d400100c285}{User}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+static \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_model_1_1_book}{Book}} \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_reservation_view_model_a9bd4f93fd0c94aaf342deb4f6f45ec80}{Book}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_commands_1_1_reservation_command}{Reservation\+Command}} \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_reservation_view_model_ad80ff28a80df5e460288aa23c08e228c}{Reservation\+Event}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_model_1_1_book}{Book}} \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_reservation_view_model_a7f20b1436daa564d6434cfb10518053f}{Selected\+Book}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_model_1_1_library}{Library}} \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_reservation_view_model_a2383fb2f751b39318554ee0aa1971104}{Selected\+Library}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+\subsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+Property\+Changed\+Event\+Handler \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_reservation_view_model_a90c36fd9f39b6f746fef9df947b4f78c}{Property\+Changed}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_reservation_view_model_a2f650e87ceb0f6bf17a5e7b384a9cc29}\label{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_reservation_view_model_a2f650e87ceb0f6bf17a5e7b384a9cc29}} 
+\index{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Reservation\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Reservation\+View\+Model}!Reservation\+View\+Model@{Reservation\+View\+Model}}
+\index{Reservation\+View\+Model@{Reservation\+View\+Model}!Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Reservation\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Reservation\+View\+Model}}
+\subsubsection{\texorpdfstring{Reservation\+View\+Model()}{ReservationViewModel()}}
+{\footnotesize\ttfamily Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+Reservation\+View\+Model.\+Reservation\+View\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+K\+Onstruktor view model-\/a 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_reservation_view_model_aa6d3dd879f96a485185c160ed39cbfef}\label{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_reservation_view_model_aa6d3dd879f96a485185c160ed39cbfef}} 
+\index{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Reservation\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Reservation\+View\+Model}!Create\+Qr\+Picture@{Create\+Qr\+Picture}}
+\index{Create\+Qr\+Picture@{Create\+Qr\+Picture}!Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Reservation\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Reservation\+View\+Model}}
+\subsubsection{\texorpdfstring{Create\+Qr\+Picture()}{CreateQrPicture()}}
+{\footnotesize\ttfamily Bitmap Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+Reservation\+View\+Model.\+Create\+Qr\+Picture (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metoda koja stvara QR kod 
+
+\begin{DoxyReturn}{Returns}
+Varaća sliku QR koda tipa Bitmap 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_reservation_view_model_a15f4bffbd97c33ba6593ff3b8f22f972}\label{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_reservation_view_model_a15f4bffbd97c33ba6593ff3b8f22f972}} 
+\index{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Reservation\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Reservation\+View\+Model}!Create\+Reservation@{Create\+Reservation}}
+\index{Create\+Reservation@{Create\+Reservation}!Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Reservation\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Reservation\+View\+Model}}
+\subsubsection{\texorpdfstring{Create\+Reservation()}{CreateReservation()}}
+{\footnotesize\ttfamily bool Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+Reservation\+View\+Model.\+Create\+Reservation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metoda kojom se kreira objekt rezervacije te popunjava podacima (odabrana knjiga, odabrana knjižnica, korisnik, datum rezervacije...) 
+
+\begin{DoxyReturn}{Returns}
+Vraća true ukolike je uspješno stvaranje objekta rezervacije te false ako je neuspješno 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_reservation_view_model_a710689b3254ccbb4353fe2b270485eb4}\label{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_reservation_view_model_a710689b3254ccbb4353fe2b270485eb4}} 
+\index{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Reservation\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Reservation\+View\+Model}!On\+Property\+Changed@{On\+Property\+Changed}}
+\index{On\+Property\+Changed@{On\+Property\+Changed}!Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Reservation\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Reservation\+View\+Model}}
+\subsubsection{\texorpdfstring{On\+Property\+Changed()}{OnPropertyChanged()}}
+{\footnotesize\ttfamily virtual void Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+Reservation\+View\+Model.\+On\+Property\+Changed (\begin{DoxyParamCaption}\item[{\mbox{[}\+Caller\+Member\+Name\mbox{]} string}]{property\+Name = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_reservation_view_model_a6e364c75ed2e8c4841fd3b821748ebf6}\label{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_reservation_view_model_a6e364c75ed2e8c4841fd3b821748ebf6}} 
+\index{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Reservation\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Reservation\+View\+Model}!Refresh@{Refresh}}
+\index{Refresh@{Refresh}!Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Reservation\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Reservation\+View\+Model}}
+\subsubsection{\texorpdfstring{Refresh()}{Refresh()}}
+{\footnotesize\ttfamily void Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+Reservation\+View\+Model.\+Refresh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Dohvaćanje podataka iz baze podataka 
+
+\mbox{\Hypertarget{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_reservation_view_model_addfe2a1a29cee69fa8fae2f60bf88c82}\label{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_reservation_view_model_addfe2a1a29cee69fa8fae2f60bf88c82}} 
+\index{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Reservation\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Reservation\+View\+Model}!Save\+Reservation\+To\+Database@{Save\+Reservation\+To\+Database}}
+\index{Save\+Reservation\+To\+Database@{Save\+Reservation\+To\+Database}!Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Reservation\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Reservation\+View\+Model}}
+\subsubsection{\texorpdfstring{Save\+Reservation\+To\+Database()}{SaveReservationToDatabase()}}
+{\footnotesize\ttfamily async void Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+Reservation\+View\+Model.\+Save\+Reservation\+To\+Database (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metoda kojom se podaci rezervacije spremaju u podaci podataka 
+
+\mbox{\Hypertarget{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_reservation_view_model_adc2f62d5b2744a23ccce98fed73e9a3e}\label{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_reservation_view_model_adc2f62d5b2744a23ccce98fed73e9a3e}} 
+\index{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Reservation\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Reservation\+View\+Model}!Send\+Email@{Send\+Email}}
+\index{Send\+Email@{Send\+Email}!Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Reservation\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Reservation\+View\+Model}}
+\subsubsection{\texorpdfstring{Send\+Email()}{SendEmail()}}
+{\footnotesize\ttfamily async void Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+Reservation\+View\+Model.\+Send\+Email (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metoda kojom se šalju podaci rezervacije i QR kod prijavljenom korisniku 
+
+
+
+\subsection{Property Documentation}
+\mbox{\Hypertarget{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_reservation_view_model_a9bd4f93fd0c94aaf342deb4f6f45ec80}\label{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_reservation_view_model_a9bd4f93fd0c94aaf342deb4f6f45ec80}} 
+\index{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Reservation\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Reservation\+View\+Model}!Book@{Book}}
+\index{Book@{Book}!Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Reservation\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Reservation\+View\+Model}}
+\subsubsection{\texorpdfstring{Book}{Book}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_model_1_1_book}{Book}} Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+Reservation\+View\+Model.\+Book\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_reservation_view_model_a0c62f64982854a18eab60ae6a0f7c5bb}\label{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_reservation_view_model_a0c62f64982854a18eab60ae6a0f7c5bb}} 
+\index{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Reservation\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Reservation\+View\+Model}!Library\+Collection\+View\+Source@{Library\+Collection\+View\+Source}}
+\index{Library\+Collection\+View\+Source@{Library\+Collection\+View\+Source}!Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Reservation\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Reservation\+View\+Model}}
+\subsubsection{\texorpdfstring{Library\+Collection\+View\+Source}{LibraryCollectionViewSource}}
+{\footnotesize\ttfamily Collection\+View\+Source Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+Reservation\+View\+Model.\+Library\+Collection\+View\+Source\hspace{0.3cm}{\ttfamily [get]}}
+
+\mbox{\Hypertarget{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_reservation_view_model_ad80ff28a80df5e460288aa23c08e228c}\label{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_reservation_view_model_ad80ff28a80df5e460288aa23c08e228c}} 
+\index{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Reservation\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Reservation\+View\+Model}!Reservation\+Event@{Reservation\+Event}}
+\index{Reservation\+Event@{Reservation\+Event}!Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Reservation\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Reservation\+View\+Model}}
+\subsubsection{\texorpdfstring{Reservation\+Event}{ReservationEvent}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_commands_1_1_reservation_command}{Reservation\+Command}} Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+Reservation\+View\+Model.\+Reservation\+Event\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_reservation_view_model_a7f20b1436daa564d6434cfb10518053f}\label{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_reservation_view_model_a7f20b1436daa564d6434cfb10518053f}} 
+\index{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Reservation\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Reservation\+View\+Model}!Selected\+Book@{Selected\+Book}}
+\index{Selected\+Book@{Selected\+Book}!Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Reservation\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Reservation\+View\+Model}}
+\subsubsection{\texorpdfstring{Selected\+Book}{SelectedBook}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_model_1_1_book}{Book}} Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+Reservation\+View\+Model.\+Selected\+Book\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_reservation_view_model_a2383fb2f751b39318554ee0aa1971104}\label{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_reservation_view_model_a2383fb2f751b39318554ee0aa1971104}} 
+\index{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Reservation\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Reservation\+View\+Model}!Selected\+Library@{Selected\+Library}}
+\index{Selected\+Library@{Selected\+Library}!Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Reservation\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Reservation\+View\+Model}}
+\subsubsection{\texorpdfstring{Selected\+Library}{SelectedLibrary}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_model_1_1_library}{Library}} Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+Reservation\+View\+Model.\+Selected\+Library\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_reservation_view_model_a2988b4ee797b1a82f47a4d400100c285}\label{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_reservation_view_model_a2988b4ee797b1a82f47a4d400100c285}} 
+\index{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Reservation\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Reservation\+View\+Model}!User@{User}}
+\index{User@{User}!Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Reservation\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Reservation\+View\+Model}}
+\subsubsection{\texorpdfstring{User}{User}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_model_1_1_user}{User}} Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+Reservation\+View\+Model.\+User\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+\subsection{Event Documentation}
+\mbox{\Hypertarget{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_reservation_view_model_a90c36fd9f39b6f746fef9df947b4f78c}\label{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_reservation_view_model_a90c36fd9f39b6f746fef9df947b4f78c}} 
+\index{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Reservation\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Reservation\+View\+Model}!Property\+Changed@{Property\+Changed}}
+\index{Property\+Changed@{Property\+Changed}!Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Reservation\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Reservation\+View\+Model}}
+\subsubsection{\texorpdfstring{Property\+Changed}{PropertyChanged}}
+{\footnotesize\ttfamily Property\+Changed\+Event\+Handler Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+Reservation\+View\+Model.\+Property\+Changed}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Easy\+Library\+Application.\+W\+P\+F/\+View\+Model/\mbox{\hyperlink{_reservation_view_model_8cs}{Reservation\+View\+Model.\+cs}}\end{DoxyCompactItemize}

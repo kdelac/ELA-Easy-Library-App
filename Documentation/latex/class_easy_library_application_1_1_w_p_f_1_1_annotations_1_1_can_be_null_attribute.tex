@@ -1,0 +1,32 @@
+\hypertarget{class_easy_library_application_1_1_w_p_f_1_1_annotations_1_1_can_be_null_attribute}{}\section{Easy\+Library\+Application.\+W\+P\+F.\+Annotations.\+Can\+Be\+Null\+Attribute Class Reference}
+\label{class_easy_library_application_1_1_w_p_f_1_1_annotations_1_1_can_be_null_attribute}\index{Easy\+Library\+Application.\+W\+P\+F.\+Annotations.\+Can\+Be\+Null\+Attribute@{Easy\+Library\+Application.\+W\+P\+F.\+Annotations.\+Can\+Be\+Null\+Attribute}}
+
+
+Indicates that the value of the marked element could be {\ttfamily null} sometimes, so the check for {\ttfamily null} is necessary before its usage.  
+
+
+Inheritance diagram for Easy\+Library\+Application.\+W\+P\+F.\+Annotations.\+Can\+Be\+Null\+Attribute\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_easy_library_application_1_1_w_p_f_1_1_annotations_1_1_can_be_null_attribute}
+\end{center}
+\end{figure}
+
+
+\subsection{Detailed Description}
+Indicates that the value of the marked element could be {\ttfamily null} sometimes, so the check for {\ttfamily null} is necessary before its usage. 
+
+
+\begin{DoxyCode}
+[CanBeNull] \textcolor{keywordtype}{object} Test() => null;
+
+\textcolor{keywordtype}{void} UseTest() \{
+  var p = Test();
+  var s = p.ToString(); \textcolor{comment}{// Warning: Possible 'System.NullReferenceException'}
+\}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Easy\+Library\+Application.\+W\+P\+F/\+Properties/\mbox{\hyperlink{_annotations_8cs}{Annotations.\+cs}}\end{DoxyCompactItemize}

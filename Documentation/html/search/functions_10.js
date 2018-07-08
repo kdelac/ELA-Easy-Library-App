@@ -1,0 +1,14 @@
+var searchData=
+[
+  ['savebookcommand',['SaveBookCommand',['../class_easy_library_application_1_1_w_p_f_1_1_commands_1_1_save_book_command.html#aa2a6c71612c4f6c4999c996262f1c002',1,'EasyLibraryApplication::WPF::Commands::SaveBookCommand']]],
+  ['savebookcopycommand',['SaveBookCopyCommand',['../class_easy_library_application_1_1_w_p_f_1_1_commands_1_1_save_book_copy_command.html#a01782390edf4df19e3238c8eec150350',1,'EasyLibraryApplication::WPF::Commands::SaveBookCopyCommand']]],
+  ['savechanges',['SaveChanges',['../class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_c_r_u_d_book_copies_view_model.html#a28e88009ab1d5f3c5dfd35a623b4a76a',1,'EasyLibraryApplication.WPF.ViewModel.CRUDBookCopiesViewModel.SaveChanges()'],['../class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_c_r_u_d_books_view_model.html#afd845d1026b4773d9c5f466899bef23f',1,'EasyLibraryApplication.WPF.ViewModel.CRUDBooksViewModel.SaveChanges()'],['../class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_registration_view_model.html#a6d3bfeaca68740bc278dde49eeab5ce9',1,'EasyLibraryApplication.WPF.ViewModel.RegistrationViewModel.SaveChanges()']]],
+  ['savereservationtodatabase',['SaveReservationToDatabase',['../class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_reservation_view_model.html#addfe2a1a29cee69fa8fae2f60bf88c82',1,'EasyLibraryApplication::WPF::ViewModel::ReservationViewModel']]],
+  ['search',['Search',['../class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_user_books_view_model.html#a4086ca89839e12a62444104c96fa02ff',1,'EasyLibraryApplication::WPF::ViewModel::UserBooksViewModel']]],
+  ['searchcommand',['SearchCommand',['../class_easy_library_application_1_1_w_p_f_1_1_commands_1_1_search_command.html#ac22debbcbdc2cc9e0cd3a2ddfb50961c',1,'EasyLibraryApplication::WPF::Commands::SearchCommand']]],
+  ['section',['Section',['../class_easy_library_application_1_1_w_p_f_1_1_model_1_1_section.html#ace4a5d55bf1998ee789128402e01f6b9',1,'EasyLibraryApplication::WPF::Model::Section']]],
+  ['sendemail',['SendEmail',['../class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_reservation_view_model.html#adc2f62d5b2744a23ccce98fed73e9a3e',1,'EasyLibraryApplication.WPF.ViewModel.ReservationViewModel.SendEmail()'],['../class_email_generator_1_1_email.html#a14690b1a17e4bf926cd840c06da283d9',1,'EmailGenerator.Email.SendEmail()']]],
+  ['showregistrationview',['ShowRegistrationView',['../class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_login_view_model.html#a18236d8222050949019144299c572897',1,'EasyLibraryApplication::WPF::ViewModel::LoginViewModel']]],
+  ['status',['Status',['../class_easy_library_application_1_1_w_p_f_1_1_model_1_1_status.html#ac1941f8095c9968293517355b9ff05e3',1,'EasyLibraryApplication::WPF::Model::Status']]],
+  ['stringformatmethodattribute',['StringFormatMethodAttribute',['../class_string_format_method_attribute.html#a68911e2dabb1b9f238f9605bde469e97',1,'StringFormatMethodAttribute']]]
+];

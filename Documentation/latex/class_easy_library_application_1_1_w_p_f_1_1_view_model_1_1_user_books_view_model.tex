@@ -1,0 +1,172 @@
+\hypertarget{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_user_books_view_model}{}\section{Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+User\+Books\+View\+Model Class Reference}
+\label{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_user_books_view_model}\index{Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+User\+Books\+View\+Model@{Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+User\+Books\+View\+Model}}
+
+
+Klasa koja služi za spajanje pogleda pregleda knjiga i modela, te za izradu poslovne logike  
+
+
+Inheritance diagram for Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+User\+Books\+View\+Model\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_user_books_view_model}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_user_books_view_model_ae2fc49b6721388e02a491684c5f16fd0}{User\+Books\+View\+Model}} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor koji stvara dva nova objekta jedan za listu knjiga, a drugi za događaj pritiska na gumb. Poziva se metoda Load\+Data(). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_user_books_view_model_a2c931fd464e4902a0ba6eb55348df1f3}{Refresh}} ()
+\item 
+void \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_user_books_view_model_a4086ca89839e12a62444104c96fa02ff}{Search}} ()
+\begin{DoxyCompactList}\small\item\em Metoda za pretragu knjige po naslovu knjige \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_user_books_view_model_a80abd85a6da594ada491cae1353e5ab1}{Choose\+Book}} ()
+\begin{DoxyCompactList}\small\item\em Metoda koja se aktivira prilikom pritiska na gumb i otvara se prozor za rezervaciju \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_user_books_view_model_ab209852d12dab3ff999230f2510dfe94}{On\+Property\+Changed}} (\mbox{[}Caller\+Member\+Name\mbox{]} string property\+Name=null)
+\begin{DoxyCompactList}\small\item\em Metoda zadužena za implementaciju I\+Notify\+Property\+Changed sučelja \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_model_1_1_user}{User}} \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_user_books_view_model_ad644240bee5dcd84cecf315e51527a95}{User}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+Collection\+View\+Source \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_user_books_view_model_a65d9de428ba91296b58c7d7a1aa14dc7}{Books\+Collection\+View\+Source}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_1_1_reservation_view}{Reservation\+View}} \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_user_books_view_model_a888b8ae4ad3dfcd9110f9305fb67f0d1}{Reservation\+View}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_model_1_1_book}{Book}} \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_user_books_view_model_ae665798f910f813665f5eb99b5ca4f8d}{Selected\+Item}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_commands_1_1_search_command}{Search\+Command}} \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_user_books_view_model_a3dcabcf3fb6f4cc393d43cf6297f9976}{Search\+Event}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_commands_1_1_choose_book_command}{Choose\+Book\+Command}} \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_user_books_view_model_a1f9c12de79358a1fc51896b6d60164bd}{Choose\+Book\+Event}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_user_books_view_model_a37b24a1f41f433df096f1ae2df31e2ad}{Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+\subsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+Property\+Changed\+Event\+Handler \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_user_books_view_model_a2073c3f2b1b2cd6137f46eb1494037be}{Property\+Changed}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Klasa koja služi za spajanje pogleda pregleda knjiga i modela, te za izradu poslovne logike 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_user_books_view_model_ae2fc49b6721388e02a491684c5f16fd0}\label{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_user_books_view_model_ae2fc49b6721388e02a491684c5f16fd0}} 
+\index{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+User\+Books\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+User\+Books\+View\+Model}!User\+Books\+View\+Model@{User\+Books\+View\+Model}}
+\index{User\+Books\+View\+Model@{User\+Books\+View\+Model}!Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+User\+Books\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+User\+Books\+View\+Model}}
+\subsubsection{\texorpdfstring{User\+Books\+View\+Model()}{UserBooksViewModel()}}
+{\footnotesize\ttfamily Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+User\+Books\+View\+Model.\+User\+Books\+View\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Konstruktor koji stvara dva nova objekta jedan za listu knjiga, a drugi za događaj pritiska na gumb. Poziva se metoda Load\+Data(). 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_user_books_view_model_a80abd85a6da594ada491cae1353e5ab1}\label{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_user_books_view_model_a80abd85a6da594ada491cae1353e5ab1}} 
+\index{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+User\+Books\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+User\+Books\+View\+Model}!Choose\+Book@{Choose\+Book}}
+\index{Choose\+Book@{Choose\+Book}!Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+User\+Books\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+User\+Books\+View\+Model}}
+\subsubsection{\texorpdfstring{Choose\+Book()}{ChooseBook()}}
+{\footnotesize\ttfamily void Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+User\+Books\+View\+Model.\+Choose\+Book (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metoda koja se aktivira prilikom pritiska na gumb i otvara se prozor za rezervaciju 
+
+\mbox{\Hypertarget{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_user_books_view_model_ab209852d12dab3ff999230f2510dfe94}\label{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_user_books_view_model_ab209852d12dab3ff999230f2510dfe94}} 
+\index{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+User\+Books\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+User\+Books\+View\+Model}!On\+Property\+Changed@{On\+Property\+Changed}}
+\index{On\+Property\+Changed@{On\+Property\+Changed}!Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+User\+Books\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+User\+Books\+View\+Model}}
+\subsubsection{\texorpdfstring{On\+Property\+Changed()}{OnPropertyChanged()}}
+{\footnotesize\ttfamily virtual void Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+User\+Books\+View\+Model.\+On\+Property\+Changed (\begin{DoxyParamCaption}\item[{\mbox{[}\+Caller\+Member\+Name\mbox{]} string}]{property\+Name = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Metoda zadužena za implementaciju I\+Notify\+Property\+Changed sučelja 
+
+
+\begin{DoxyParams}{Parameters}
+{\em property\+Name} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_user_books_view_model_a2c931fd464e4902a0ba6eb55348df1f3}\label{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_user_books_view_model_a2c931fd464e4902a0ba6eb55348df1f3}} 
+\index{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+User\+Books\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+User\+Books\+View\+Model}!Refresh@{Refresh}}
+\index{Refresh@{Refresh}!Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+User\+Books\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+User\+Books\+View\+Model}}
+\subsubsection{\texorpdfstring{Refresh()}{Refresh()}}
+{\footnotesize\ttfamily void Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+User\+Books\+View\+Model.\+Refresh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_user_books_view_model_a4086ca89839e12a62444104c96fa02ff}\label{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_user_books_view_model_a4086ca89839e12a62444104c96fa02ff}} 
+\index{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+User\+Books\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+User\+Books\+View\+Model}!Search@{Search}}
+\index{Search@{Search}!Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+User\+Books\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+User\+Books\+View\+Model}}
+\subsubsection{\texorpdfstring{Search()}{Search()}}
+{\footnotesize\ttfamily void Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+User\+Books\+View\+Model.\+Search (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metoda za pretragu knjige po naslovu knjige 
+
+
+
+\subsection{Property Documentation}
+\mbox{\Hypertarget{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_user_books_view_model_a65d9de428ba91296b58c7d7a1aa14dc7}\label{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_user_books_view_model_a65d9de428ba91296b58c7d7a1aa14dc7}} 
+\index{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+User\+Books\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+User\+Books\+View\+Model}!Books\+Collection\+View\+Source@{Books\+Collection\+View\+Source}}
+\index{Books\+Collection\+View\+Source@{Books\+Collection\+View\+Source}!Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+User\+Books\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+User\+Books\+View\+Model}}
+\subsubsection{\texorpdfstring{Books\+Collection\+View\+Source}{BooksCollectionViewSource}}
+{\footnotesize\ttfamily Collection\+View\+Source Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+User\+Books\+View\+Model.\+Books\+Collection\+View\+Source\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_user_books_view_model_a1f9c12de79358a1fc51896b6d60164bd}\label{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_user_books_view_model_a1f9c12de79358a1fc51896b6d60164bd}} 
+\index{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+User\+Books\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+User\+Books\+View\+Model}!Choose\+Book\+Event@{Choose\+Book\+Event}}
+\index{Choose\+Book\+Event@{Choose\+Book\+Event}!Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+User\+Books\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+User\+Books\+View\+Model}}
+\subsubsection{\texorpdfstring{Choose\+Book\+Event}{ChooseBookEvent}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_commands_1_1_choose_book_command}{Choose\+Book\+Command}} Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+User\+Books\+View\+Model.\+Choose\+Book\+Event\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_user_books_view_model_a37b24a1f41f433df096f1ae2df31e2ad}\label{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_user_books_view_model_a37b24a1f41f433df096f1ae2df31e2ad}} 
+\index{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+User\+Books\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+User\+Books\+View\+Model}!Name@{Name}}
+\index{Name@{Name}!Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+User\+Books\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+User\+Books\+View\+Model}}
+\subsubsection{\texorpdfstring{Name}{Name}}
+{\footnotesize\ttfamily string Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+User\+Books\+View\+Model.\+Name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_user_books_view_model_a888b8ae4ad3dfcd9110f9305fb67f0d1}\label{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_user_books_view_model_a888b8ae4ad3dfcd9110f9305fb67f0d1}} 
+\index{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+User\+Books\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+User\+Books\+View\+Model}!Reservation\+View@{Reservation\+View}}
+\index{Reservation\+View@{Reservation\+View}!Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+User\+Books\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+User\+Books\+View\+Model}}
+\subsubsection{\texorpdfstring{Reservation\+View}{ReservationView}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_1_1_reservation_view}{Reservation\+View}} Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+User\+Books\+View\+Model.\+Reservation\+View\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_user_books_view_model_a3dcabcf3fb6f4cc393d43cf6297f9976}\label{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_user_books_view_model_a3dcabcf3fb6f4cc393d43cf6297f9976}} 
+\index{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+User\+Books\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+User\+Books\+View\+Model}!Search\+Event@{Search\+Event}}
+\index{Search\+Event@{Search\+Event}!Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+User\+Books\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+User\+Books\+View\+Model}}
+\subsubsection{\texorpdfstring{Search\+Event}{SearchEvent}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_commands_1_1_search_command}{Search\+Command}} Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+User\+Books\+View\+Model.\+Search\+Event\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_user_books_view_model_ae665798f910f813665f5eb99b5ca4f8d}\label{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_user_books_view_model_ae665798f910f813665f5eb99b5ca4f8d}} 
+\index{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+User\+Books\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+User\+Books\+View\+Model}!Selected\+Item@{Selected\+Item}}
+\index{Selected\+Item@{Selected\+Item}!Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+User\+Books\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+User\+Books\+View\+Model}}
+\subsubsection{\texorpdfstring{Selected\+Item}{SelectedItem}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_model_1_1_book}{Book}} Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+User\+Books\+View\+Model.\+Selected\+Item\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_user_books_view_model_ad644240bee5dcd84cecf315e51527a95}\label{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_user_books_view_model_ad644240bee5dcd84cecf315e51527a95}} 
+\index{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+User\+Books\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+User\+Books\+View\+Model}!User@{User}}
+\index{User@{User}!Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+User\+Books\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+User\+Books\+View\+Model}}
+\subsubsection{\texorpdfstring{User}{User}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_model_1_1_user}{User}} Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+User\+Books\+View\+Model.\+User\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+\subsection{Event Documentation}
+\mbox{\Hypertarget{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_user_books_view_model_a2073c3f2b1b2cd6137f46eb1494037be}\label{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_user_books_view_model_a2073c3f2b1b2cd6137f46eb1494037be}} 
+\index{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+User\+Books\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+User\+Books\+View\+Model}!Property\+Changed@{Property\+Changed}}
+\index{Property\+Changed@{Property\+Changed}!Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+User\+Books\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+User\+Books\+View\+Model}}
+\subsubsection{\texorpdfstring{Property\+Changed}{PropertyChanged}}
+{\footnotesize\ttfamily Property\+Changed\+Event\+Handler Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+User\+Books\+View\+Model.\+Property\+Changed}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Easy\+Library\+Application.\+W\+P\+F/\+View\+Model/\mbox{\hyperlink{_user_books_view_model_8cs}{User\+Books\+View\+Model.\+cs}}\end{DoxyCompactItemize}

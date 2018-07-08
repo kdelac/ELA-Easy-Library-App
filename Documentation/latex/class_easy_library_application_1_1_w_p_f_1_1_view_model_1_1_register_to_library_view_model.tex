@@ -1,0 +1,148 @@
+\hypertarget{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_register_to_library_view_model}{}\section{Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+Register\+To\+Library\+View\+Model Class Reference}
+\label{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_register_to_library_view_model}\index{Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+Register\+To\+Library\+View\+Model@{Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+Register\+To\+Library\+View\+Model}}
+
+
+Klasa koja služi za spajanje pogleda za registraciju knjiznice za određenog korisnika i modela, te za izradu poslovne logike  
+
+
+Inheritance diagram for Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+Register\+To\+Library\+View\+Model\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_register_to_library_view_model}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_register_to_library_view_model_a595b136e4fafc9d54558ef9ea81249a8}{Register\+To\+Library\+View\+Model}} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor koji stvara tri objekta od kojih su dva liste koje prikazuju podatke na pogledima i jedan objekt za događaj prilikom pritiska gumba. Poziva se metoda za prikaz podataka \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_register_to_library_view_model_a8b864d9d781067de52ac2053912d0094}{Refresh}} ()
+\begin{DoxyCompactList}\small\item\em Stvaranje novog objekta baze, učitavanje svih knjižnica. Dodjeljivanje knjižnica u liste pomoću pohranjenih procedura. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_register_to_library_view_model_a378d4e6524920d56dd979d92803797e6}{Register\+To\+Library}} ()
+\begin{DoxyCompactList}\small\item\em Metoda koja upisuje korisnika u bazu i dodaje mu izabranu knjižnicu \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_register_to_library_view_model_ab0d088de82b202d0e2e7b25f82a0e791}{On\+Property\+Changed}} (\mbox{[}Caller\+Member\+Name\mbox{]} string property\+Name=null)
+\begin{DoxyCompactList}\small\item\em Metoda zadužena za implementaciju I\+Notify\+Property\+Changed sučelja \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_model_1_1_user}{User}} \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_register_to_library_view_model_a2bad0b1dd27d3c3d80617c938dd13417}{User}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+Collection\+View\+Source \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_register_to_library_view_model_acf7e0759dfdd955541a53e9e78e4e08b}{Registred\+Librar\+Collection}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Collection\+View\+Source \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_register_to_library_view_model_ae3553520efa652cc7e510447151a3f8d}{Not\+Registred\+Librar\+Collection}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_commands_1_1_register_to_library_command}{Register\+To\+Library\+Command}} \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_register_to_library_view_model_a42727cb60e815808028195dcef76f973}{Register\+To\+Library\+Event}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_model_1_1_library}{Library}} \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_register_to_library_view_model_abd2f754baf953e907e0f72a4eb107181}{Selected\+Item}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+\subsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+Property\+Changed\+Event\+Handler \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_register_to_library_view_model_ac883e545476f345c2c3516a918826891}{Property\+Changed}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Klasa koja služi za spajanje pogleda za registraciju knjiznice za određenog korisnika i modela, te za izradu poslovne logike 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_register_to_library_view_model_a595b136e4fafc9d54558ef9ea81249a8}\label{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_register_to_library_view_model_a595b136e4fafc9d54558ef9ea81249a8}} 
+\index{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Register\+To\+Library\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Register\+To\+Library\+View\+Model}!Register\+To\+Library\+View\+Model@{Register\+To\+Library\+View\+Model}}
+\index{Register\+To\+Library\+View\+Model@{Register\+To\+Library\+View\+Model}!Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Register\+To\+Library\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Register\+To\+Library\+View\+Model}}
+\subsubsection{\texorpdfstring{Register\+To\+Library\+View\+Model()}{RegisterToLibraryViewModel()}}
+{\footnotesize\ttfamily Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+Register\+To\+Library\+View\+Model.\+Register\+To\+Library\+View\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Konstruktor koji stvara tri objekta od kojih su dva liste koje prikazuju podatke na pogledima i jedan objekt za događaj prilikom pritiska gumba. Poziva se metoda za prikaz podataka 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_register_to_library_view_model_ab0d088de82b202d0e2e7b25f82a0e791}\label{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_register_to_library_view_model_ab0d088de82b202d0e2e7b25f82a0e791}} 
+\index{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Register\+To\+Library\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Register\+To\+Library\+View\+Model}!On\+Property\+Changed@{On\+Property\+Changed}}
+\index{On\+Property\+Changed@{On\+Property\+Changed}!Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Register\+To\+Library\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Register\+To\+Library\+View\+Model}}
+\subsubsection{\texorpdfstring{On\+Property\+Changed()}{OnPropertyChanged()}}
+{\footnotesize\ttfamily virtual void Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+Register\+To\+Library\+View\+Model.\+On\+Property\+Changed (\begin{DoxyParamCaption}\item[{\mbox{[}\+Caller\+Member\+Name\mbox{]} string}]{property\+Name = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Metoda zadužena za implementaciju I\+Notify\+Property\+Changed sučelja 
+
+
+\begin{DoxyParams}{Parameters}
+{\em property\+Name} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_register_to_library_view_model_a8b864d9d781067de52ac2053912d0094}\label{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_register_to_library_view_model_a8b864d9d781067de52ac2053912d0094}} 
+\index{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Register\+To\+Library\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Register\+To\+Library\+View\+Model}!Refresh@{Refresh}}
+\index{Refresh@{Refresh}!Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Register\+To\+Library\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Register\+To\+Library\+View\+Model}}
+\subsubsection{\texorpdfstring{Refresh()}{Refresh()}}
+{\footnotesize\ttfamily void Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+Register\+To\+Library\+View\+Model.\+Refresh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Stvaranje novog objekta baze, učitavanje svih knjižnica. Dodjeljivanje knjižnica u liste pomoću pohranjenih procedura. 
+
+\mbox{\Hypertarget{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_register_to_library_view_model_a378d4e6524920d56dd979d92803797e6}\label{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_register_to_library_view_model_a378d4e6524920d56dd979d92803797e6}} 
+\index{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Register\+To\+Library\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Register\+To\+Library\+View\+Model}!Register\+To\+Library@{Register\+To\+Library}}
+\index{Register\+To\+Library@{Register\+To\+Library}!Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Register\+To\+Library\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Register\+To\+Library\+View\+Model}}
+\subsubsection{\texorpdfstring{Register\+To\+Library()}{RegisterToLibrary()}}
+{\footnotesize\ttfamily void Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+Register\+To\+Library\+View\+Model.\+Register\+To\+Library (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metoda koja upisuje korisnika u bazu i dodaje mu izabranu knjižnicu 
+
+
+
+\subsection{Property Documentation}
+\mbox{\Hypertarget{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_register_to_library_view_model_ae3553520efa652cc7e510447151a3f8d}\label{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_register_to_library_view_model_ae3553520efa652cc7e510447151a3f8d}} 
+\index{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Register\+To\+Library\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Register\+To\+Library\+View\+Model}!Not\+Registred\+Librar\+Collection@{Not\+Registred\+Librar\+Collection}}
+\index{Not\+Registred\+Librar\+Collection@{Not\+Registred\+Librar\+Collection}!Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Register\+To\+Library\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Register\+To\+Library\+View\+Model}}
+\subsubsection{\texorpdfstring{Not\+Registred\+Librar\+Collection}{NotRegistredLibrarCollection}}
+{\footnotesize\ttfamily Collection\+View\+Source Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+Register\+To\+Library\+View\+Model.\+Not\+Registred\+Librar\+Collection\hspace{0.3cm}{\ttfamily [get]}}
+
+\mbox{\Hypertarget{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_register_to_library_view_model_a42727cb60e815808028195dcef76f973}\label{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_register_to_library_view_model_a42727cb60e815808028195dcef76f973}} 
+\index{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Register\+To\+Library\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Register\+To\+Library\+View\+Model}!Register\+To\+Library\+Event@{Register\+To\+Library\+Event}}
+\index{Register\+To\+Library\+Event@{Register\+To\+Library\+Event}!Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Register\+To\+Library\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Register\+To\+Library\+View\+Model}}
+\subsubsection{\texorpdfstring{Register\+To\+Library\+Event}{RegisterToLibraryEvent}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_commands_1_1_register_to_library_command}{Register\+To\+Library\+Command}} Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+Register\+To\+Library\+View\+Model.\+Register\+To\+Library\+Event\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_register_to_library_view_model_acf7e0759dfdd955541a53e9e78e4e08b}\label{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_register_to_library_view_model_acf7e0759dfdd955541a53e9e78e4e08b}} 
+\index{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Register\+To\+Library\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Register\+To\+Library\+View\+Model}!Registred\+Librar\+Collection@{Registred\+Librar\+Collection}}
+\index{Registred\+Librar\+Collection@{Registred\+Librar\+Collection}!Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Register\+To\+Library\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Register\+To\+Library\+View\+Model}}
+\subsubsection{\texorpdfstring{Registred\+Librar\+Collection}{RegistredLibrarCollection}}
+{\footnotesize\ttfamily Collection\+View\+Source Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+Register\+To\+Library\+View\+Model.\+Registred\+Librar\+Collection\hspace{0.3cm}{\ttfamily [get]}}
+
+\mbox{\Hypertarget{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_register_to_library_view_model_abd2f754baf953e907e0f72a4eb107181}\label{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_register_to_library_view_model_abd2f754baf953e907e0f72a4eb107181}} 
+\index{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Register\+To\+Library\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Register\+To\+Library\+View\+Model}!Selected\+Item@{Selected\+Item}}
+\index{Selected\+Item@{Selected\+Item}!Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Register\+To\+Library\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Register\+To\+Library\+View\+Model}}
+\subsubsection{\texorpdfstring{Selected\+Item}{SelectedItem}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_model_1_1_library}{Library}} Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+Register\+To\+Library\+View\+Model.\+Selected\+Item\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_register_to_library_view_model_a2bad0b1dd27d3c3d80617c938dd13417}\label{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_register_to_library_view_model_a2bad0b1dd27d3c3d80617c938dd13417}} 
+\index{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Register\+To\+Library\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Register\+To\+Library\+View\+Model}!User@{User}}
+\index{User@{User}!Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Register\+To\+Library\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Register\+To\+Library\+View\+Model}}
+\subsubsection{\texorpdfstring{User}{User}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_easy_library_application_1_1_w_p_f_1_1_model_1_1_user}{User}} Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+Register\+To\+Library\+View\+Model.\+User\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+\subsection{Event Documentation}
+\mbox{\Hypertarget{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_register_to_library_view_model_ac883e545476f345c2c3516a918826891}\label{class_easy_library_application_1_1_w_p_f_1_1_view_model_1_1_register_to_library_view_model_ac883e545476f345c2c3516a918826891}} 
+\index{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Register\+To\+Library\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Register\+To\+Library\+View\+Model}!Property\+Changed@{Property\+Changed}}
+\index{Property\+Changed@{Property\+Changed}!Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Register\+To\+Library\+View\+Model@{Easy\+Library\+Application\+::\+W\+P\+F\+::\+View\+Model\+::\+Register\+To\+Library\+View\+Model}}
+\subsubsection{\texorpdfstring{Property\+Changed}{PropertyChanged}}
+{\footnotesize\ttfamily Property\+Changed\+Event\+Handler Easy\+Library\+Application.\+W\+P\+F.\+View\+Model.\+Register\+To\+Library\+View\+Model.\+Property\+Changed}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Easy\+Library\+Application.\+W\+P\+F/\+View\+Model/\mbox{\hyperlink{_register_to_library_view_model_8cs}{Register\+To\+Library\+View\+Model.\+cs}}\end{DoxyCompactItemize}
