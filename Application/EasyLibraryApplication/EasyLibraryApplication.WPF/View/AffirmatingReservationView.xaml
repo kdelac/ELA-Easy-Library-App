@@ -1,0 +1,18 @@
+﻿<Page x:Class="EasyLibraryApplication.WPF.View.AffirmatingReservationView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:EasyLibraryApplication.WPF.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="600"
+      Title="AffirmatingReservationView" Background="#2488e0">
+
+    <Grid>
+        <Label Content="Kamera" HorizontalAlignment="Left" Margin="42,42,0,0" VerticalAlignment="Top" FontSize="24"/>
+        <Image HorizontalAlignment="Left" Height="263" Margin="42,89,0,0" VerticalAlignment="Top" Width="407"/>
+        <Button Content="Otvori kameru" HorizontalAlignment="Left" Margin="42,385,0,0" VerticalAlignment="Top" Width="109" Height="33"/>
+        <Button Content="Pokazi podatke" HorizontalAlignment="Left" Margin="195,385,0,0" VerticalAlignment="Top" Width="109" Height="33"/>
+
+    </Grid>
+</Page>

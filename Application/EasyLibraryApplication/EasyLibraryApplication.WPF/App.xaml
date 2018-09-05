@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:EasyLibraryApplication.WPF"
 
              
-             StartupUri="View/LoginView.xaml">
+             StartupUri="View/AffirmatingReservation.xaml">
 
     <Application.Resources>
          

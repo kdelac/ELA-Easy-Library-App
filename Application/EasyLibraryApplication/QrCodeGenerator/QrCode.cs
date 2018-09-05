@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using ZXing;
 
 namespace QrCodeGenerator
 {
@@ -43,6 +46,18 @@ namespace QrCodeGenerator
         public Bitmap GetQrCodeBitmap()
         {
             return qrCodeBitmap;
+        }
+
+        public string ReadQrCode(Bitmap qrCode)
+        {
+            IBarcodeReader reader = new BarcodeReader();
+
+            var result = reader.Decode(qrCode);
+            if (result != null)
+            {
+                return result.Text;
+            }
+            return "Ne valja";
         }
     }
 }
