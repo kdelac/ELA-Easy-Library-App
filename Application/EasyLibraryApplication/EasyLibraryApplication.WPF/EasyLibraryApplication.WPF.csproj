@@ -34,6 +34,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.2.2.5\lib\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
     <Reference Include="EmailGenerator">
       <HintPath>..\EmailGenerator\bin\Debug\EmailGenerator.dll</HintPath>
     </Reference>
@@ -89,6 +98,7 @@
     </Compile>
     <Compile Include="Commands\AddBookCommand.cs" />
     <Compile Include="Commands\AddBookCopyCommand.cs" />
+    <Compile Include="Commands\CameraCommand.cs" />
     <Compile Include="Commands\ChooseBookCommand.cs" />
     <Compile Include="Commands\DeleteBookCommand.cs" />
     <Compile Include="Commands\DeleteBookCopyCommand.cs" />
@@ -178,6 +188,7 @@
     <Compile Include="ViewModel\AffirmatingReservationViewModel.cs" />
     <Compile Include="ViewModel\CRUDBookCopiesViewModel.cs" />
     <Compile Include="ViewModel\CRUDBooksViewModel.cs" />
+    <Compile Include="ViewModel\LoanBookAdminViewModel.cs" />
     <Compile Include="ViewModel\LoanBookViewModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="ViewModel\RegisterToLibraryViewModel.cs" />
@@ -195,6 +206,9 @@
     </Compile>
     <Compile Include="View\CRUDBooksView.xaml.cs">
       <DependentUpon>CRUDBooksView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\LoanBookAdminView.xaml.cs">
+      <DependentUpon>LoanBookAdminView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\LoanBooksView.xaml.cs">
       <DependentUpon>LoanBooksView.xaml</DependentUpon>
@@ -275,6 +289,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\CRUDBooksView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\LoanBookAdminView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

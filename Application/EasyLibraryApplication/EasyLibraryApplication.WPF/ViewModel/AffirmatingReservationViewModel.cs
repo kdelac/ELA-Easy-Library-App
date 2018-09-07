@@ -1,16 +1,41 @@
 ﻿using EasyLibraryApplication.WPF.Annotations;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
+using AForge.Video;
+using AForge.Video.DirectShow;
+using System.Drawing;
+using System.Windows.Controls;
+using EasyLibraryApplication.WPF.Commands;
 
 namespace EasyLibraryApplication.WPF.ViewModel
 {
-    class AffirmatingReservationViewModel : INotifyPropertyChanged
+    public class AffirmatingReservationViewModel : INotifyPropertyChanged
     {
+
+        public AffirmatingReservationViewModel()
+        {
+            CameraEvent = new CameraCommand(this);
+        }
+
+        #region Command
+
+        public CameraCommand CameraEvent { get; set; }
+
+        #endregion
+
+        public void OpenCamera()
+        {
+            VideoCaptureDevice FinalFrame = new VideoCaptureDevice();
+            FinalFrame.NewFrame += new NewFrameEventHandler(FinalFrame_NewFrame);
+            FinalFrame.Start();
+
+        }
+
+        private void FinalFrame_NewFrame(object sender, NewFrameEventArgs eventArgs)
+        {
+            System.Drawing.Image img;
+            img = (Bitmap)eventArgs.Frame.Clone();
+        }
 
 
         #region PropertyChangedEventHandler

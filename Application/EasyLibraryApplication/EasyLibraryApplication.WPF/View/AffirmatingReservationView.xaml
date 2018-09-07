@@ -10,8 +10,8 @@
 
     <Grid>
         <Label Content="Kamera" HorizontalAlignment="Left" Margin="42,42,0,0" VerticalAlignment="Top" FontSize="24"/>
-        <Image HorizontalAlignment="Left" Height="263" Margin="42,89,0,0" VerticalAlignment="Top" Width="407"/>
-        <Button Content="Otvori kameru" HorizontalAlignment="Left" Margin="42,385,0,0" VerticalAlignment="Top" Width="109" Height="33"/>
+        <Image Name="img" HorizontalAlignment="Left" Height="263" Margin="42,89,0,0" VerticalAlignment="Top" Width="407"/>
+        <Button Content="Otvori kameru" HorizontalAlignment="Left" Margin="42,385,0,0" VerticalAlignment="Top" Width="109" Height="33" Command="{Binding CameraEvent}"/>
         <Button Content="Pokazi podatke" HorizontalAlignment="Left" Margin="195,385,0,0" VerticalAlignment="Top" Width="109" Height="33"/>
 
     </Grid>

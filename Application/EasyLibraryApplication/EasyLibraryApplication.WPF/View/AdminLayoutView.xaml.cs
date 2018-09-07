@@ -42,5 +42,10 @@ namespace EasyLibraryApplication.WPF.View
         {
             uiFrame.Source = new Uri("CRUDBookCopiesView.xaml", UriKind.Relative);
         }
+
+        private void uiActionOption3_Click(object sender, RoutedEventArgs e)
+        {
+            uiFrame.Source = new Uri("LoanBookAdminView.xaml", UriKind.Relative);
+        }
     }
 }

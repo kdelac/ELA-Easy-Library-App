@@ -42,10 +42,10 @@
                     <Label HorizontalAlignment="Center" Content="CRUD Kopije"></Label>
                 </StackPanel>
             </Button>
-            <Button Name="uiActionOption3" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Background="Transparent" BorderThickness="0">
+            <Button Name="uiActionOption3" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Background="Transparent" BorderThickness="0" Click="uiActionOption3_Click">
                 <StackPanel HorizontalAlignment="Center">
-                    <Image Height="50" Width="50"/>
-                    <Label HorizontalAlignment="Center"></Label>
+                    <Image Height="50" Width="50" Source="../Icons/books.png"/>
+                    <Label HorizontalAlignment="Center" Content="Pregled posuđenih knjiga"></Label>
                 </StackPanel>
             </Button>
             <Button Name="uiActionOption4" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" Background="Transparent" BorderThickness="0">
