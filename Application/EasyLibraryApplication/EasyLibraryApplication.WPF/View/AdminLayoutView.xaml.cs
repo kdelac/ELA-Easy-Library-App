@@ -47,5 +47,10 @@ namespace EasyLibraryApplication.WPF.View
         {
             uiFrame.Source = new Uri("LoanBookAdminView.xaml", UriKind.Relative);
         }
+
+        private void uiActionOption4_Click(object sender, RoutedEventArgs e)
+        {
+            uiFrame.Source = new Uri("ConfirmationOfReturningBookView.xaml", UriKind.Relative);
+        }
     }
 }

@@ -102,6 +102,8 @@
     <Compile Include="Commands\ChooseBookCommand.cs" />
     <Compile Include="Commands\DeleteBookCommand.cs" />
     <Compile Include="Commands\DeleteBookCopyCommand.cs" />
+    <Compile Include="Commands\DeleteLoanCommand.cs" />
+    <Compile Include="Commands\GetLoanBookCommand.cs" />
     <Compile Include="Commands\LoginCommand.cs" />
     <Compile Include="Commands\RefreshCommand.cs" />
     <Compile Include="Commands\RefreshCopyCommand.cs" />
@@ -186,6 +188,7 @@
     </Compile>
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="ViewModel\AffirmatingReservationViewModel.cs" />
+    <Compile Include="ViewModel\ConfirmationOfReturningBookViewModel.cs" />
     <Compile Include="ViewModel\CRUDBookCopiesViewModel.cs" />
     <Compile Include="ViewModel\CRUDBooksViewModel.cs" />
     <Compile Include="ViewModel\LoanBookAdminViewModel.cs" />
@@ -200,6 +203,9 @@
     </Compile>
     <Compile Include="View\AffirmatingReservationView.xaml.cs">
       <DependentUpon>AffirmatingReservationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ConfirmationOfReturningBookView.xaml.cs">
+      <DependentUpon>ConfirmationOfReturningBookView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\CRUDBookCopiesView.xaml.cs">
       <DependentUpon>CRUDBookCopiesView.xaml</DependentUpon>
@@ -281,6 +287,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\AffirmatingReservationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ConfirmationOfReturningBookView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
