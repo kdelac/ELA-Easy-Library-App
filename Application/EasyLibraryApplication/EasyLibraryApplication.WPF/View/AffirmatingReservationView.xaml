@@ -10,9 +10,10 @@
 
     <Grid>
         <Label Content="Kamera" HorizontalAlignment="Left" Margin="42,42,0,0" VerticalAlignment="Top" FontSize="24"/>
-        <Image Name="img" HorizontalAlignment="Left" Height="263" Margin="42,89,0,0" VerticalAlignment="Top" Width="407"/>
-        <Button Content="Otvori kameru" HorizontalAlignment="Left" Margin="42,385,0,0" VerticalAlignment="Top" Width="109" Height="33" Command="{Binding CameraEvent}"/>
-        <Button Content="Pokazi podatke" HorizontalAlignment="Left" Margin="195,385,0,0" VerticalAlignment="Top" Width="109" Height="33"/>
-
+        <Image x:Name="img" HorizontalAlignment="Left" Height="263" Margin="42,89,0,0" VerticalAlignment="Top" Width="298"  />
+        <Button Content="Otvori kameru" HorizontalAlignment="Left" Margin="42,385,0,0" VerticalAlignment="Top" Width="109" Height="33" Click="Button_Click"/>
+        <Button Content="Ugasi kameru" HorizontalAlignment="Left" Margin="195,385,0,0" VerticalAlignment="Top" Width="109" Height="33" Click="Button_Click_1"/>
+        <TextBox x:Name="ispis" Margin="345,89,10,82"></TextBox>
+        <Label Content="Podaci s QR koda" HorizontalAlignment="Left" Margin="345,48,0,0" VerticalAlignment="Top" FontSize="18"/>
     </Grid>
 </Page>

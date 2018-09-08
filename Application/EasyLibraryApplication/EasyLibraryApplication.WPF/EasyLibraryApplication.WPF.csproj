@@ -114,6 +114,7 @@
     <Compile Include="Commands\SaveBookCommand.cs" />
     <Compile Include="Commands\SaveBookCopyCommand.cs" />
     <Compile Include="Commands\SearchCommand.cs" />
+    <Compile Include="Helper\BitmapHelpers.cs" />
     <Compile Include="Model\Administrator.cs">
       <DependentUpon>LibraryDbModel.tt</DependentUpon>
     </Compile>

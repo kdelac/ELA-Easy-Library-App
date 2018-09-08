@@ -48,6 +48,11 @@ namespace QrCodeGenerator
             return qrCodeBitmap;
         }
 
+        /// <summary>
+        /// Citanje podataka iz QR koda
+        /// </summary>
+        /// <param name="qrCode"></param>
+        /// <returns></returns>
         public string ReadQrCode(Bitmap qrCode)
         {
             IBarcodeReader reader = new BarcodeReader();
@@ -57,7 +62,7 @@ namespace QrCodeGenerator
             {
                 return result.Text;
             }
-            return "Ne valja";
+            return "Neuspjelo";
         }
     }
 }
