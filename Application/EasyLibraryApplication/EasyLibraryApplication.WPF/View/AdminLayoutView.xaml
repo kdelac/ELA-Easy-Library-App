@@ -22,6 +22,7 @@
                 <RowDefinition Height="2*"/>
                 <RowDefinition Height="2*"/>
                 <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Rectangle Grid.Row="0" Grid.Column="1" Fill="LightGray" Name="uiActionRec1"></Rectangle>
@@ -54,7 +55,13 @@
                     <Label HorizontalAlignment="Center" Content="Vraćanje knjiga"></Label>
                 </StackPanel>
             </Button>
-            <Button x:Name="uiActionLogOff" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" Background="Transparent" BorderThickness="0" Click="UiActionLogOff_OnClick">Odjava</Button>
+            <Button Name="uiActionOption5" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" Background="Transparent" BorderThickness="0" Click="uiActionOption5_Click">
+                <StackPanel HorizontalAlignment="Center">
+                    <Image Height="50" Width="50" Source="../Icons/allBooks.png"/>
+                    <Label HorizontalAlignment="Center" Content="Potvrda rezervacije"></Label>
+                </StackPanel>
+            </Button>
+            <Button x:Name="uiActionLogOff" Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2" Background="Transparent" BorderThickness="0" Click="UiActionLogOff_OnClick">Odjava</Button>
             <Frame Grid.Row="0" Grid.RowSpan="5" Grid.Column="2" NavigationUIVisibility="Hidden" x:Name="uiFrame"></Frame>
         </Grid>
     </Grid>

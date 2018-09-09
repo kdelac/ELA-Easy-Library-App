@@ -10,6 +10,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Data;
 
 namespace EasyLibraryApplication.WPF.ViewModel
@@ -93,7 +94,18 @@ namespace EasyLibraryApplication.WPF.ViewModel
         /// </summary>
         public void DeleteLoan()
         {
-            ctx.Loans.Remove(LoansCollection.View.CurrentItem as Loan);
+            Loan selected = LoansCollection.View.CurrentItem as Loan;
+
+            ctx.Libraries.Load();
+            TimeSpan razlika = DateTime.Now.Subtract((DateTime)selected.EndLoanDate);
+            if(razlika.Days > 0)
+            {
+                var overdue = ctx.Libraries.Where(x => x.Id == AdminUser.LibraryId).Select(x => x.OverduePrice).FirstOrDefault();
+                var rez = razlika.Days * (double)overdue;
+                MessageBox.Show($"Korisnik mora platiti  {rez} kn");
+            }
+            
+            ctx.Loans.Remove(selected);
             ctx.SaveChanges();
             Refresh();
         }

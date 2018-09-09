@@ -52,5 +52,10 @@ namespace EasyLibraryApplication.WPF.View
         {
             uiFrame.Source = new Uri("ConfirmationOfReturningBookView.xaml", UriKind.Relative);
         }
+
+        private void uiActionOption5_Click(object sender, RoutedEventArgs e)
+        {
+            uiFrame.Source = new Uri("AffirmatingReservationView.xaml", UriKind.Relative);
+        }
     }
 }

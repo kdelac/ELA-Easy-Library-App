@@ -10,10 +10,20 @@
 
     <Grid>
         <Label Content="Kamera" HorizontalAlignment="Left" Margin="42,42,0,0" VerticalAlignment="Top" FontSize="24"/>
-        <Image x:Name="img" HorizontalAlignment="Left" Height="263" Margin="42,89,0,0" VerticalAlignment="Top" Width="298"  />
+        <Image x:Name="img" HorizontalAlignment="Left" Height="273" Margin="26,89,0,0" VerticalAlignment="Top" Width="299"  />
         <Button Content="Otvori kameru" HorizontalAlignment="Left" Margin="42,385,0,0" VerticalAlignment="Top" Width="109" Height="33" Click="Button_Click"/>
-        <Button Content="Ugasi kameru" HorizontalAlignment="Left" Margin="195,385,0,0" VerticalAlignment="Top" Width="109" Height="33" Click="Button_Click_1"/>
-        <TextBox x:Name="ispis" Margin="345,89,10,82"></TextBox>
-        <Label Content="Podaci s QR koda" HorizontalAlignment="Left" Margin="345,48,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Button Content="Ugasi kameru" HorizontalAlignment="Left" Margin="174,385,0,0" VerticalAlignment="Top" Width="109" Height="33" Click="Button_Click_1"/>
+            
+        <Label Content="Očitavanje uspjelo" HorizontalAlignment="Left" Margin="345,48,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label Content="" HorizontalAlignment="Left" Margin="345,142,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Button Content="Snimi QR kod" HorizontalAlignment="Left" Margin="305,385,0,0" VerticalAlignment="Top" Width="109" Height="33" Click="Button_Click_2"/>
+
+        <TextBox x:Name="ispis" Margin="345,89,10,336"/>
+        <TextBox x:Name="bookName" Margin="345,129,10,288" ></TextBox>
+        <TextBox x:Name="userName" Margin="345,181,10,234"></TextBox>
+
+        <Label Content="Inventarski broj" Margin="345,296,114,-153" FontSize="18"></Label>
+        <TextBox x:Name="inventoryNumber" Margin="345,333,10,82" />
+        <Button Content="Izdaj knjigu" HorizontalAlignment="Left" Margin="443,385,0,0" VerticalAlignment="Top" Width="109" Height="33" Click="Button_Click_3"/>
     </Grid>
 </Page>

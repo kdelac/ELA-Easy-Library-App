@@ -28,12 +28,10 @@
                     <Label VerticalAlignment="Center" FontWeight="Bold" Grid.Row="1" Grid.Column="0" Content="ISBN:"></Label>
                     <Label VerticalAlignment="Center" FontWeight="Bold" Grid.Row="2" Grid.Column="0" Content="Datum posudbe: "></Label>
                     <Label VerticalAlignment="Center" FontWeight="Bold" Grid.Row="3" Grid.Column="0" Content="Datum vraćanja: "></Label>
-                    <Label VerticalAlignment="Center" FontWeight="Bold" Grid.Row="4" Grid.Column="0" Content="Iznos zakasnine: "></Label>
                     <TextBlock VerticalAlignment="Center" Grid.Row="0" Grid.Column="1" Width="120" Text="{Binding Copy.Book.Title}" TextWrapping="Wrap"></TextBlock>
                     <TextBlock VerticalAlignment="Center" Grid.Row="1" Grid.Column="1" Width="120" Text="{Binding Copy.Book.ISBN}"></TextBlock>
                     <TextBlock VerticalAlignment="Center" Grid.Row="2" Grid.Column="1" Width="120" Text="{Binding LoanDate.Date}"></TextBlock>
                     <TextBlock VerticalAlignment="Center" Grid.Row="3" Grid.Column="1" Width="120" Text="{Binding EndLoanDate.Date}"></TextBlock>
-                    <TextBlock VerticalAlignment="Center" Grid.Row="4" Grid.Column="1" Width="120" Text="{Binding OverdueAmount}"></TextBlock>
                 </Grid>
             </StackPanel>
         </DataTemplate>

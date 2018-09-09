@@ -143,6 +143,7 @@ namespace EasyLibraryApplication.WPF.ViewModel
                 CRUDBooksViewModel.AdminUser = admin;
                 LoanBookAdminViewModel.AdminUser = admin;
                 CRUDBookCopiesViewModel.AdminUser = admin;
+                ConfirmationOfReturningBookViewModel.AdminUser = admin;
             }
             else
             {
