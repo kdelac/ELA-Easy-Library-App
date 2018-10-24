@@ -34,9 +34,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EmailGenerator">
-      <HintPath>..\EmailGenerator\bin\Debug\EmailGenerator.dll</HintPath>
-    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -48,9 +45,6 @@
     </Reference>
     <Reference Include="PasswordHash">
       <HintPath>..\PasswordHash\bin\Debug\PasswordHash.dll</HintPath>
-    </Reference>
-    <Reference Include="QrCodeGenerator">
-      <HintPath>..\QrCodeGenerator\bin\Debug\QrCodeGenerator.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -313,6 +307,16 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>LibraryDbModel.cs</LastGenOutput>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EmailGenerator\EmailGenerator.csproj">
+      <Project>{1f06d96f-72cb-401b-9fb4-30693bd3e29e}</Project>
+      <Name>EmailGenerator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QrCodeGenerator\QrCodeGenerator.csproj">
+      <Project>{7e919e4a-c8d8-4def-83ee-aae6a8e8f958}</Project>
+      <Name>QrCodeGenerator</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
