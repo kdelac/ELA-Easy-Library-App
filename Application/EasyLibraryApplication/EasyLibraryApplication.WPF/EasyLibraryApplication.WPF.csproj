@@ -34,6 +34,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+<<<<<<< HEAD
+=======
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.2.2.5\lib\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="EmailGenerator">
+      <HintPath>..\EmailGenerator\bin\Debug\EmailGenerator.dll</HintPath>
+    </Reference>
+>>>>>>> aa4811c3c823ff118ea8e1a5a1df889d10b60d69
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -65,6 +80,12 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="zxing, Version=0.16.4.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.4\lib\net461\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.4.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.4\lib\net461\zxing.presentation.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -77,9 +98,12 @@
     </Compile>
     <Compile Include="Commands\AddBookCommand.cs" />
     <Compile Include="Commands\AddBookCopyCommand.cs" />
+    <Compile Include="Commands\CameraCommand.cs" />
     <Compile Include="Commands\ChooseBookCommand.cs" />
     <Compile Include="Commands\DeleteBookCommand.cs" />
     <Compile Include="Commands\DeleteBookCopyCommand.cs" />
+    <Compile Include="Commands\DeleteLoanCommand.cs" />
+    <Compile Include="Commands\GetLoanBookCommand.cs" />
     <Compile Include="Commands\LoginCommand.cs" />
     <Compile Include="Commands\RefreshCommand.cs" />
     <Compile Include="Commands\RefreshCopyCommand.cs" />
@@ -90,6 +114,7 @@
     <Compile Include="Commands\SaveBookCommand.cs" />
     <Compile Include="Commands\SaveBookCopyCommand.cs" />
     <Compile Include="Commands\SearchCommand.cs" />
+    <Compile Include="Helper\BitmapHelpers.cs" />
     <Compile Include="Model\Administrator.cs">
       <DependentUpon>LibraryDbModel.tt</DependentUpon>
     </Compile>
@@ -163,8 +188,11 @@
       <DependentUpon>LibraryDbModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="ViewModel\AffirmatingReservationViewModel.cs" />
+    <Compile Include="ViewModel\ConfirmationOfReturningBookViewModel.cs" />
     <Compile Include="ViewModel\CRUDBookCopiesViewModel.cs" />
     <Compile Include="ViewModel\CRUDBooksViewModel.cs" />
+    <Compile Include="ViewModel\LoanBookAdminViewModel.cs" />
     <Compile Include="ViewModel\LoanBookViewModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="ViewModel\RegisterToLibraryViewModel.cs" />
@@ -174,11 +202,20 @@
     <Compile Include="View\AdminLayoutView.xaml.cs">
       <DependentUpon>AdminLayoutView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\AffirmatingReservationView.xaml.cs">
+      <DependentUpon>AffirmatingReservationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ConfirmationOfReturningBookView.xaml.cs">
+      <DependentUpon>ConfirmationOfReturningBookView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\CRUDBookCopiesView.xaml.cs">
       <DependentUpon>CRUDBookCopiesView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\CRUDBooksView.xaml.cs">
       <DependentUpon>CRUDBooksView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\LoanBookAdminView.xaml.cs">
+      <DependentUpon>LoanBookAdminView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\LoanBooksView.xaml.cs">
       <DependentUpon>LoanBooksView.xaml</DependentUpon>
@@ -250,11 +287,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\AffirmatingReservationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ConfirmationOfReturningBookView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\CRUDBookCopiesView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\CRUDBooksView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\LoanBookAdminView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

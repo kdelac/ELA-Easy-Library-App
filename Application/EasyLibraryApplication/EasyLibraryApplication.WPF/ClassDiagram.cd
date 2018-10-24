@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="EasyLibraryApplication.WPF.Commands.LoginCommand">
-    <Position X="18.75" Y="9.5" Width="1.5" />
+    <Position X="0.5" Y="5.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAACAAQAAEAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Commands\LoginCommand.cs</FileName>
@@ -12,7 +12,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="EasyLibraryApplication.WPF.View.Login">
-    <Position X="18.75" Y="15.75" Width="1.5" />
+    <Position X="3.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAA=</HashCode>
       <FileName>View\LoginView.xaml.cs</FileName>
@@ -23,7 +23,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="EasyLibraryApplication.WPF.ViewModel.LoginViewModel">
-    <Position X="16" Y="11.75" Width="2" />
+    <Position X="5.75" Y="4.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AQAAAAAABAAAAAAAIAAAAgAigAgAAAAAIHAAAQAQAAA=</HashCode>
       <FileName>ViewModel\LoginViewModel.cs</FileName>
@@ -34,14 +34,14 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="EasyLibraryApplication.WPF.Model.LibraryEntities" Collapsed="true">
-    <Position X="10.25" Y="13.5" Width="1.5" />
+    <Position X="12" Y="13.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AEAAACAACEIAAAAEEABEgAAAkARAEAAAAUAAMABBAAQ=</HashCode>
       <FileName>Model\LibraryDbModel.Context.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="EasyLibraryApplication.WPF.View.RegiserToLibraryView">
-    <Position X="0.5" Y="10.25" Width="1.75" />
+    <Position X="18.5" Y="21" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>View\RegiserToLibraryView.xaml.cs</FileName>
@@ -52,7 +52,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="EasyLibraryApplication.WPF.ViewModel.RegisterToLibraryViewModel">
-    <Position X="3.5" Y="12" Width="2.75" />
+    <Position X="14.5" Y="17.75" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AAABAAAAAABQAAAAIAEAAAAAgAAMAAAAIBAgAAAQAAA=</HashCode>
       <FileName>ViewModel\RegisterToLibraryViewModel.cs</FileName>
@@ -63,7 +63,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="EasyLibraryApplication.WPF.View.RegistrationView">
-    <Position X="4.25" Y="20.75" Width="1.5" />
+    <Position X="6" Y="21.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
       <FileName>View\RegistrationView.xaml.cs</FileName>
@@ -74,7 +74,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="EasyLibraryApplication.WPF.ViewModel.RegistrationViewModel">
-    <Position X="7" Y="16.75" Width="1.75" />
+    <Position X="9" Y="17.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>gAEAAAAAAABwQAAAIAAAAAAAgAAAAAAAIJAAAACSAAA=</HashCode>
       <FileName>ViewModel\RegistrationViewModel.cs</FileName>
@@ -85,7 +85,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="EasyLibraryApplication.WPF.View.UserBooksView">
-    <Position X="4.25" Y="1.75" Width="1.5" />
+    <Position X="6" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
       <FileName>View\UserBooksView.xaml.cs</FileName>
@@ -96,7 +96,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="EasyLibraryApplication.WPF.ViewModel.UserBooksViewModel">
-    <Position X="7.25" Y="6.5" Width="1.5" />
+    <Position X="9" Y="5.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAABAAAAIABQAAAAIAAAAAQAkAAEAAAAIDBAAgAwAAA=</HashCode>
       <FileName>ViewModel\UserBooksViewModel.cs</FileName>
@@ -107,7 +107,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="EasyLibraryApplication.WPF.Commands.ChooseBookCommand">
-    <Position X="4.25" Y="4.5" Width="1.5" />
+    <Position X="12" Y="2.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAACAAQAAEAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Commands\ChooseBookCommand.cs</FileName>
@@ -118,7 +118,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="EasyLibraryApplication.WPF.Commands.RegisterCommand">
-    <Position X="18.75" Y="12.5" Width="1.5" />
+    <Position X="3.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAACAAQAAEAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Commands\RegisterCommand.cs</FileName>
@@ -129,7 +129,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="EasyLibraryApplication.WPF.Commands.RegisterToLibraryCommand">
-    <Position X="0.75" Y="13" Width="1.5" />
+    <Position X="14.5" Y="22.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAACAAQAAEAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Commands\RegisterToLibraryCommand.cs</FileName>
@@ -140,7 +140,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="EasyLibraryApplication.WPF.Commands.RegistrationCommand">
-    <Position X="4.25" Y="17.5" Width="1.5" />
+    <Position X="12" Y="19.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAACAAQAAEAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Commands\RegistrationCommand.cs</FileName>
@@ -151,7 +151,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="EasyLibraryApplication.WPF.Commands.SearchCommand">
-    <Position X="4.25" Y="7.5" Width="1.5" />
+    <Position X="9" Y="2.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAACAAQAAEAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Commands\SearchCommand.cs</FileName>
@@ -162,7 +162,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="EasyLibraryApplication.WPF.ViewModel.CRUDBookCopiesViewModel">
-    <Position X="10.25" Y="15.75" Width="1.5" />
+    <Position X="18" Y="10.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>gBKAAIAEAABQAACAYQAIAAEAiYCAAACAYAABAAAAAAA=</HashCode>
       <FileName>ViewModel\CRUDBookCopiesViewModel.cs</FileName>
@@ -173,7 +173,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="EasyLibraryApplication.WPF.Commands.AddBookCommand">
-    <Position X="7.25" Y="0.5" Width="1.5" />
+    <Position X="3" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAACAAQAAEAAAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
       <FileName>Commands\AddBookCommand.cs</FileName>
@@ -184,7 +184,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="EasyLibraryApplication.WPF.ViewModel.CRUDBooksViewModel">
-    <Position X="10.25" Y="5.5" Width="1.5" />
+    <Position X="6" Y="10.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>gAICAIBAAABSCAAAYAAAAAIAkICAAACgYIAhIQAABAA=</HashCode>
       <FileName>ViewModel\CRUDBooksViewModel.cs</FileName>
@@ -195,7 +195,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="EasyLibraryApplication.WPF.Commands.AddBookCopyCommand">
-    <Position X="13.25" Y="22.5" Width="1.5" />
+    <Position X="18" Y="18.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAACAAQAAEAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Commands\AddBookCopyCommand.cs</FileName>
@@ -206,7 +206,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="EasyLibraryApplication.WPF.Commands.DeleteBookCommand">
-    <Position X="13.25" Y="2.5" Width="1.5" />
+    <Position X="3" Y="17.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAACAAQAAEAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Commands\DeleteBookCommand.cs</FileName>
@@ -217,7 +217,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="EasyLibraryApplication.WPF.Commands.DeleteBookCopyCommand">
-    <Position X="7.25" Y="22.5" Width="1.5" />
+    <Position X="21" Y="9.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAACAAQAAEAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Commands\DeleteBookCopyCommand.cs</FileName>
@@ -228,7 +228,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="EasyLibraryApplication.WPF.Commands.RefreshCommand">
-    <Position X="7.25" Y="3.5" Width="1.5" />
+    <Position X="6" Y="18.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAACAAQAAEAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Commands\RefreshCommand.cs</FileName>
@@ -239,7 +239,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="EasyLibraryApplication.WPF.Commands.RefreshCopyCommand">
-    <Position X="10.25" Y="23.5" Width="1.5" />
+    <Position X="21" Y="15.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAACAAQAAEAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Commands\RefreshCopyCommand.cs</FileName>
@@ -250,7 +250,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="EasyLibraryApplication.WPF.Commands.ReservationCommand">
-    <Position X="16.25" Y="7" Width="1.5" />
+    <Position X="18" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAACAAQAAEAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Commands\ReservationCommand.cs</FileName>
@@ -261,7 +261,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="EasyLibraryApplication.WPF.ViewModel.ReservationViewModel">
-    <Position X="13.25" Y="11.5" Width="1.5" />
+    <Position X="15" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAABAAAAABBQAAJgIAQCBBAAg4AAAACAIgAAAAIAAAA=</HashCode>
       <FileName>ViewModel\ReservationViewModel.cs</FileName>
@@ -274,15 +274,15 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="EmailGenerator.Email">
-    <Position X="16.25" Y="17.25" Width="1.5" />
+    <Position X="12" Y="5" Width="1.5" />
     <TypeIdentifier />
   </Class>
   <Class Name="QrCodeGenerator.QrCode" Collapsed="true">
-    <Position X="16.25" Y="9.75" Width="1.5" />
+    <Position X="12" Y="7.5" Width="1.5" />
     <TypeIdentifier />
   </Class>
   <Class Name="EasyLibraryApplication.WPF.Commands.SaveBookCommand">
-    <Position X="10.25" Y="2.5" Width="1.5" />
+    <Position X="3" Y="9.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAACAAQAAEAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Commands\SaveBookCommand.cs</FileName>
@@ -293,7 +293,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="EasyLibraryApplication.WPF.Commands.SaveBookCopyCommand">
-    <Position X="13.25" Y="19.5" Width="1.5" />
+    <Position X="21" Y="12.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAACAAQAAEAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Commands\SaveBookCopyCommand.cs</FileName>
@@ -304,7 +304,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="EasyLibraryApplication.WPF.ViewModel.LoanBookViewModel">
-    <Position X="7.25" Y="12.25" Width="1.5" />
+    <Position X="12" Y="15" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAABAAAAAABQAAAAIAIAAAgCgAAAAAAAIAAAAAAAAAA=</HashCode>
       <FileName>ViewModel\LoanBookViewModel.cs</FileName>
@@ -315,7 +315,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="EasyLibraryApplication.WPF.View.CRUDBookCopiesView">
-    <Position X="13.25" Y="5.75" Width="1.5" />
+    <Position X="3" Y="14.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>View\CRUDBookCopiesView.xaml.cs</FileName>
@@ -326,7 +326,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="EasyLibraryApplication.WPF.View.CRUDBooksView">
-    <Position X="13.25" Y="7.75" Width="1.5" />
+    <Position X="3" Y="12.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>View\CRUDBooksView.xaml.cs</FileName>
@@ -337,7 +337,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="EasyLibraryApplication.WPF.View.LoanBooksView">
-    <Position X="1.25" Y="16.25" Width="1.5" />
+    <Position X="12" Y="22" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>View\LoanBooksView.xaml.cs</FileName>
@@ -348,13 +348,68 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="EasyLibraryApplication.WPF.View.ReservationView">
-    <Position X="13.25" Y="17.25" Width="1.5" />
+    <Position X="18" Y="8" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>View\ReservationView.xaml.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Field Name="viewModel" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="EasyLibraryApplication.WPF.ViewModel.ConfirmationOfReturningBookViewModel">
+    <Position X="11.75" Y="8.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABBAwAgAIAAAAAAAgAAAAAAAIAABgAAACAA=</HashCode>
+      <FileName>ViewModel\ConfirmationOfReturningBookViewModel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="ctx" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="EasyLibraryApplication.WPF.ViewModel.LoanBookAdminViewModel">
+    <Position X="15" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQBQAAAAIAIAAAACgAAAAAAAIAABAAAAAAA=</HashCode>
+      <FileName>ViewModel\LoanBookAdminViewModel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="ctx" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="EasyLibraryApplication.WPF.Commands.GetLoanBookCommand">
+    <Position X="17.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\GetLoanBookCommand.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="viewModel" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="EasyLibraryApplication.WPF.View.ConfirmationOfReturningBookView">
+    <Position X="14.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\ConfirmationOfReturningBookView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="viewModel" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="EasyLibraryApplication.WPF.View.AffirmatingReservationView">
+    <Position X="9" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAABAAACKAAABAEEgAAAAAAgIAIACEAAAAA=</HashCode>
+      <FileName>View\AffirmatingReservationView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="ctx" />
     </ShowAsAssociation>
     <Lollipop Position="0.2" />
   </Class>

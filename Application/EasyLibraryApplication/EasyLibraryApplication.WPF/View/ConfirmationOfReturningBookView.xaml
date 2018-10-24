@@ -1,0 +1,73 @@
+﻿<Page x:Class="EasyLibraryApplication.WPF.View.ConfirmationOfReturningBookView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:EasyLibraryApplication.WPF.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="630"
+      Title="ConfirmationOfReturningBookView" Background="#2488e0">
+    <Page.Resources>
+
+        <DataTemplate x:Key="BookTemplate" >
+            <StackPanel Margin="0" Orientation="Horizontal">
+                <Image Height="120" Width="80" Source="{Binding Copy.Book.Signatory}"></Image>
+                <Grid VerticalAlignment="Center">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label VerticalAlignment="Center" FontWeight="Bold" Grid.Row="0" Grid.Column="0" Content="Naslov:"></Label>
+                    <Label VerticalAlignment="Center" FontWeight="Bold" Grid.Row="1" Grid.Column="0" Content="ISBN:"></Label>
+                    <Label VerticalAlignment="Center" FontWeight="Bold" Grid.Row="2" Grid.Column="0" Content="Datum posudbe: "></Label>
+                    <Label VerticalAlignment="Center" FontWeight="Bold" Grid.Row="3" Grid.Column="0" Content="Datum vraćanja: "></Label>
+                    <TextBlock VerticalAlignment="Center" Grid.Row="0" Grid.Column="1" Width="120" Text="{Binding Copy.Book.Title}" TextWrapping="Wrap"></TextBlock>
+                    <TextBlock VerticalAlignment="Center" Grid.Row="1" Grid.Column="1" Width="120" Text="{Binding Copy.Book.ISBN}"></TextBlock>
+                    <TextBlock VerticalAlignment="Center" Grid.Row="2" Grid.Column="1" Width="120" Text="{Binding LoanDate.Date}"></TextBlock>
+                    <TextBlock VerticalAlignment="Center" Grid.Row="3" Grid.Column="1" Width="120" Text="{Binding EndLoanDate.Date}"></TextBlock>
+                </Grid>
+            </StackPanel>
+        </DataTemplate>
+    </Page.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Column ="0"  FontSize="20" Foreground="White" Margin="10,0,4.333,30.667" Grid.RowSpan="2">Vraćanje knjige</Label>
+        <Label Grid.Row="1" Grid.Column ="0" Margin="10,0.2,4.6,0"  Foreground="White">Broj knjige</Label>
+        <TextBox  Grid.Row="2" Grid.Column="0" Margin="10,0,4.6,0.6" VerticalContentAlignment="Center" Text="{Binding bookNumber, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+        <Button Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="2" Margin="9.667,0.333,157,1" Grid.RowSpan="1" Command="{Binding GetLoanBookEvent}">Dohvati podatke</Button>
+        <Button Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="13" Margin="10,0.333,4.667,0.667" Grid.RowSpan="1" Command="{Binding DeleteLoanEvent}">Vrati knjigu</Button>
+        <Label Grid.Row="3" Grid.Column="0"  Margin="10,0,4.6,0.6" Foreground="White">Podaci o posudbi</Label>
+        <ListBox Grid.Column="0" Grid.Row="4" Grid.RowSpan="8" Grid.ColumnSpan="3" Margin="10,0,4.6,0.6" SelectionMode="Single" ItemsSource="{Binding LoansCollection.View}" ItemTemplate="{StaticResource BookTemplate}" SelectedItem="{Binding SelectedLoan}"></ListBox>
+    </Grid>
+</Page>
